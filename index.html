@@ -4,17 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tomás Oliveira</title>
+    <title>Tomás Oliveira - Cross-Media Designer</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
     <!-- Side Navigation -->
     <nav class="sidenav">
         <div class="nav-header">
             <h1>TOMÁS<br>OLIVEIRA</h1>
-            <p class="nav-subtitle">CROSS-MEDIA DESIGNER</p>
+            <p class="nav-subtitle">PORTFOLIO</p>
         </div>
         <ul class="nav-links">
             <li><a href="#home" class="nav-link active">HOME</a></li>
@@ -25,8 +32,8 @@
         </ul>
         <div class="nav-footer">
             <div class="social-links">
-                <a href="https://www.behance.net/gallery/199042085/Portfolio-Tomas-Oliveira" target="_blank">Behance</a>
-                <a href="https://instagram.com/tomas_dof" target="_blank">Instagram</a>
+                <a href="https://www.behance.net/gallery/199042085/Portfolio-Tomas-Oliveira" target="_blank" rel="noopener">Behance</a>
+                <a href="https://instagram.com/tomas_dof" target="_blank" rel="noopener">Instagram</a>
             </div>
             <p class="location">Coimbra / Viseu, PT</p>
             <a href="mailto:tomasoliveira.media@gmail.com" class="email">tomasoliveira.media@gmail.com</a>
@@ -40,10 +47,16 @@
         <section id="home" class="section active">
             <div class="section-inner">
                 <div class="home-content">
-                    <h2 class="title-large">Cross-media Designer<br>Music Producer<br>Sound Engineer</h2>
+                    <h2 class="title-large">
+                        <span class="line">HELLO!</span>
+                        <span class="line">MY NAME IS <b>TOMÁS OLIVEIRA</b>.</span>
+                        <span class="line">I'M A <b>CROSS-MEDIA DESIGNER</b></span>
+                        <span class="line">AND THIS IS MY WEB PORTFOLIO.
+                    </h2>
                     <p class="intro-text">
-                        Passionate about exploring the intersection between<br> visual arts, sound, and technology.
+                        
                     </p>
+
                 </div>
             </div>
         </section>
@@ -52,34 +65,33 @@
         <section id="design" class="section">
             <div class="section-inner">
                 <h2 class="section-title">DESIGN</h2>
-                <div class="work-grid">
+                    <div class="work-grid">
 
-                    <!-- Project Item - Add data attributes for modal -->
-                    <div class="project-item" data-project="design-1">
-                        <div class="project-image">
-                            <div class="placeholder">Project Image</div>
+                        <div class="project-item" data-project="design-1">
+                            <div class="project-image">
+                                <div class="placeholder">Project Image</div>
+                            </div>
+                            <div class="project-info">
+                                <h3>Project Title</h3>
+                                <p class="project-meta">2024</p>
+                            </div>
                         </div>
-                        <div class="project-info">
-                            <h3>Project Title</h3>
-                            <p class="project-meta">2024</p>
+
+                        <div class="project-item" data-project="design-2">
+                            <div class="project-image">
+                                <div class="placeholder">Project Image</div>
+                            </div>
+                            <div class="project-info">
+                                <h3>Another Project</h3>
+                                <p class="project-meta">2023</p>
+                            </div>
                         </div>
+
                     </div>
-
-                    <div class="project-item" data-project="design-2">
-                        <div class="project-image">
-                            <div class="placeholder">Project Image</div>
-                        </div>
-                        <div class="project-info">
-                            <h3>Another Project</h3>
-                            <p class="project-meta">2023</p>
-                        </div>
-                    </div>
-
-                </div>
             </div>
         </section>
 
-        <!-- AUDIO / MUSIC Section -->
+        <!-- AUDIO & MUSIC Section -->
         <section id="audio" class="section">
             <div class="section-inner">
                 <h2 class="section-title">AUDIO & MUSIC</h2>
@@ -109,7 +121,7 @@
             </div>
         </section>
 
-        <!-- cross media Section -->
+        <!-- OTHER MEDIA Section -->
         <section id="audiovisual" class="section">
             <div class="section-inner">
                 <h2 class="section-title">OTHER MEDIA</h2>
@@ -167,24 +179,22 @@
 
                     <div class="about-intro">
                         <div class="about-photo">
-                            <!-- Add your photo here -->
-                            <img src="your-photo.jpg" alt="Tomás Oliveira">
-                            <!-- Or use placeholder: -->
-                            <div class="photo-placeholder">Your Photo</div>
+                            <img src="assets/profile.jpg" alt="Tomás Oliveira">
+                        
                         </div>
                         <div class="about-text">
-                            <p class="lead">Cross-media designer with experience in graphic and communication design, as well as video and audio post-production. Alongside, I'm also a music producer and sound engineer, working both on my own projects and collaborations.</p>
+                            <p class="lead"><b>Cross-media designer</b> with experience in graphic and communication design, as well as video and audio post-production. Alongside, I'm also a <b>music producer</b> and sound engineer, working both on my own projects and collaborations.
+                                I consider myself a dedicated and creative worker, passionate about art in its many forms — particularly interested in exploring the intersection between visual arts, sound, and technology.
+                            </p>
 
-                            <p>I consider myself a dedicated and creative worker, passionate about art in its many forms — particularly interested in exploring the intersection between visual arts, sound, and technology.</p>
+                            <p></p>
                         </div>
                     </div>
 
                     <div class="timeline-section">
                         <h3>Education</h3>
-
                         <div class="education-grid">
 
-                            <!-- Coluna 1: Academic Education -->
                             <div class="education-column">
                                 <h4>Academic</h4>
                                 <div class="timeline">
@@ -211,7 +221,6 @@
                                 </div>
                             </div>
 
-                            <!-- Coluna 2: Workshops & Courses -->
                             <div class="education-column">
                                 <h4>Workshops & Courses</h4>
                                 <div class="timeline">
@@ -221,8 +230,6 @@
                                             <p>Donesaika Course<br>Music Production by João Sável</p>
                                         </div>
                                     </div>
-
-                                    <!-- Adiciona mais workshops/cursos aqui -->
                                 </div>
                             </div>
 
@@ -231,10 +238,8 @@
 
                     <div class="timeline-section">
                         <h3>Experience</h3>
-
                         <div class="experience-grid">
 
-                            <!-- Coluna 1: Design -->
                             <div class="experience-column">
                                 <h4>Design</h4>
                                 <div class="timeline">
@@ -254,7 +259,6 @@
                                 </div>
                             </div>
 
-                            <!-- Coluna 2: Music/Audio -->
                             <div class="experience-column">
                                 <h4>Music / Audio</h4>
                                 <div class="timeline">
@@ -267,7 +271,6 @@
                                 </div>
                             </div>
 
-                            <!-- Coluna 3: Other Media -->
                             <div class="experience-column">
                                 <h4>Audiovisual</h4>
                                 <div class="timeline">
@@ -293,10 +296,9 @@
     <div class="modal" id="projectModal">
         <div class="modal-overlay"></div>
         <div class="modal-content">
-            <button class="modal-close">&times;</button>
+            <button class="modal-close" aria-label="Close modal">&times;</button>
             <div class="modal-inner">
                 <div class="modal-images">
-                    <!-- Images will be inserted here -->
                     <div class="placeholder">Project Images</div>
                 </div>
                 <div class="modal-info">
@@ -305,26 +307,26 @@
                     <div class="modal-tags">
                         <span class="tag">Tag 1</span>
                         <span class="tag">Tag 2</span>
+                </div>
+                <div class="modal-description">
+                    <p>Project description will go here...</p>
+                </div>
+                <div class="modal-details">
+                    <div class="detail-item">
+                        <strong>Role:</strong>
+                        <p>Your role in the project</p>
                     </div>
-                    <div class="modal-description">
-                        <p>Project description will go here...</p>
-                    </div>
-                    <div class="modal-details">
-                        <div class="detail-item">
-                            <strong>Role:</strong>
-                            <p>Your role in the project</p>
-                        </div>
-                        <div class="detail-item">
-                            <strong>Areas:</strong>
-                            <p>Design areas covered</p>
-                        </div>
+                    <div class="detail-item">
+                        <strong>Areas:</strong>
+                        <p>Design areas covered</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+            </div>
+            </div>
+            </div>
 
-    <script src="script.js"></script>
+            <script src="script.js"></script>
 </body>
 
 </html>

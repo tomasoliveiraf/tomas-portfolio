@@ -1,30 +1,7 @@
-// Navigation system
-const navLinks = document.querySelectorAll('.nav-link');
-const sections = document.querySelectorAll('.section');
+// ==========================================
+// PROJECT DATA
+// ==========================================
 
-navLinks.forEach(link => {
-    link.addEventListener('click', function(e) {
-        e.preventDefault();
-
-        // Get target section id from href
-        const targetId = this.getAttribute('href').replace('#', '');
-
-        // Remove active from all
-        navLinks.forEach(l => l.classList.remove('active'));
-        sections.forEach(s => s.classList.remove('active'));
-
-        // Add active to clicked link
-        this.classList.add('active');
-
-        // Show target section
-        const targetSection = document.getElementById(targetId);
-        if (targetSection) {
-            targetSection.classList.add('active');
-        }
-    });
-});
-
-// Project data - adiciona aqui os dados dos teus projetos
 const projectData = {
     'design-1': {
         title: 'Project Title',
@@ -104,13 +81,128 @@ const projectData = {
     }
 };
 
-// Modal functionality
+// ==========================================
+// DOM ELEMENTS
+// ==========================================
+
+const navLinks = document.querySelectorAll('.nav-link');
+const sections = document.querySelectorAll('.section');
+const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+const sidenav = document.querySelector('.sidenav');
 const modal = document.getElementById('projectModal');
 const modalOverlay = document.querySelector('.modal-overlay');
 const modalClose = document.querySelector('.modal-close');
 const projectItems = document.querySelectorAll('.project-item');
 
-// Open modal function
+// ==========================================
+// NAVIGATION SYSTEM
+// ==========================================
+
+function initNavigation() {
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            // Get target section id from href
+            const targetId = this.getAttribute('href').replace('#', '');
+
+            // Remove active from all
+            navLinks.forEach(l => l.classList.remove('active'));
+            sections.forEach(s => s.classList.remove('active'));
+
+            // Add active to clicked link
+            this.classList.add('active');
+
+            // Show target section
+            const targetSection = document.getElementById(targetId);
+            if (targetSection) {
+                targetSection.classList.add('active');
+            }
+
+            // Close mobile menu if open
+            if (window.innerWidth <= 768) {
+                closeMobileMenu();
+            }
+
+            // Scroll to top smoothly
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    });
+}
+
+// ==========================================
+// MOBILE MENU
+// ==========================================
+
+function initMobileMenu() {
+    if (!mobileMenuToggle) return;
+
+    mobileMenuToggle.addEventListener('click', function() {
+        toggleMobileMenu();
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768) {
+            if (!sidenav.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+                closeMobileMenu();
+            }
+        }
+    });
+}
+
+function toggleMobileMenu() {
+    mobileMenuToggle.classList.toggle('active');
+    sidenav.classList.toggle('active');
+    document.body.classList.toggle('menu-open');
+}
+
+function closeMobileMenu() {
+    mobileMenuToggle.classList.remove('active');
+    sidenav.classList.remove('active');
+    document.body.classList.remove('menu-open');
+}
+
+// Close mobile menu on window resize
+window.addEventListener('resize', function() {
+    if (window.innerWidth > 768) {
+        closeMobileMenu();
+    }
+});
+
+// ==========================================
+// PROJECT MODAL
+// ==========================================
+
+function initProjectModal() {
+    // Open modal when clicking on project items
+    projectItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const projectId = this.getAttribute('data-project');
+            openModal(projectId);
+        });
+    });
+
+    // Close modal events
+    modalClose.addEventListener('click', closeModal);
+    modalOverlay.addEventListener('click', closeModal);
+
+    // Close modal with ESC key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+            closeModal();
+        }
+    });
+
+    // Prevent modal content clicks from closing modal
+    const modalContent = document.querySelector('.modal-content');
+    if (modalContent) {
+        modalContent.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+    }
+}
+
 function openModal(projectId) {
     const project = projectData[projectId];
 
@@ -120,6 +212,24 @@ function openModal(projectId) {
     }
 
     // Update modal content
+    updateModalContent(project);
+
+    // Show modal
+    modal.classList.add('active');
+    document.body.classList.add('modal-open');
+
+    // Prevent body scroll
+    document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+    modal.classList.remove('active');
+    document.body.classList.remove('modal-open');
+    document.body.style.overflow = '';
+}
+
+function updateModalContent(project) {
+    // Update title and year
     document.querySelector('.modal-title').textContent = project.title;
     document.querySelector('.modal-year').textContent = project.year;
 
@@ -130,7 +240,8 @@ function openModal(projectId) {
     ).join('');
 
     // Update description
-    document.querySelector('.modal-description').innerHTML = `<p>${project.description}</p>`;
+    document.querySelector('.modal-description').innerHTML =
+        `<p>${project.description}</p>`;
 
     // Update details
     const detailsContainer = document.querySelector('.modal-details');
@@ -149,43 +260,76 @@ function openModal(projectId) {
     const imagesContainer = document.querySelector('.modal-images');
     if (project.images && project.images.length > 0) {
         imagesContainer.innerHTML = project.images.map(img =>
-            `<img src="${img}" alt="${project.title}">`
+            `<img src="${img}" alt="${project.title}" loading="lazy">`
         ).join('');
     } else {
-        imagesContainer.innerHTML = '<div class="placeholder">Project Images</div>';
+        imagesContainer.innerHTML =
+            '<div class="placeholder">Project Images</div>';
     }
-
-    // Show modal
-    modal.classList.add('active');
-    document.body.style.overflow = 'hidden';
 }
 
-// Close modal function
-function closeModal() {
-    modal.classList.remove('active');
-    document.body.style.overflow = '';
+// ==========================================
+// INITIALIZE APP
+// ==========================================
+
+function initApp() {
+    console.log('Portfolio initialized');
+
+    // Initialize all features
+    initNavigation();
+    initMobileMenu();
+    initProjectModal();
+
+    // Show home section by default
+    const homeSection = document.getElementById('home');
+    if (homeSection) {
+        homeSection.classList.add('active');
+    }
 }
 
-// Event listeners for projects
-projectItems.forEach(item => {
-    item.addEventListener('click', function() {
-        const projectId = this.getAttribute('data-project');
-        openModal(projectId);
-    });
-});
+// ==========================================
+// RUN ON DOM LOADED
+// ==========================================
 
-// Event listeners for closing modal
-modalClose.addEventListener('click', closeModal);
-modalOverlay.addEventListener('click', closeModal);
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initApp);
+} else {
+    initApp();
+}
 
-// Close modal with ESC key
-document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape' && modal.classList.contains('active')) {
-        closeModal();
-    }
-});
+// ==========================================
+// UTILITY FUNCTIONS
+// ==========================================
 
-// Prevent modal content clicks from closing modal
-document.querySelector('.modal-content').addEventListener('click', function(e) {
-    e.stopPropagation();
-});
+// Debounce function for performance
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+
+// Check if element is in viewport
+function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+// Export functions if needed (for ES6 modules)
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = {
+        openModal,
+        closeModal,
+        toggleMobileMenu
+    };
+}
