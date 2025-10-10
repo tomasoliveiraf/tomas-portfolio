@@ -1,84 +1,101 @@
 // ==========================================
-// PROJECT DATA
+// PROJECT DATA - Define tudo aqui!
 // ==========================================
 
 const projectData = {
-    'design-1': {
-        title: 'Project Title',
-        year: '2024',
-        tags: ['Graphic Design', 'Branding'],
-        description: 'Descrição detalhada do projeto. Aqui podes explicar o contexto, objetivos, processo criativo e resultados alcançados.',
-        role: 'Designer Principal',
-        areas: 'Identidade Visual, Design Editorial',
-        images: [
-            // Adiciona URLs das imagens aqui
-            // 'caminho/para/imagem1.jpg',
-            // 'caminho/para/imagem2.jpg',
-        ]
-    },
-    'design-2': {
-        title: 'Another Project',
-        year: '2023',
-        tags: ['UI/UX', 'Web Design'],
-        description: 'Descrição do segundo projeto.',
-        role: 'UI/UX Designer',
-        areas: 'Interface Design, Prototipagem',
-        images: []
-    },
-    'audio-1': {
-        title: 'Serendipity',
-        year: '2021',
-        tags: ['Music Production', 'Electronic'],
-        description: 'Descrição do projeto musical Serendipity.',
-        role: 'Producer, Mix & Master',
-        areas: 'Produção Musical, Mixing, Mastering',
-        images: []
-    },
-    'audio-2': {
-        title: 'Lamiré',
-        year: '2023',
-        tags: ['Music Production', 'Collaboration'],
-        description: 'Descrição do projeto Lamiré.',
-        role: 'Producer, Sound Engineer',
-        areas: 'Produção Musical, Sound Design',
-        images: []
-    },
-    'av-1': {
-        title: 'Cuidar - Um Olhar Atento',
-        year: '2019',
-        tags: ['Documentary', 'Post-Production'],
-        description: 'Descrição do projeto audiovisual.',
-        role: 'Editor, Sound Designer',
-        areas: 'Edição de Vídeo, Pós-produção Audio',
-        images: []
-    },
-    'av-2': {
-        title: 'O Alto do Mártir',
-        year: '2021',
-        tags: ['Film', 'Sound Design'],
-        description: 'Descrição do projeto.',
-        role: 'Sound Designer',
-        areas: 'Sound Design, Audio Post-Production',
-        images: []
-    },
-    'av-3': {
-        title: 'Carim',
-        year: '2025',
-        tags: ['Short Film', 'Post-Production'],
-        description: 'Descrição do projeto.',
-        role: 'Editor',
-        areas: 'Edição, Color Grading',
-        images: []
-    },
-    'av-4': {
-        title: 'O Que É Que a Gente Vai Ouvir Hoje?',
-        year: '2024',
-        tags: ['Documentary', 'Sound'],
-        description: 'Descrição do projeto.',
-        role: 'Sound Engineer',
-        areas: 'Captação de Som, Mixing',
-        images: []
-    }
+    design: [{
+            id: 'winitroia',
+            title: 'WINITRÓIA',
+            year: '2025',
+            tags: ['Graphic Design', 'Branding'],
+            description: 'Descrição detalhada do projeto. Aqui podes explicar o contexto, objetivos, processo criativo e resultados alcançados.',
+            role: 'Designer Principal',
+            areas: 'Identidade Visual, Design Editorial',
+            images: ['assets/design/winitroia1.jpg', 'assets/design/winitroia2.jpg', 'assets/design/winitroia3.jpg', 'assets/design/winitroia4.jpg']
+        },
+        {
+            id: 'sasuc',
+            title: 'SASUC',
+            year: '2024-CURRENT',
+            tags: ['Branding', 'Visual Identity'],
+            description: 'Descrição do segundo projeto.',
+            role: 'Communication Designer',
+            areas: 'Communication Design',
+            images: []
+        },
+        {
+            id: 'atrevome',
+            title: 'A(TREVO)-ME',
+            year: '2023',
+            tags: ['Branding', 'Visual Identity'],
+            description: 'Descrição do segundo projeto.',
+            role: 'Graphic Designer',
+            areas: 'Graphic Design',
+            images: []
+        }
+    ],
+    audio: [{
+            id: 'serendipity',
+            title: 'Serendipity',
+            year: '2021',
+            tags: ['Music Production', 'Electronic'],
+            description: 'Descrição do projeto musical Serendipity.',
+            role: 'Producer, Mix & Master',
+            areas: 'Produção Musical, Mixing, Mastering',
+            images: []
+        },
+        {
+            id: 'lamire',
+            title: 'Lamiré',
+            year: '2023',
+            tags: ['Music Production', 'Collaboration'],
+            description: 'Descrição do projeto Lamiré.',
+            role: 'Producer, Sound Engineer',
+            areas: 'Produção Musical, Sound Design',
+            images: []
+        }
+    ],
+    audiovisual: [{
+            id: 'cuidar',
+            title: 'Cuidar - Um Olhar Atento',
+            year: '2019',
+            tags: ['Documentary', 'Post-Production'],
+            description: 'Descrição do projeto audiovisual.',
+            role: 'Editor, Sound Designer',
+            areas: 'Edição de Vídeo, Pós-produção Audio',
+            images: []
+        },
+        {
+            id: 'alto-martir',
+            title: 'O Alto do Mártir',
+            year: '2021',
+            tags: ['Film', 'Sound Design'],
+            description: 'Descrição do projeto.',
+            role: 'Sound Designer',
+            areas: 'Sound Design, Audio Post-Production',
+            images: []
+        },
+        {
+            id: 'carim',
+            title: 'Carim',
+            year: '2025',
+            tags: ['Short Film', 'Post-Production'],
+            description: 'Descrição do projeto.',
+            role: 'Editor',
+            areas: 'Edição, Color Grading',
+            images: []
+        },
+        {
+            id: 'ouvir-hoje',
+            title: 'O Que É Que a Gente Vai Ouvir Hoje?',
+            year: '2024',
+            tags: ['Documentary', 'Sound'],
+            description: 'Descrição do projeto.',
+            role: 'Sound Engineer',
+            areas: 'Captação de Som, Mixing',
+            images: []
+        }
+    ]
 };
 
 // ==========================================
@@ -92,7 +109,135 @@ const sidenav = document.querySelector('.sidenav');
 const modal = document.getElementById('projectModal');
 const modalOverlay = document.querySelector('.modal-overlay');
 const modalClose = document.querySelector('.modal-close');
-const projectItems = document.querySelectorAll('.project-item');
+
+// ==========================================
+// CAROUSEL STATE
+// ==========================================
+
+let currentImageIndex = 0;
+let currentImages = [];
+
+// ==========================================
+// RENDER PROJECTS DYNAMICALLY
+// ==========================================
+
+function renderProjects() {
+    Object.keys(projectData).forEach(category => {
+        const section = document.getElementById(category);
+        if (!section) return;
+
+        const workGrid = section.querySelector('.work-grid');
+        if (!workGrid) return;
+
+        workGrid.innerHTML = '';
+
+        projectData[category].forEach(project => {
+            const projectItem = createProjectElement(category, project);
+            workGrid.appendChild(projectItem);
+        });
+    });
+
+    initProjectModal();
+}
+
+function createProjectElement(category, project) {
+    const div = document.createElement('div');
+    div.className = 'project-item';
+    div.setAttribute('data-category', category);
+    div.setAttribute('data-project-id', project.id);
+
+    const imageContent = project.images && project.images.length > 0 ?
+        `<img src="${project.images[0]}" alt="${project.title}">` :
+        `<div class="placeholder">${project.title}</div>`;
+
+    div.innerHTML = `
+        <div class="project-image ${project.images && project.images.length > 0 ? 'has-image' : ''}">
+            ${imageContent}
+        </div>
+        <div class="project-info">
+            <h3>${project.title}</h3>
+            <p class="project-meta">${project.year}</p>
+        </div>
+    `;
+
+    return div;
+}
+
+// ==========================================
+// FIND PROJECT BY CATEGORY AND ID
+// ==========================================
+
+function findProject(category, projectId) {
+    const categoryProjects = projectData[category];
+    if (!categoryProjects) return null;
+
+    return categoryProjects.find(p => p.id === projectId);
+}
+
+// ==========================================
+// IMAGE CAROUSEL
+// ==========================================
+
+function initCarousel(images) {
+    currentImages = images;
+    currentImageIndex = 0;
+    updateCarouselDisplay();
+}
+
+function updateCarouselDisplay() {
+    const imagesContainer = document.querySelector('.modal-images');
+
+    if (!currentImages || currentImages.length === 0) {
+        imagesContainer.innerHTML = '<div class="placeholder">Project Images</div>';
+        return;
+    }
+
+    const showControls = currentImages.length > 1;
+
+    imagesContainer.innerHTML = `
+        <div class="carousel-container">
+            ${showControls ? '<button class="carousel-btn carousel-prev" aria-label="Previous image">‹</button>' : ''}
+            <div class="carousel-image-wrapper">
+                <img src="${currentImages[currentImageIndex]}" alt="Project image ${currentImageIndex + 1}" class="carousel-image">
+            </div>
+            ${showControls ? '<button class="carousel-btn carousel-next" aria-label="Next image">›</button>' : ''}
+        </div>
+        ${showControls ? `
+        <div class="carousel-indicators">
+            ${currentImages.map((_, index) => 
+                `<button class="carousel-indicator ${index === currentImageIndex ? 'active' : ''}" 
+                        data-index="${index}" 
+                        aria-label="Go to image ${index + 1}"></button>`
+            ).join('')}
+        </div>
+        ` : ''}
+    `;
+
+    if (showControls) {
+        const prevBtn = imagesContainer.querySelector('.carousel-prev');
+        const nextBtn = imagesContainer.querySelector('.carousel-next');
+        const indicators = imagesContainer.querySelectorAll('.carousel-indicator');
+
+        if (prevBtn) prevBtn.addEventListener('click', () => navigateCarousel('prev'));
+        if (nextBtn) nextBtn.addEventListener('click', () => navigateCarousel('next'));
+        
+        indicators.forEach(indicator => {
+            indicator.addEventListener('click', (e) => {
+                currentImageIndex = parseInt(e.target.dataset.index);
+                updateCarouselDisplay();
+            });
+        });
+    }
+}
+
+function navigateCarousel(direction) {
+    if (direction === 'next') {
+        currentImageIndex = (currentImageIndex + 1) % currentImages.length;
+    } else {
+        currentImageIndex = (currentImageIndex - 1 + currentImages.length) % currentImages.length;
+    }
+    updateCarouselDisplay();
+}
 
 // ==========================================
 // NAVIGATION SYSTEM
@@ -103,28 +248,22 @@ function initNavigation() {
         link.addEventListener('click', function(e) {
             e.preventDefault();
 
-            // Get target section id from href
             const targetId = this.getAttribute('href').replace('#', '');
 
-            // Remove active from all
             navLinks.forEach(l => l.classList.remove('active'));
             sections.forEach(s => s.classList.remove('active'));
 
-            // Add active to clicked link
             this.classList.add('active');
 
-            // Show target section
             const targetSection = document.getElementById(targetId);
             if (targetSection) {
                 targetSection.classList.add('active');
             }
 
-            // Close mobile menu if open
             if (window.innerWidth <= 768) {
                 closeMobileMenu();
             }
 
-            // Scroll to top smoothly
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     });
@@ -141,7 +280,6 @@ function initMobileMenu() {
         toggleMobileMenu();
     });
 
-    // Close menu when clicking outside
     document.addEventListener('click', function(e) {
         if (window.innerWidth <= 768) {
             if (!sidenav.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
@@ -163,7 +301,6 @@ function closeMobileMenu() {
     document.body.classList.remove('menu-open');
 }
 
-// Close mobile menu on window resize
 window.addEventListener('resize', function() {
     if (window.innerWidth > 768) {
         closeMobileMenu();
@@ -175,26 +312,40 @@ window.addEventListener('resize', function() {
 // ==========================================
 
 function initProjectModal() {
-    // Open modal when clicking on project items
+    const projectItems = document.querySelectorAll('.project-item');
+    
     projectItems.forEach(item => {
-        item.addEventListener('click', function() {
-            const projectId = this.getAttribute('data-project');
-            openModal(projectId);
+        const newItem = item.cloneNode(true);
+        item.parentNode.replaceChild(newItem, item);
+        
+        newItem.addEventListener('click', function() {
+            const category = this.getAttribute('data-category');
+            const projectId = this.getAttribute('data-project-id');
+            openModal(category, projectId);
         });
     });
 
-    // Close modal events
-    modalClose.addEventListener('click', closeModal);
-    modalOverlay.addEventListener('click', closeModal);
+    if (modalClose) {
+        modalClose.addEventListener('click', closeModal);
+    }
+    
+    if (modalOverlay) {
+        modalOverlay.addEventListener('click', closeModal);
+    }
 
-    // Close modal with ESC key
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape' && modal.classList.contains('active')) {
             closeModal();
         }
+        if (modal.classList.contains('active') && currentImages.length > 1) {
+            if (e.key === 'ArrowLeft') {
+                navigateCarousel('prev');
+            } else if (e.key === 'ArrowRight') {
+                navigateCarousel('next');
+            }
+        }
     });
 
-    // Prevent modal content clicks from closing modal
     const modalContent = document.querySelector('.modal-content');
     if (modalContent) {
         modalContent.addEventListener('click', function(e) {
@@ -203,22 +354,18 @@ function initProjectModal() {
     }
 }
 
-function openModal(projectId) {
-    const project = projectData[projectId];
+function openModal(category, projectId) {
+    const project = findProject(category, projectId);
 
     if (!project) {
-        console.error('Project not found:', projectId);
+        console.error('Project not found:', category, projectId);
         return;
     }
 
-    // Update modal content
     updateModalContent(project);
 
-    // Show modal
     modal.classList.add('active');
     document.body.classList.add('modal-open');
-
-    // Prevent body scroll
     document.body.style.overflow = 'hidden';
 }
 
@@ -226,24 +373,22 @@ function closeModal() {
     modal.classList.remove('active');
     document.body.classList.remove('modal-open');
     document.body.style.overflow = '';
+    currentImages = [];
+    currentImageIndex = 0;
 }
 
 function updateModalContent(project) {
-    // Update title and year
     document.querySelector('.modal-title').textContent = project.title;
     document.querySelector('.modal-year').textContent = project.year;
 
-    // Update tags
     const tagsContainer = document.querySelector('.modal-tags');
     tagsContainer.innerHTML = project.tags.map(tag =>
         `<span class="tag">${tag}</span>`
     ).join('');
 
-    // Update description
     document.querySelector('.modal-description').innerHTML =
         `<p>${project.description}</p>`;
 
-    // Update details
     const detailsContainer = document.querySelector('.modal-details');
     detailsContainer.innerHTML = `
         <div class="detail-item">
@@ -256,15 +401,11 @@ function updateModalContent(project) {
         </div>
     `;
 
-    // Update images
-    const imagesContainer = document.querySelector('.modal-images');
     if (project.images && project.images.length > 0) {
-        imagesContainer.innerHTML = project.images.map(img =>
-            `<img src="${img}" alt="${project.title}" loading="lazy">`
-        ).join('');
+        initCarousel(project.images);
     } else {
-        imagesContainer.innerHTML =
-            '<div class="placeholder">Project Images</div>';
+        const imagesContainer = document.querySelector('.modal-images');
+        imagesContainer.innerHTML = '<div class="placeholder">Project Images</div>';
     }
 }
 
@@ -275,12 +416,10 @@ function updateModalContent(project) {
 function initApp() {
     console.log('Portfolio initialized');
 
-    // Initialize all features
+    renderProjects();
     initNavigation();
     initMobileMenu();
-    initProjectModal();
 
-    // Show home section by default
     const homeSection = document.getElementById('home');
     if (homeSection) {
         homeSection.classList.add('active');
@@ -301,7 +440,6 @@ if (document.readyState === 'loading') {
 // UTILITY FUNCTIONS
 // ==========================================
 
-// Debounce function for performance
 function debounce(func, wait) {
     let timeout;
     return function executedFunction(...args) {
@@ -314,7 +452,6 @@ function debounce(func, wait) {
     };
 }
 
-// Check if element is in viewport
 function isInViewport(element) {
     const rect = element.getBoundingClientRect();
     return (
@@ -325,7 +462,6 @@ function isInViewport(element) {
     );
 }
 
-// Export functions if needed (for ES6 modules)
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = {
         openModal,

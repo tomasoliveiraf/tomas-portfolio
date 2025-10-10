@@ -343,13 +343,25 @@ a {
     margin-bottom: 1rem;
     overflow: hidden;
     border-radius: 2px;
+    position: relative;
+}
+
+
+/* Remove background quando tem imagem */
+
+.project-image.has-image {
+    background: transparent;
 }
 
 .project-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
     transition: var(--transition);
+    /* Garante que não há filtros ou blend modes */
+    filter: none;
+    mix-blend-mode: normal;
 }
 
 .project-item:hover .project-image img {
@@ -622,6 +634,10 @@ a {
     width: 100%;
     height: auto;
     border-radius: 2px;
+    display: block;
+    /* Remove qualquer filtro ou efeito */
+    filter: none;
+    mix-blend-mode: normal;
 }
 
 .modal-info {
@@ -695,6 +711,120 @@ a {
 .detail-item p {
     color: #666;
     line-height: 1.6;
+}
+
+
+/* ==========================================
+   IMAGE CAROUSEL STYLES
+   ========================================== */
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    background: #f5f5f5;
+}
+
+.carousel-image-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.carousel-image {
+    max-width: 100%;
+    max-height: 80vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    border-radius: 2px;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    transition: all 0.2s ease;
+    color: #000;
+    font-weight: 300;
+    user-select: none;
+}
+
+.carousel-btn:hover {
+    background: white;
+    border-color: #000;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-btn:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+.carousel-prev {
+    left: 1rem;
+}
+
+.carousel-next {
+    right: 1rem;
+}
+
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem 0;
+}
+
+.carousel-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    padding: 0;
+}
+
+.carousel-indicator:hover {
+    border-color: #666;
+}
+
+.carousel-indicator.active {
+    background: #000;
+    border-color: #000;
+}
+
+
+/* Fix para imagens (coloração) */
+
+img {
+    image-rendering: -webkit-optimize-contrast;
+}
+
+.project-image img,
+.carousel-image,
+.modal-images img {
+    filter: none !important;
+    -webkit-filter: none !important;
 }
 
 
