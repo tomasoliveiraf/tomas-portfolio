@@ -35,6 +35,26 @@ a {
 }
 
 
+/* Fix para imagens - Remover qualquer alteração de cor */
+
+img {
+    image-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    backface-visibility: hidden;
+}
+
+.project-image img,
+.carousel-image,
+.modal-images img {
+    filter: none !important;
+    -webkit-filter: none !important;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+}
+
+
 /* ==========================================
    MOBILE MENU TOGGLE
    ========================================== */
@@ -252,9 +272,6 @@ a {
     letter-spacing: -0.03em;
 }
 
-
-/* Base da animação fadeInDown */
-
 @keyframes fadeInDown {
     from {
         opacity: 0;
@@ -266,17 +283,11 @@ a {
     }
 }
 
-
-/* Linha oculta inicialmente */
-
 .title-large .line {
     opacity: 0;
     display: inline-block;
     animation: fadeInDown 0.8s ease forwards;
 }
-
-
-/* Cada linha tem um delay diferente */
 
 .title-large .line:nth-child(1) {
     animation-delay: 0s;
@@ -346,9 +357,6 @@ a {
     position: relative;
 }
 
-
-/* Remove background quando tem imagem */
-
 .project-image.has-image {
     background: transparent;
 }
@@ -357,11 +365,9 @@ a {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
     display: block;
     transition: var(--transition);
-    /* Garante que não há filtros ou blend modes */
-    filter: none;
-    mix-blend-mode: normal;
 }
 
 .project-item:hover .project-image img {
@@ -442,9 +448,6 @@ a {
     line-height: 1.8;
 }
 
-
-/* Timeline Sections */
-
 .timeline-section {
     margin-bottom: 4rem;
 }
@@ -455,17 +458,11 @@ a {
     margin-bottom: 2.5rem;
 }
 
-
-/* Education Grid */
-
 .education-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 3rem;
 }
-
-
-/* Experience Grid */
 
 .experience-grid {
     display: grid;
@@ -623,7 +620,7 @@ a {
 }
 
 .modal-images {
-    padding: 3rem;
+    padding: 2rem;
     background: var(--hover-color);
     display: flex;
     flex-direction: column;
@@ -635,9 +632,6 @@ a {
     height: auto;
     border-radius: 2px;
     display: block;
-    /* Remove qualquer filtro ou efeito */
-    filter: none;
-    mix-blend-mode: normal;
 }
 
 .modal-info {
@@ -715,35 +709,32 @@ a {
 
 
 /* ==========================================
-   IMAGE CAROUSEL STYLES
+   IMAGE CAROUSEL STYLES (MELHORADO)
    ========================================== */
 
 .carousel-container {
     position: relative;
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 400px;
-    background: #f5f5f5;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    background: #000;
+    border-radius: 2px;
 }
 
 .carousel-image-wrapper {
     width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2rem;
 }
 
 .carousel-image {
-    max-width: 100%;
-    max-height: 80vh;
-    width: auto;
-    height: auto;
-    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
     display: block;
-    border-radius: 2px;
 }
 
 .carousel-btn {
@@ -814,17 +805,33 @@ a {
 }
 
 
-/* Fix para imagens (coloração) */
+/* ==========================================
+   VIDEO EMBED STYLES (NOVO)
+   ========================================== */
 
-img {
-    image-rendering: -webkit-optimize-contrast;
+.modal-video {
+    margin-top: 2rem;
+    width: 100%;
 }
 
-.project-image img,
-.carousel-image,
-.modal-images img {
-    filter: none !important;
-    -webkit-filter: none !important;
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 2px;
+    background: #000;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
 }
 
 
@@ -866,11 +873,9 @@ img {
    ========================================== */
 
 @media (max-width: 768px) {
-    /* Show mobile menu toggle */
     .mobile-menu-toggle {
         display: flex;
     }
-    /* Navigation mobile styles */
     .sidenav {
         width: 280px;
         transform: translateX(-100%);
@@ -887,14 +892,12 @@ img {
         font-size: 1rem;
         margin-bottom: 2.5rem;
     }
-    /* Main content adjustments */
     .main-content {
         margin-left: 0;
     }
     .section-inner {
         padding: 5rem 1.5rem 3rem;
     }
-    /* Home section */
     #home .section-inner {
         padding: 6rem 1.5rem 3rem;
     }
@@ -908,17 +911,14 @@ img {
     .intro-text br {
         display: none;
     }
-    /* Section title */
     .section-title {
         font-size: 2rem;
         margin-bottom: 2.5rem;
     }
-    /* Work grid */
     .work-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
-    /* About section */
     .about-intro {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -939,7 +939,6 @@ img {
         padding-left: 1.5rem;
         padding-bottom: 2rem;
     }
-    /* Modal adjustments */
     .modal-content {
         width: 95%;
         max-height: 95vh;
@@ -955,7 +954,7 @@ img {
         grid-template-columns: 1fr;
     }
     .modal-images {
-        padding: 2rem 1.5rem;
+        padding: 1.5rem;
     }
     .modal-info {
         padding: 2rem 1.5rem;
@@ -970,6 +969,17 @@ img {
     .tag {
         font-size: 0.75rem;
         padding: 0.3rem 0.6rem;
+    }
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+    }
+    .carousel-prev {
+        left: 0.5rem;
+    }
+    .carousel-next {
+        right: 0.5rem;
     }
 }
 
@@ -1038,7 +1048,7 @@ img {
         margin-bottom: 2rem;
     }
     .modal-images {
-        padding: 1.5rem 1.25rem;
+        padding: 1rem;
     }
     .modal-info {
         padding: 1.5rem 1.25rem;
@@ -1057,32 +1067,20 @@ img {
    UTILITY CLASSES
    ========================================== */
 
-
-/* Prevent body scroll when modal or menu is open */
-
 body.modal-open,
 body.menu-open {
     overflow: hidden;
 }
 
-
-/* Smooth scrolling */
-
 html {
     scroll-behavior: smooth;
 }
-
-
-/* Focus styles for accessibility */
 
 a:focus-visible,
 button:focus-visible {
     outline: 2px solid var(--accent-color);
     outline-offset: 2px;
 }
-
-
-/* Print styles */
 
 @media print {
     .sidenav,

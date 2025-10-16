@@ -11,7 +11,8 @@ const projectData = {
             description: 'Descrição detalhada do projeto. Aqui podes explicar o contexto, objetivos, processo criativo e resultados alcançados.',
             role: 'Designer Principal',
             areas: 'Identidade Visual, Design Editorial',
-            images: ['assets/design/winitroia1.jpg', 'assets/design/winitroia2.jpg', 'assets/design/winitroia3.jpg', 'assets/design/winitroia4.jpg']
+            images: ['assets/design/winitroia1.jpg', 'assets/design/winitroia2.jpg', 'assets/design/winitroia3.jpg', 'assets/design/winitroia4.jpg'],
+            video: 'https://youtu.be/B-UFFtwzrSo'
         },
         {
             id: 'sasuc',
@@ -21,7 +22,8 @@ const projectData = {
             description: 'Descrição do segundo projeto.',
             role: 'Communication Designer',
             areas: 'Communication Design',
-            images: []
+            images: [],
+            video: '' // Adicionar URL do YouTube embed se necessário
         },
         {
             id: 'atrevome',
@@ -31,7 +33,8 @@ const projectData = {
             description: 'Descrição do segundo projeto.',
             role: 'Graphic Designer',
             areas: 'Graphic Design',
-            images: []
+            images: [],
+            video: ''
         }
     ],
     audio: [{
@@ -42,7 +45,8 @@ const projectData = {
             description: 'Descrição do projeto musical Serendipity.',
             role: 'Producer, Mix & Master',
             areas: 'Produção Musical, Mixing, Mastering',
-            images: []
+            images: [],
+            video: '' // Pode ser Spotify embed, YouTube, etc.
         },
         {
             id: 'lamire',
@@ -52,7 +56,8 @@ const projectData = {
             description: 'Descrição do projeto Lamiré.',
             role: 'Producer, Sound Engineer',
             areas: 'Produção Musical, Sound Design',
-            images: []
+            images: [],
+            video: ''
         }
     ],
     audiovisual: [{
@@ -63,7 +68,8 @@ const projectData = {
             description: 'Descrição do projeto audiovisual.',
             role: 'Editor, Sound Designer',
             areas: 'Edição de Vídeo, Pós-produção Audio',
-            images: []
+            images: [],
+            video: '' // URL do YouTube, Vimeo, etc.
         },
         {
             id: 'alto-martir',
@@ -73,7 +79,8 @@ const projectData = {
             description: 'Descrição do projeto.',
             role: 'Sound Designer',
             areas: 'Sound Design, Audio Post-Production',
-            images: []
+            images: [],
+            video: ''
         },
         {
             id: 'carim',
@@ -83,7 +90,8 @@ const projectData = {
             description: 'Descrição do projeto.',
             role: 'Editor',
             areas: 'Edição, Color Grading',
-            images: []
+            images: [],
+            video: ''
         },
         {
             id: 'ouvir-hoje',
@@ -93,7 +101,8 @@ const projectData = {
             description: 'Descrição do projeto.',
             role: 'Sound Engineer',
             areas: 'Captação de Som, Mixing',
-            images: []
+            images: [],
+            video: ''
         }
     ]
 };
@@ -175,7 +184,7 @@ function findProject(category, projectId) {
 }
 
 // ==========================================
-// IMAGE CAROUSEL
+// IMAGE CAROUSEL (MELHORADO)
 // ==========================================
 
 function initCarousel(images) {
@@ -237,6 +246,34 @@ function navigateCarousel(direction) {
         currentImageIndex = (currentImageIndex - 1 + currentImages.length) % currentImages.length;
     }
     updateCarouselDisplay();
+}
+
+// ==========================================
+// VIDEO EMBED (NOVO)
+// ==========================================
+
+function renderVideoEmbed(videoUrl) {
+    const imagesContainer = document.querySelector('.modal-images');
+    
+    if (!videoUrl || videoUrl.trim() === '') {
+        return; // Não adiciona vídeo se não houver URL
+    }
+
+    // Cria container do vídeo
+    const videoHTML = `
+        <div class="modal-video">
+            <div class="video-container">
+                <iframe 
+                    src="${videoUrl}" 
+                    title="Project video"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    `;
+
+    imagesContainer.insertAdjacentHTML('beforeend', videoHTML);
 }
 
 // ==========================================
@@ -401,11 +438,17 @@ function updateModalContent(project) {
         </div>
     `;
 
+    // Renderiza imagens (carrossel)
     if (project.images && project.images.length > 0) {
         initCarousel(project.images);
     } else {
         const imagesContainer = document.querySelector('.modal-images');
         imagesContainer.innerHTML = '<div class="placeholder">Project Images</div>';
+    }
+
+    // Adiciona vídeo se existir
+    if (project.video && project.video.trim() !== '') {
+        renderVideoEmbed(project.video);
     }
 }
 
