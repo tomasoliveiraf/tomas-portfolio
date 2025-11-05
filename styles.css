@@ -35,23 +35,14 @@ a {
 }
 
 
-/* Fix para imagens - Remover qualquer alteração de cor */
+/* ==========================================
+   IMAGENS - SEM FILTROS
+   ========================================== */
 
 img {
-    image-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    backface-visibility: hidden;
-}
-
-.project-image img,
-.carousel-image,
-.modal-images img {
-    filter: none !important;
-    -webkit-filter: none !important;
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
-    transform: translateZ(0);
-    -webkit-transform: translateZ(0);
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 
@@ -329,7 +320,7 @@ img {
 
 
 /* ==========================================
-   WORK GRID (DESIGN & OTHER MEDIA)
+   WORK GRID
    ========================================== */
 
 .work-grid {
@@ -709,7 +700,7 @@ img {
 
 
 /* ==========================================
-   IMAGE CAROUSEL STYLES (MELHORADO)
+   CAROUSEL
    ========================================== */
 
 .carousel-container {
@@ -717,7 +708,7 @@ img {
     width: 100%;
     aspect-ratio: 4/3;
     overflow: hidden;
-    background: #000;
+    background: var(--hover-color);
     border-radius: 2px;
 }
 
@@ -727,6 +718,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
+    background: var(--hover-color);
 }
 
 .carousel-image {
@@ -806,11 +798,11 @@ img {
 
 
 /* ==========================================
-   VIDEO EMBED STYLES (NOVO)
+   VIDEO EMBED
    ========================================== */
 
 .modal-video {
-    margin-top: 2rem;
+    margin-top: 0;
     width: 100%;
 }
 
@@ -818,7 +810,6 @@ img {
     position: relative;
     width: 100%;
     padding-bottom: 56.25%;
-    /* 16:9 aspect ratio */
     height: 0;
     overflow: hidden;
     border-radius: 2px;

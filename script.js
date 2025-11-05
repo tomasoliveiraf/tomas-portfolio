@@ -7,12 +7,12 @@ const projectData = {
             id: 'winitroia',
             title: 'WINITRÓIA',
             year: '2025',
-            tags: ['Graphic Design', 'Branding'],
+            tags: ['Visual Identity', 'Branding'],
             description: 'Descrição detalhada do projeto. Aqui podes explicar o contexto, objetivos, processo criativo e resultados alcançados.',
-            role: 'Designer Principal',
-            areas: 'Identidade Visual, Design Editorial',
-            images: ['assets/design/winitroia1.jpg', 'assets/design/winitroia2.jpg', 'assets/design/winitroia3.jpg', 'assets/design/winitroia4.jpg'],
-            video: 'https://youtu.be/B-UFFtwzrSo'
+            role: 'Graphic Designer',
+            areas: 'Graphic Design, Branding',
+            images: ['assets/design/winitroia/winitroia1.jpg', 'assets/design/winitroia/winitroia2.jpg', 'assets/design/winitroia/winitroia3.jpg', 'assets/design/winitroia/winitroia4.jpg'],
+            video: ''
         },
         {
             id: 'sasuc',
@@ -23,7 +23,7 @@ const projectData = {
             role: 'Communication Designer',
             areas: 'Communication Design',
             images: [],
-            video: '' // Adicionar URL do YouTube embed se necessário
+            video: ''
         },
         {
             id: 'atrevome',
@@ -33,20 +33,20 @@ const projectData = {
             description: 'Descrição do segundo projeto.',
             role: 'Graphic Designer',
             areas: 'Graphic Design',
-            images: [],
-            video: ''
+            images: ['assets/design/atrevome/atrevome1.png', ],
+            video: 'https://youtu.be/VuI3AnUKyg4'
         }
     ],
     audio: [{
             id: 'serendipity',
             title: 'Serendipity',
             year: '2021',
-            tags: ['Music Production', 'Electronic'],
+            tags: ['Music Production', 'Pop'],
             description: 'Descrição do projeto musical Serendipity.',
-            role: 'Producer, Mix & Master',
-            areas: 'Produção Musical, Mixing, Mastering',
-            images: [],
-            video: '' // Pode ser Spotify embed, YouTube, etc.
+            role: 'Producer, Mixing Engineer',
+            areas: 'Music Production, Mixing, Mastering',
+            images: ['assets/audio/serendipity/serendipity1.jpg', ],
+            video: 'https://youtu.be/HPxAG745vqE?list=RDHPxAG745vqE'
         },
         {
             id: 'lamire',
@@ -54,54 +54,65 @@ const projectData = {
             year: '2023',
             tags: ['Music Production', 'Collaboration'],
             description: 'Descrição do projeto Lamiré.',
-            role: 'Producer, Sound Engineer',
-            areas: 'Produção Musical, Sound Design',
-            images: [],
-            video: ''
+            role: 'Producer, Mixing Engineer',
+            areas: 'Music Production, Sound Design',
+            images: ['assets/audio/lamire/lamire1.png', ],
+            video: 'https://youtu.be/5MT288F68ak'
+        },
+        {
+            id: 'escutar',
+            title: 'Listening To The Invisible',
+            year: '2025',
+            tags: ['Music Production', 'Computacional Design'],
+            description: 'Descrição do projeto Lamiré.',
+            role: 'Designer, Producer, Sound Engineer',
+            areas: 'Music Production, Sound Design',
+            images: ['assets/audio/escutar/escutar2.jpg', ],
+            video: 'https://youtu.be/B-UFFtwzrSo'
         }
     ],
     audiovisual: [{
             id: 'cuidar',
             title: 'Cuidar - Um Olhar Atento',
             year: '2019',
-            tags: ['Documentary', 'Post-Production'],
+            tags: ['Photo editing'],
             description: 'Descrição do projeto audiovisual.',
-            role: 'Editor, Sound Designer',
-            areas: 'Edição de Vídeo, Pós-produção Audio',
-            images: [],
-            video: '' // URL do YouTube, Vimeo, etc.
+            role: 'Photographer, Editor',
+            areas: 'Photography',
+            images: ['assets/other/cuidar/cuidar1.jpg', 'assets/other/cuidar/cuidar2.jpg', 'assets/other/cuidar/cuidar3.jpg', 'assets/other/cuidar/cuidar4.jpg', 'assets/other/cuidar/cuidar5.jpg', 'assets/other/cuidar/cuidar6.jpg', 'assets/other/cuidar/cuidar7.jpg', 'assets/other/cuidar/cuidar8.jpg', 'assets/other/cuidar/cuidar9.jpg', 'assets/other/cuidar/cuidar10.jpg', 'assets/other/cuidar/cuidar11.jpg', ],
+            video: ''
         },
         {
             id: 'alto-martir',
-            title: 'O Alto do Mártir',
+            title: 'Martyr: One Step Away From The Dead',
             year: '2021',
             tags: ['Film', 'Sound Design'],
             description: 'Descrição do projeto.',
-            role: 'Sound Designer',
-            areas: 'Sound Design, Audio Post-Production',
-            images: [],
-            video: ''
+            role: 'Designer, Post-Production Supervisor',
+            areas: 'Graphic design, Video Post-Production, Audio Post-Production',
+            images: ['assets/other/alto/alto1.jpg', 'assets/other/alto/alto3.jpg', 'assets/other/alto/alto4.jpg', 'assets/other/alto/alto5.jpg', ],
+            video: 'https://youtu.be/85L27l6hYl8'
         },
         {
-            id: 'carim',
-            title: 'Carim',
+            id: 'berco',
+            title: 'Rainbow Baby',
             year: '2025',
             tags: ['Short Film', 'Post-Production'],
             description: 'Descrição do projeto.',
-            role: 'Editor',
-            areas: 'Edição, Color Grading',
-            images: [],
-            video: ''
+            role: 'Designer, Editor, Mixing Engineer',
+            areas: 'Graphic Design, Video Post-Production, Audio Post-Production',
+            images: ['assets/other/berco/berco1.png'],
+            video: 'https://youtu.be/6ludLvMZLXc'
         },
         {
             id: 'ouvir-hoje',
             title: 'O Que É Que a Gente Vai Ouvir Hoje?',
             year: '2024',
             tags: ['Documentary', 'Sound'],
-            description: 'Descrição do projeto.',
+            description: 'Designer, Editor, Mixing Engineer',
             role: 'Sound Engineer',
             areas: 'Captação de Som, Mixing',
-            images: [],
+            images: ['assets/other/gente/gente1.jpg', ],
             video: ''
         }
     ]
@@ -125,6 +136,33 @@ const modalClose = document.querySelector('.modal-close');
 
 let currentImageIndex = 0;
 let currentImages = [];
+
+// ==========================================
+// FUNÇÃO PARA CONVERTER URL DO YOUTUBE PARA EMBED
+// ==========================================
+
+function convertYouTubeUrl(url) {
+    if (!url || url.trim() === '') return '';
+
+    const patterns = [
+        /(?:https?:\/\/)?(?:www\.)?youtube\.com\/watch\?v=([a-zA-Z0-9_-]+)/,
+        /(?:https?:\/\/)?(?:www\.)?youtu\.be\/([a-zA-Z0-9_-]+)/,
+        /(?:https?:\/\/)?(?:www\.)?youtube\.com\/embed\/([a-zA-Z0-9_-]+)/
+    ];
+
+    for (let pattern of patterns) {
+        const match = url.match(pattern);
+        if (match && match[1]) {
+            return `https://www.youtube.com/embed/${match[1]}`;
+        }
+    }
+
+    if (url.includes('youtube.com/embed/')) {
+        return url;
+    }
+
+    return url;
+}
 
 // ==========================================
 // RENDER PROJECTS DYNAMICALLY
@@ -184,7 +222,7 @@ function findProject(category, projectId) {
 }
 
 // ==========================================
-// IMAGE CAROUSEL (MELHORADO)
+// IMAGE CAROUSEL
 // ==========================================
 
 function initCarousel(images) {
@@ -201,9 +239,13 @@ function updateCarouselDisplay() {
         return;
     }
 
+    // Guarda o vídeo se existir
+    const existingVideo = imagesContainer.querySelector('.modal-video');
+    const videoHTML = existingVideo ? existingVideo.outerHTML : '';
+
     const showControls = currentImages.length > 1;
 
-    imagesContainer.innerHTML = `
+    const carouselHTML = `
         <div class="carousel-container">
             ${showControls ? '<button class="carousel-btn carousel-prev" aria-label="Previous image">‹</button>' : ''}
             <div class="carousel-image-wrapper">
@@ -221,6 +263,9 @@ function updateCarouselDisplay() {
         </div>
         ` : ''}
     `;
+
+    // Reconstrói mantendo o vídeo no final
+    imagesContainer.innerHTML = carouselHTML + videoHTML;
 
     if (showControls) {
         const prevBtn = imagesContainer.querySelector('.carousel-prev');
@@ -249,24 +294,30 @@ function navigateCarousel(direction) {
 }
 
 // ==========================================
-// VIDEO EMBED (NOVO)
+// VIDEO EMBED
 // ==========================================
 
 function renderVideoEmbed(videoUrl) {
     const imagesContainer = document.querySelector('.modal-images');
     
     if (!videoUrl || videoUrl.trim() === '') {
-        return; // Não adiciona vídeo se não houver URL
+        return;
     }
 
-    // Cria container do vídeo
+    const embedUrl = convertYouTubeUrl(videoUrl);
+    
+    if (!embedUrl) {
+        console.error('URL de vídeo inválida:', videoUrl);
+        return;
+    }
+
     const videoHTML = `
         <div class="modal-video">
             <div class="video-container">
                 <iframe 
-                    src="${videoUrl}" 
+                    src="${embedUrl}" 
                     title="Project video"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                     allowfullscreen>
                 </iframe>
             </div>
@@ -438,15 +489,18 @@ function updateModalContent(project) {
         </div>
     `;
 
+    // IMPORTANTE: Limpa o container de imagens completamente antes de adicionar novo conteúdo
+    const imagesContainer = document.querySelector('.modal-images');
+    imagesContainer.innerHTML = '';
+
     // Renderiza imagens (carrossel)
     if (project.images && project.images.length > 0) {
         initCarousel(project.images);
     } else {
-        const imagesContainer = document.querySelector('.modal-images');
         imagesContainer.innerHTML = '<div class="placeholder">Project Images</div>';
     }
 
-    // Adiciona vídeo se existir
+    // Adiciona vídeo se existir (sempre depois das imagens)
     if (project.video && project.video.trim() !== '') {
         renderVideoEmbed(project.video);
     }
