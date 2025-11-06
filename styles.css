@@ -114,7 +114,7 @@ img {
     font-weight: 500;
     line-height: 1.2;
     margin-bottom: 0.5rem;
-    letter-spacing: -0.02em;
+    /*letter-spacing: -0.02em;*/
     color: var(--nav-text-active);
 }
 
@@ -122,7 +122,7 @@ img {
     font-size: 1.2rem;
     color: var(--nav-text);
     font-weight: 400;
-    letter-spacing: 0.02em;
+    /*letter-spacing: 0.02em;*/
     margin-bottom: 3.5rem;
 }
 
@@ -237,47 +237,53 @@ img {
 
 
 /* ==========================================
-   HOME SECTION
+   HOME SECTION - SUBLINHADOS NAS PALAVRAS A NEGRITO
    ========================================== */
-
-#home {
-    position: relative;
-}
 
 #home .section-inner {
     display: flex;
     align-items: center;
     min-height: 100vh;
+    padding-top: 8rem;
 }
 
 .home-content {
-    max-width: 800px;
-    animation: fadeInDown 1s ease-out;
+    max-width: 900px;
 }
 
 .title-large {
-    font-size: 3.5rem;
+    font-size: 3.2rem;
     font-weight: 200;
-    line-height: 1.2;
+    line-height: 1.3;
     margin-bottom: 1rem;
-    letter-spacing: -0.03em;
 }
 
-@keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.title-large b {
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.3rem;
 }
+
+.title-large b::after {
+    content: '';
+    position: absolute;
+    left: -4px;
+    right: -4px;
+    bottom: 0;
+    height: 6px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 6' preserveAspectRatio='none'%3E%3Cpath d='M2,3 Q15,2.5 30,3.3 T60,3 T90,3.3 T120,3 T150,3.3 T180,3 T210,3.3 T240,3 T270,3.3 L298,3' stroke='%23000000' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center;
+    background-size: 100% 100%;
+    opacity: 0;
+}
+
+
+/* Animação suave das linhas - aparecem gradualmente */
 
 .title-large .line {
     opacity: 0;
     display: inline-block;
-    animation: fadeInDown 0.8s ease forwards;
+    animation: fadeInLine 0.6s ease forwards;
 }
 
 .title-large .line:nth-child(1) {
@@ -285,25 +291,62 @@ img {
 }
 
 .title-large .line:nth-child(2) {
-    animation-delay: 0.8s;
+    animation-delay: 0.6s;
 }
 
 .title-large .line:nth-child(3) {
-    animation-delay: 1.6s;
+    animation-delay: 1.2s;
 }
 
 .title-large .line:nth-child(4) {
-    animation-delay: 2.4s;
+    animation-delay: 1.8s;
 }
+
+
+/* Animação para "TOMÁS OLIVEIRA" - linha 2 */
+
+.title-large .line:nth-child(2) b::after {
+    animation: drawUnderline 0.6s ease-out 1s forwards;
+}
+
+
+/* Animação para "CROSS-MEDIA DESIGNER" - linha 3 */
+
+.title-large .line:nth-child(3) b::after {
+    animation: drawUnderline 0.8s ease-out 2s forwards;
+}
+
+
+/* Intro text também aparece suavemente */
 
 .intro-text {
     opacity: 0;
-    animation: fadeInDown 0.8s ease forwards;
-    animation-delay: 3.2s;
+    animation: fadeInLine 0.6s ease forwards;
+    animation-delay: 1.8s;
     font-size: 1.5rem;
     color: #666;
     line-height: 1.8;
     margin-top: 1rem;
+}
+
+@keyframes fadeInLine {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes drawUnderline {
+    from {
+        opacity: 0;
+        clip-path: inset(0 100% 0 0);
+    }
+    to {
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+    }
 }
 
 
@@ -314,8 +357,35 @@ img {
 .section-title {
     font-size: 2.5rem;
     font-weight: 500;
-    margin-bottom: 4rem;
-    letter-spacing: -0.02em;
+    margin-bottom: 5rem;
+    /*letter-spacing: -0.02em;*/
+    position: relative;
+    display: inline-block;
+    padding-bottom: 1rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    left: -8px;
+    right: -8px;
+    bottom: 0.2rem;
+    height: 10px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 8' preserveAspectRatio='none'%3E%3Cpath d='M2,4 Q15,3 30,4.5 T60,4 T90,4.5 T120,4 T150,4.5 T180,4 T210,4.5 T240,4 T270,4.5 L298,4' stroke='%23000000' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center;
+    background-size: 100% 100%;
+    opacity: 0;
+    animation: drawUnderline 0.8s ease-out 0.3s forwards;
+}
+
+@keyframes drawUnderline {
+    from {
+        opacity: 0;
+        clip-path: inset(0 100% 0 0);
+    }
+    to {
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+    }
 }
 
 
@@ -513,7 +583,7 @@ img {
     font-weight: 600;
     color: #999;
     margin-bottom: 0.5rem;
-    letter-spacing: 0.05em;
+    /*letter-spacing: 0.05em;*/
 }
 
 .timeline-content p {
@@ -634,7 +704,7 @@ img {
     font-size: 2rem;
     font-weight: 500;
     margin-bottom: 0.5rem;
-    letter-spacing: -0.02em;
+    /*letter-spacing: -0.02em;*/
 }
 
 .modal-year {
@@ -688,7 +758,7 @@ img {
     font-size: 0.875rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    /*letter-spacing: 0.05em;*/
     margin-bottom: 0.5rem;
     color: var(--accent-color);
 }
@@ -1086,5 +1156,132 @@ button:focus-visible {
         display: block !important;
         opacity: 1 !important;
         page-break-after: always;
+    }
+}
+
+
+/* ==========================================
+   SVG DRAWING ANIMATION - ADICIONAR NO FINAL DO STYLES.CSS
+   ========================================== */
+
+.home-svg-container {
+    position: absolute;
+    right: -40%;
+    top: 5%;
+    transform: translateY(-50%);
+    width: 100%;
+    max-width: 900px;
+    opacity: 0;
+    animation: fadeInSVG 0.8s ease forwards;
+    animation-delay: 1.6s;
+    z-index: 0;
+    pointer-events: none;
+}
+
+@keyframes fadeInSVG {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Animação de desenho para os paths do SVG */
+
+.home-svg-container svg path {
+    fill: none;
+    stroke: #000000;
+    stroke-width: 2;
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+    animation: drawSVG 5s ease-out forwards;
+    animation-delay: 0s;
+}
+
+
+/* Animação personalizada para múltiplos paths */
+
+.home-svg-container svg path:nth-child(1) {
+    animation-delay: 1.6s;
+}
+
+.home-svg-container svg path:nth-child(2) {
+    animation-delay: 1.8s;
+}
+
+.home-svg-container svg path:nth-child(3) {
+    animation-delay: 2s;
+}
+
+.home-svg-container svg path:nth-child(4) {
+    animation-delay: 2.2s;
+}
+
+.home-svg-container svg path:nth-child(5) {
+    animation-delay: 2.4s;
+}
+
+@keyframes drawSVG {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+
+/* Ajuste do layout da home para acomodar o SVG */
+
+#home .section-inner {
+    position: relative;
+}
+
+.home-content {
+    max-width: 80%;
+    position: relative;
+    z-index: 10;
+}
+
+
+/* Responsive - Tablet */
+
+@media (max-width: 1024px) {
+    .home-svg-container {
+        width: 40%;
+        right: 3%;
+    }
+    .home-content {
+        max-width: 55%;
+    }
+}
+
+
+/* Responsive - Mobile */
+
+@media (max-width: 768px) {
+    .home-svg-container {
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: none;
+        width: 80%;
+        max-width: 400px;
+        margin: 3rem auto 0;
+        opacity: 0;
+        animation: fadeInSVG 0.8s ease forwards;
+        animation-delay: 2.4s;
+    }
+    .home-content {
+        max-width: 100%;
+    }
+    #home .section-inner {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-svg-container {
+        width: 90%;
+        margin: 2rem auto 0;
     }
 }
