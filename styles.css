@@ -111,10 +111,10 @@ img {
 
 .nav-header h1 {
     font-size: 2rem;
-    font-weight: 500;
+    font-weight: 1000;
     line-height: 1.2;
     margin-bottom: 0.5rem;
-    /*letter-spacing: -0.02em;*/
+    letter-spacing: 0.02em;
     color: var(--nav-text-active);
 }
 
@@ -122,7 +122,7 @@ img {
     font-size: 1.2rem;
     color: var(--nav-text);
     font-weight: 400;
-    /*letter-spacing: 0.02em;*/
+    letter-spacing: 0.02em;
     margin-bottom: 3.5rem;
 }
 
