@@ -95,7 +95,7 @@ const projectData = {
             description: 'Descrição do projeto.',
             role: 'Producer, Mixing Engineer',
             areas: 'Music Production, Mixing, Mastering',
-            images: ['assets/audio/singles/singles1.jpg', ],
+            images: [],
             video: 'https://youtu.be/HPxAG745vqE?list=RDHPxAG745vqE'
         }
 
