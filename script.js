@@ -37,17 +37,20 @@ const projectData = {
             video: 'https://youtu.be/VuI3AnUKyg4'
         }
     ],
-    audio: [{
-            id: 'serendipity',
-            title: 'Serendipity',
-            year: '2021',
-            tags: ['Music Production', 'Pop'],
-            description: 'Descrição do projeto musical Serendipity.',
-            role: 'Producer, Mixing Engineer',
-            areas: 'Music Production, Mixing, Mastering',
-            images: ['assets/audio/serendipity/serendipity1.jpg', ],
-            video: 'https://youtu.be/HPxAG745vqE?list=RDHPxAG745vqE'
+    audio: [
+
+        {
+            id: 'escutar',
+            title: 'Listening To The Invisible',
+            year: '2025',
+            tags: ['Music Production', 'Computacional Design'],
+            description: 'Descrição do projeto Lamiré.',
+            role: 'Designer, Producer, Sound Engineer',
+            areas: 'Music Production, Sound Design',
+            images: ['assets/audio/escutar/escutar2.jpg', ],
+            video: 'https://youtu.be/B-UFFtwzrSo'
         },
+
         {
             id: 'lamire',
             title: 'Lamiré',
@@ -59,17 +62,31 @@ const projectData = {
             images: ['assets/audio/lamire/lamire1.png', ],
             video: 'https://youtu.be/5MT288F68ak'
         },
+
         {
-            id: 'escutar',
-            title: 'Listening To The Invisible',
+            id: 'esplanada',
+            title: 'Há Uma Hora na Esplanada do Navio de Espelhos',
             year: '2025',
-            tags: ['Music Production', 'Computacional Design'],
+            tags: ['Music', 'Poetry', 'Sound'],
             description: 'Descrição do projeto Lamiré.',
             role: 'Designer, Producer, Sound Engineer',
             areas: 'Music Production, Sound Design',
-            images: ['assets/audio/escutar/escutar2.jpg', ],
-            video: 'https://youtu.be/B-UFFtwzrSo'
+            images: ['assets/audio/esplanada/esplanada1.jpg', 'assets/audio/esplanada/esplanada2.jpg', ],
+            video: 'https://youtu.be/eBgwArEFQGE'
+        },
+
+        {
+            id: 'serendipity',
+            title: 'Serendipity',
+            year: '2021',
+            tags: ['Music Production', 'Pop'],
+            description: 'Descrição do projeto musical Serendipity.',
+            role: 'Producer, Mixing Engineer',
+            areas: 'Music Production, Mixing, Mastering',
+            images: ['assets/audio/serendipity/serendipity1.jpg', ],
+            video: 'https://youtu.be/HPxAG745vqE?list=RDHPxAG745vqE'
         }
+
     ],
     audiovisual: [{
             id: 'cuidar',
