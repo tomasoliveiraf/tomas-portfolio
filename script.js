@@ -7,8 +7,8 @@ const projectData = {
             id: 'winitroia',
             title: 'WINITRÓIA',
             year: '2025',
-            tags: ['Visual Identity', 'Branding'],
-            description: 'Descrição do projeto.',
+            tags: ['Wine', 'Brand', 'Visual'],
+            description: 'Freelance development of an <b>updated visual identity</b> for the wine distribution brand, <b><i>Winitróia</i></b>. The project includes the <b>modernization of the logo, iconography, utilities, among others.</b>',
             role: 'Graphic Designer',
             areas: 'Graphic Design, Branding',
             images: ['assets/design/winitroia/winitroia1.jpg', 'assets/design/winitroia/winitroia2.jpg', 'assets/design/winitroia/winitroia3.jpg', 'assets/design/winitroia/winitroia4.jpg'],
@@ -19,20 +19,22 @@ const projectData = {
             title: 'SASUC',
             year: '2024-CURRENT',
             tags: ['Branding', 'Visual Identity'],
-            description: 'Descrição do projeto.',
+            description: "My time in the communications department of the <b>Social Services of the University of Coimbra</b> consisted of expanding the newly created visual identity by developing various updated materials for the University's physical and digital media. The work carried out included various <b>posters, notices, signage, publications for social media, menus, among many others</b> - for the benefit of different departments (food, scholarships, residences, etc)",
             role: 'Communication Designer',
             areas: 'Communication Design',
             images: [],
-            video: ''
+            video: '',
+            linkText: 'WEBSITE',
+            linkUrl: 'https://www.uc.pt/sasuc/'
         },
         {
             id: 'atrevome',
             title: 'A(TREVO)-ME',
             year: '2023',
-            tags: ['Branding', 'Visual Identity'],
-            description: 'Descrição do projeto.',
+            tags: ['Brand', 'Visual', 'Social Media'],
+            description: "Brand identity (including <b>logo variations, typography & post mockups and a podcast cover</b>) developed for the social media brand “a(trevo)-me”.",
             role: 'Graphic Designer',
-            areas: 'Graphic Design',
+            areas: 'Graphic Design, Branding',
             images: ['assets/design/atrevome/atrevome1.jpg', ],
             video: 'https://youtu.be/VuI3AnUKyg4'
         }
@@ -55,12 +57,14 @@ const projectData = {
             id: 'lamire',
             title: 'Lamiré',
             year: '2023',
-            tags: ['Music Production', 'Collaboration'],
-            description: 'Descrição do projeto.',
-            role: 'Producer, Mixing Engineer',
-            areas: 'Music Production, Sound Design',
-            images: ['assets/audio/lamire/lamire1.png', ],
-            video: 'https://youtu.be/5MT288F68ak'
+            tags: ['Music', 'Pop/Rock'],
+            description: "<b>Indie Pop/Rock</b> debut studio album released under my own music project. The project includes 10 tracks that I <b>composed, produced, and mixed</b>, where I also played all the instruments. It was performed live with a band at a small launch party and several concerts. <br><br> For this album, I also developed all the <b>graphic and editorial elements (cover, CD, artwork, banners, visualizers)</b> and collaborated with my colleague <b>Micael Nisa</b> on the creation of the music video for the single 'Despassarado.'",
+            role: 'Composer, Musician, Producer, Mixing Engineer, Designer, Editor',
+            areas: 'Music Production, Music',
+            images: ['assets/audio/lamire/lamire1.png', 'assets/audio/lamire/lamire2.png', 'assets/audio/lamire/lamire3.png', ],
+            video: 'https://youtu.be/5MT288F68ak',
+            linkText: 'OUVIR ÁLBUM',
+            linkUrl: 'https://onerpm.link/220884326842'
         },
 
         {
@@ -79,12 +83,14 @@ const projectData = {
             id: 'serendipity',
             title: 'Serendipity',
             year: '2021',
-            tags: ['Music Production', 'Pop'],
-            description: 'Descrição do projeto.',
-            role: 'Producer, Mixing Engineer',
-            areas: 'Music Production, Mixing, Mastering',
+            tags: ['Music', 'Pop'],
+            description: 'Debut album by pop artist <b>Miguel Correia</b>, on which I was executive producer. I <b>produced and mixed</b> 10 of the 11 tracks written by Miguel, on which I also played all the instruments. <br><br> It was my first time working with music in English!',
+            role: 'Musician, Producer, Mixing Engineer',
+            areas: 'Music Production',
             images: ['assets/audio/serendipity/serendipity1.jpg', ],
-            video: 'https://youtu.be/HPxAG745vqE?list=RDHPxAG745vqE'
+            video: 'https://youtu.be/HPxAG745vqE?list=RDHPxAG745vqE',
+            linkText: 'OUVIR ÁLBUM',
+            linkUrl: 'https://youtube.com/playlist?list=OLAK5uy_lKosbOljM3oK3ca_vEiYVicgf_FSefivw&si=0r4M1yfTYAJhgiwQ'
         },
 
         {
@@ -96,7 +102,9 @@ const projectData = {
             role: 'Producer, Mixing Engineer',
             areas: 'Music Production, Mixing, Mastering',
             images: [],
-            video: 'https://youtu.be/HPxAG745vqE?list=RDHPxAG745vqE'
+            video: 'https://youtu.be/HPxAG745vqE?list=RDHPxAG745vqE',
+            linkText: 'PLAYLIST COM TODAS AS MÚSICAS',
+            linkUrl: 'https://open.spotify.com/playlist/5wMIlKW2ASYNKVVem0YuVL?si=03e3a695b4174f57'
         }
 
     ],
@@ -627,6 +635,7 @@ function updateModalContent(project) {
     document.querySelector('.modal-title').textContent = project.title;
     document.querySelector('.modal-year').textContent = project.year;
 
+
     const tagsContainer = document.querySelector('.modal-tags');
     tagsContainer.innerHTML = project.tags.map(tag =>
         `<span class="tag">${tag}</span>`
@@ -634,6 +643,30 @@ function updateModalContent(project) {
 
     document.querySelector('.modal-description').innerHTML =
         `<p>${project.description}</p>`;
+
+        // 1. Limpa qualquer botão de ação de um projeto anterior
+    const existingButton = modal.querySelector('.project-action-button');
+    if (existingButton) {
+        existingButton.remove();
+    }
+    
+    document.querySelector('.modal-description').innerHTML =
+        `<p>${project.description}</p>`;
+
+    // >>> COLOQUE O CÓDIGO NOVO DO BOTÃO AQUI <<<
+    // 2. Cria e insere o novo botão se os dados existirem no projeto
+    if (project.linkText && project.linkUrl) {
+        const linkButton = document.createElement('a');
+        linkButton.href = project.linkUrl;
+        linkButton.target = '_blank'; // Abrir em nova aba
+        linkButton.rel = 'noopener noreferrer';
+        linkButton.textContent = project.linkText;
+        linkButton.className = 'project-action-button'; // Classe para estilização no CSS
+        
+        // Insere o botão logo a seguir ao elemento da descrição
+        const modalDescription = document.querySelector('.modal-description');
+        modalDescription.insertAdjacentElement('afterend', linkButton); 
+    }
 
     const detailsContainer = document.querySelector('.modal-details');
     detailsContainer.innerHTML = `

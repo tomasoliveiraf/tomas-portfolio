@@ -826,6 +826,28 @@ img {
     gap: 1.5rem;
 }
 
+.project-action-button {
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    padding: 0.75em 1.5em 1em 1em;
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border: 1px solid var(--accent-color);
+    border-radius: 3px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-align: center;
+}
+
+.project-action-button:hover {
+    background-color: transparent;
+    color: var(--accent-color);
+    /* Inverte as cores no hover */
+}
+
 .detail-item strong {
     display: block;
     font-size: 0.875rem;
