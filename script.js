@@ -115,7 +115,33 @@ const projectData = {
             images: ['assets/other/gente/gente1.jpg', ],
             video: ''
         }
-    ]
+    ],
+    // NOVO BLOCO ACADEMIC
+    academic: [{
+        id: 'academic-main',
+        title: 'Academic Projects',
+        year: 'VARIOUS',
+        tags: ['Research', 'Conceptual', 'Experimental'],
+        description: 'Aqui estão reunidos todos os projetos desenvolvidos no âmbito da formação académica, englobando diversas áreas de estudo e experimentação visual e sonora.',
+        role: 'Student / Researcher',
+        areas: 'Multidisciplinary',
+        // ATENÇÃO: Confirma que estes caminhos estão corretos na tua estrutura de pastas
+        images: [
+            'assets/design/academic/academic1.jpg',
+            'assets/design/academic/academic2.jpg',
+            'assets/design/academic/academic3.jpg',
+            'assets/design/academic/academic4.jpg',
+            'assets/design/academic/academic5.jpg',
+            'assets/design/academic/academic6.jpg',
+            'assets/design/academic/academic7.jpg',
+            'assets/design/academic/academic8.jpg',
+            'assets/design/academic/academic9.jpg',
+            'assets/design/academic/academic10.jpg',
+            'assets/design/academic/academic11.jpg',
+            'assets/design/academic/academic12.jpg',
+        ],
+        video: ''
+    }]
 };
 
 // ==========================================
@@ -135,8 +161,8 @@ const lightbox = document.getElementById('imageLightbox');
 const lightboxImage = lightbox.querySelector('.lightbox-image');
 const lightboxClose = lightbox.querySelector('.lightbox-close');
 const lightboxOverlay = lightbox.querySelector('.lightbox-overlay');
-const lightboxPrev = lightbox.querySelector('.lightbox-prev'); // NOVO
-const lightboxNext = lightbox.querySelector('.lightbox-next'); // NOVO
+const lightboxPrev = lightbox.querySelector('.lightbox-prev');
+const lightboxNext = lightbox.querySelector('.lightbox-next');
 
 // ==========================================
 // CAROUSEL STATE
@@ -144,7 +170,7 @@ const lightboxNext = lightbox.querySelector('.lightbox-next'); // NOVO
 
 let currentImageIndex = 0;
 let currentImages = [];
-let currentLightboxImages = []; // NOVO: Para as imagens do lightbox
+let currentLightboxImages = [];
 
 // ==========================================
 // FUNÇÃO PARA CONVERTER URL DO YOUTUBE PARA EMBED
@@ -179,6 +205,9 @@ function convertYouTubeUrl(url) {
 
 function renderProjects() {
     Object.keys(projectData).forEach(category => {
+        // Ignora a categoria 'academic' aqui, pois é tratada por um botão separado
+        if (category === 'academic') return;
+
         const section = document.getElementById(category);
         if (!section) return;
 
@@ -389,18 +418,18 @@ function navigateLightbox(direction) {
 }
 
 function initLightbox() {
-    if (!lightbox || !lightboxClose || !lightboxOverlay || !lightboxPrev || !lightboxNext) return; // Inclui os novos botões
+    if (!lightbox || !lightboxClose || !lightboxOverlay || !lightboxPrev || !lightboxNext) return; 
 
     lightboxClose.addEventListener('click', closeLightbox);
     lightboxOverlay.addEventListener('click', closeLightbox);
     lightboxPrev.addEventListener('click', (e) => {
         e.stopPropagation(); // Impede o overlay de fechar
         navigateLightbox('prev');
-    }); // NOVO
+    }); 
     lightboxNext.addEventListener('click', (e) => {
         e.stopPropagation(); // Impede o overlay de fechar
         navigateLightbox('next');
-    }); // NOVO
+    });
 }
 
 // ==========================================
@@ -475,9 +504,15 @@ window.addEventListener('resize', function() {
 // PROJECT MODAL
 // ==========================================
 
+function openAcademicModal() {
+    // Abre o modal usando os dados que definimos em 'academic'
+    openModal('academic', 'academic-main'); 
+}
+
 function initProjectModal() {
     const projectItems = document.querySelectorAll('.project-item');
-    
+    const academicButton = document.getElementById('academicWorkButton'); // NOVO: Seleciona o botão
+
     projectItems.forEach(item => {
         const newItem = item.cloneNode(true);
         item.parentNode.replaceChild(newItem, item);
@@ -488,6 +523,10 @@ function initProjectModal() {
             openModal(category, projectId);
         });
     });
+
+    if (academicButton) { // NOVO: Adiciona o listener para o botão académico
+        academicButton.addEventListener('click', openAcademicModal);
+    }
 
     if (modalClose) {
         modalClose.addEventListener('click', closeModal);
@@ -606,7 +645,7 @@ function initApp() {
     renderProjects();
     initNavigation();
     initMobileMenu();
-    initLightbox(); // <-- ADICIONADO
+    initLightbox(); 
 
     const homeSection = document.getElementById('home');
     if (homeSection) {
