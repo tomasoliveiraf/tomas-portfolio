@@ -111,7 +111,7 @@ img {
 
 .nav-header h1 {
     font-size: 2rem;
-    font-weight: 1000;
+    font-weight: 800;
     line-height: 1.2;
     margin-bottom: 0.5rem;
     letter-spacing: 0.02em;
@@ -809,11 +809,11 @@ img {
     border: 1px solid #ddd;
     border-radius: 50%;
     font-size: 2rem;
-    line-height: 1;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-bottom: 0.20em;
     z-index: 100;
     transition: all 0.2s ease;
     color: #000;
@@ -1166,7 +1166,7 @@ button:focus-visible {
 
 .home-svg-container {
     position: absolute;
-    right: -40%;
+    right: -38%;
     top: 5%;
     transform: translateY(-50%);
     width: 100%;
@@ -1284,4 +1284,132 @@ button:focus-visible {
         width: 90%;
         margin: 2rem auto 0;
     }
+}
+
+
+/* ==========================================
+   IMAGE LIGHTBOX (Ecrã Inteiro)
+   ========================================== */
+
+.lightbox {
+    display: none;
+    /* Escondido por defeito */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3000;
+    /* Mais alto que o modal do projeto (que é 2000) */
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.lightbox.active {
+    display: flex;
+    /* Mostra quando ativo */
+    animation: fadeIn 0.3s ease;
+}
+
+.lightbox-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    /* Fundo mais escuro */
+    backdrop-filter: blur(5px);
+    cursor: pointer;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 300;
+    cursor: pointer;
+    z-index: 3003;
+    /* Alterado para 3003 (acima dos nav) */
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-close:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(90deg);
+}
+
+.lightbox-image {
+    position: relative;
+    z-index: 3001;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    /* Para a imagem caber sem cortar */
+    border-radius: 2px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    animation: modalSlideIn 0.3s ease;
+    /* Reutiliza a animação do modal */
+}
+
+
+/* ==========================================
+   IMAGE LIGHTBOX (Ecrã Inteiro) - Botões de Navegação (ADICIONADO)
+   ========================================== */
+
+.lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    /* Mais largo para ser fácil de clicar */
+    height: 60px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 3rem;
+    /* Símbolo maior */
+    display: flex;
+    /* Para centralizar o símbolo */
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 0.20em;
+    cursor: pointer;
+    z-index: 3002;
+    transition: var(--transition);
+    user-select: none;
+    /* Não permite selecionar o texto do botão */
+}
+
+.lightbox-nav:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.lightbox-prev {
+    left: 2rem;
+    /* Mais afastado da borda */
+}
+
+.lightbox-next {
+    right: 2rem;
+    /* Mais afastado da borda */
+}
+
+
+/* Ocultar botões se houver apenas uma imagem */
+
+.lightbox:not(.has-multiple-images) .lightbox-nav {
+    display: none;
 }

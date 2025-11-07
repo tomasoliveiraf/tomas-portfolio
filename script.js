@@ -130,12 +130,21 @@ const modal = document.getElementById('projectModal');
 const modalOverlay = document.querySelector('.modal-overlay');
 const modalClose = document.querySelector('.modal-close');
 
+// Elementos do Lightbox
+const lightbox = document.getElementById('imageLightbox');
+const lightboxImage = lightbox.querySelector('.lightbox-image');
+const lightboxClose = lightbox.querySelector('.lightbox-close');
+const lightboxOverlay = lightbox.querySelector('.lightbox-overlay');
+const lightboxPrev = lightbox.querySelector('.lightbox-prev'); // NOVO
+const lightboxNext = lightbox.querySelector('.lightbox-next'); // NOVO
+
 // ==========================================
 // CAROUSEL STATE
 // ==========================================
 
 let currentImageIndex = 0;
 let currentImages = [];
+let currentLightboxImages = []; // NOVO: Para as imagens do lightbox
 
 // ==========================================
 // FUNÇÃO PARA CONVERTER URL DO YOUTUBE PARA EMBED
@@ -226,7 +235,7 @@ function findProject(category, projectId) {
 // ==========================================
 
 function initCarousel(images) {
-    currentImages = images;
+    currentImages = images; // Armazena as imagens do carrossel atual
     currentImageIndex = 0;
     updateCarouselDisplay();
 }
@@ -266,6 +275,17 @@ function updateCarouselDisplay() {
 
     // Reconstrói mantendo o vídeo no final
     imagesContainer.innerHTML = carouselHTML + videoHTML;
+
+    // Tornar a imagem do carrossel clicável
+    const carouselImageEl = imagesContainer.querySelector('.carousel-image');
+    if (carouselImageEl) {
+        carouselImageEl.addEventListener('click', () => {
+            // ALTERADO: Passa o array completo de imagens e o índice atual
+            openLightbox(carouselImageEl.src, currentImages, currentImageIndex);
+        });
+        // Adiciona um cursor para indicar que é clicável
+        carouselImageEl.style.cursor = 'zoom-in';
+    }
 
     if (showControls) {
         const prevBtn = imagesContainer.querySelector('.carousel-prev');
@@ -325,6 +345,62 @@ function renderVideoEmbed(videoUrl) {
     `;
 
     imagesContainer.insertAdjacentHTML('beforeend', videoHTML);
+}
+
+// ==========================================
+// IMAGE LIGHTBOX (Ecrã Inteiro)
+// ==========================================
+
+function openLightbox(imageUrl, imagesArray, clickedIndex) {
+    if (!lightbox || !lightboxImage) return;
+
+    currentLightboxImages = imagesArray || []; // Guarda o array de imagens
+    currentImageIndex = clickedIndex || 0;     // Guarda o índice da imagem clicada
+
+    lightboxImage.src = imageUrl;
+    lightbox.classList.add('active');
+
+    // ADICIONADO: Controla a visibilidade dos botões de navegação
+    if (currentLightboxImages.length > 1) {
+        lightbox.classList.add('has-multiple-images');
+    } else {
+        lightbox.classList.remove('has-multiple-images');
+    }
+}
+
+function closeLightbox() {
+    if (!lightbox) return;
+    lightbox.classList.remove('active');
+    lightbox.classList.remove('has-multiple-images'); // Limpa a classe
+    currentLightboxImages = []; // Limpa o array
+    currentImageIndex = 0;      // Reinicia o índice
+}
+
+// ADICIONADO: Navegação para o lightbox
+function navigateLightbox(direction) {
+    if (currentLightboxImages.length === 0) return;
+
+    if (direction === 'next') {
+        currentImageIndex = (currentImageIndex + 1) % currentLightboxImages.length;
+    } else {
+        currentImageIndex = (currentImageIndex - 1 + currentLightboxImages.length) % currentLightboxImages.length;
+    }
+    lightboxImage.src = currentLightboxImages[currentImageIndex];
+}
+
+function initLightbox() {
+    if (!lightbox || !lightboxClose || !lightboxOverlay || !lightboxPrev || !lightboxNext) return; // Inclui os novos botões
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightboxOverlay.addEventListener('click', closeLightbox);
+    lightboxPrev.addEventListener('click', (e) => {
+        e.stopPropagation(); // Impede o overlay de fechar
+        navigateLightbox('prev');
+    }); // NOVO
+    lightboxNext.addEventListener('click', (e) => {
+        e.stopPropagation(); // Impede o overlay de fechar
+        navigateLightbox('next');
+    }); // NOVO
 }
 
 // ==========================================
@@ -422,10 +498,24 @@ function initProjectModal() {
     }
 
     document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && modal.classList.contains('active')) {
-            closeModal();
+        if (e.key === 'Escape') {
+            if (lightbox && lightbox.classList.contains('active')) {
+                closeLightbox(); // Fecha o lightbox primeiro
+            } else if (modal.classList.contains('active')) {
+                closeModal(); // Se o lightbox não estiver ativo, fecha o modal
+            }
         }
-        if (modal.classList.contains('active') && currentImages.length > 1) {
+        
+        // ADICIONADO: Navegação no lightbox com setas
+        if (lightbox && lightbox.classList.contains('active') && currentLightboxImages.length > 1) {
+            if (e.key === 'ArrowLeft') {
+                navigateLightbox('prev');
+            } else if (e.key === 'ArrowRight') {
+                navigateLightbox('next');
+            }
+        } 
+        // Navegação no carrossel (só funciona se o lightbox não estiver ativo)
+        else if (modal.classList.contains('active') && currentImages.length > 1) {
             if (e.key === 'ArrowLeft') {
                 navigateCarousel('prev');
             } else if (e.key === 'ArrowRight') {
@@ -461,7 +551,7 @@ function closeModal() {
     modal.classList.remove('active');
     document.body.classList.remove('modal-open');
     document.body.style.overflow = '';
-    currentImages = [];
+    currentImages = []; // Limpa as imagens do carrossel
     currentImageIndex = 0;
 }
 
@@ -516,6 +606,7 @@ function initApp() {
     renderProjects();
     initNavigation();
     initMobileMenu();
+    initLightbox(); // <-- ADICIONADO
 
     const homeSection = document.getElementById('home');
     if (homeSection) {
