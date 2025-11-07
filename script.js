@@ -46,7 +46,7 @@ const projectData = {
             description: "Brand identity (including <b>logo variations, typography & post mockups and a podcast cover</b>) developed for the social media brand “a(trevo)-me”.",
             role: 'Graphic Designer',
             areas: 'Graphic Design, Branding',
-            images: ['assets/design/atrevome/atrevome1.jpg', ],
+            images: ['assets/design/atrevome/atrevome2.jpg', 'assets/design/atrevome/atrevome3.jpg', 'assets/design/atrevome/atrevome1.jpg'],
             video: 'https://youtu.be/VuI3AnUKyg4'
         }
     ],
