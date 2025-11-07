@@ -138,6 +138,7 @@ img {
 .nav-link {
     display: inline-block;
     font-size: 1rem;
+    font-weight: 500;
     color: var(--nav-text);
     transition: var(--transition);
     position: relative;
