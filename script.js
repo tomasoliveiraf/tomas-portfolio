@@ -28,6 +28,17 @@ const projectData = {
             linkUrl: 'https://www.uc.pt/sasuc/'
         },
         {
+            id: 'artworks',
+            title: 'MUSIC ARTWORK',
+            year: '2024-CURRENT',
+            tags: ['Music', 'Artwork', 'Singles'],
+            description: "",
+            role: 'Graphic Designer',
+            areas: 'Graphic Design, Design for Music',
+            images: [],
+            video: ''
+        },
+        {
             id: 'atrevome',
             title: 'A(TREVO)-ME',
             year: '2023',
@@ -43,7 +54,7 @@ const projectData = {
 
         {
             id: 'escutar',
-            title: 'Listening To The Invisible',
+            title: 'LISTENING TO THE INVISIBLE',
             year: '2025',
             tags: ['Music Production', 'Computacional Design'],
             description: 'Descrição do projeto.',
@@ -55,7 +66,7 @@ const projectData = {
 
         {
             id: 'lamire',
-            title: 'Lamiré',
+            title: 'LAMIRÉ',
             year: '2023',
             tags: ['Music', 'Pop/Rock'],
             description: "<b>Indie Pop/Rock</b> debut studio album released under my own music project. The project includes 10 tracks that I <b>composed, produced, and mixed</b>, where I also played all the instruments. It was performed live with a band at a small launch party and several concerts. <br><br> For this album, I also developed all the <b>graphic and editorial elements (cover, CD, artwork, banners, visualizers)</b> and collaborated with my colleague <b>Micael Nisa</b> on the creation of the music video for the single 'Despassarado.'",
@@ -69,7 +80,7 @@ const projectData = {
 
         {
             id: 'esplanada',
-            title: 'Há Uma Hora na Esplanada do Navio de Espelhos',
+            title: 'HÁ UMA HORA NA ESPLANADA DO NAVIO DE ESPELHOS',
             year: '2025',
             tags: ['Music', 'Poetry', 'Sound'],
             description: 'Descrição do projeto.',
@@ -81,7 +92,7 @@ const projectData = {
 
         {
             id: 'serendipity',
-            title: 'Serendipity',
+            title: 'SERENDIPITY',
             year: '2021',
             tags: ['Music', 'Pop'],
             description: 'Debut album by pop artist <b>Miguel Correia</b>, on which I was executive producer. I <b>produced and mixed</b> 10 of the 11 tracks written by Miguel, on which I also played all the instruments. <br><br> It was my first time working with music in English!',
@@ -95,7 +106,7 @@ const projectData = {
 
         {
             id: 'singles',
-            title: 'Various Singles',
+            title: 'VARIOUS SINGLES',
             year: '2021-Present Day',
             tags: ['Music'],
             description: 'Descrição do projeto.',
@@ -110,7 +121,7 @@ const projectData = {
     ],
     audiovisual: [{
             id: 'cuidar',
-            title: 'Cuidar - Um Olhar Atento',
+            title: 'CUIDAR - UM OLHAR ATENTO',
             year: '2019',
             tags: ['Photo editing'],
             description: 'Descrição do projeto.',
@@ -121,7 +132,7 @@ const projectData = {
         },
         {
             id: 'alto-martir',
-            title: 'Martyr: One Step Away From The Dead',
+            title: 'MARTYR: ONE STEP AWAY FROM THE DEAD',
             year: '2021',
             tags: ['Film', 'Sound Design'],
             description: 'Descrição do projeto.',
@@ -132,7 +143,7 @@ const projectData = {
         },
         {
             id: 'berco',
-            title: 'Rainbow Baby',
+            title: 'RAINBOW',
             year: '2025',
             tags: ['Short Film', 'Post-Production'],
             description: 'Descrição do projeto.',
@@ -143,7 +154,7 @@ const projectData = {
         },
         {
             id: 'ouvir-hoje',
-            title: 'O Que É Que a Gente Vai Ouvir Hoje?',
+            title: 'WHAT ARE WE LISTENING TODAY?',
             year: '2024',
             tags: ['Documentary', 'Sound'],
             description: 'Descrição do projeto.',
@@ -156,7 +167,7 @@ const projectData = {
     // NOVO BLOCO ACADEMIC
     academic: [{
         id: 'academic-main',
-        title: 'Academic Projects',
+        title: 'ACADEMIC PROJECTS',
         year: 'VARIOUS',
         tags: ['Research', 'Conceptual', 'Experimental'],
         description: 'eheh',
