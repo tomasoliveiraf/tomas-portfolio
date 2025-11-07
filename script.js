@@ -33,7 +33,7 @@ const projectData = {
             description: 'Descrição do segundo projeto.',
             role: 'Graphic Designer',
             areas: 'Graphic Design',
-            images: ['assets/design/atrevome/atrevome1.png', ],
+            images: ['assets/design/atrevome/atrevome1.jpg', ],
             video: 'https://youtu.be/VuI3AnUKyg4'
         }
     ],
