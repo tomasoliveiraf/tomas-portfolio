@@ -380,7 +380,7 @@ img {
 
 @keyframes drawUnderline {
     from {
-        opacity: 0;
+        opacity: 1;
         clip-path: inset(0 100% 0 0);
     }
     to {
@@ -620,7 +620,7 @@ img {
     position: absolute;
     left: 0;
     top: 0.5rem;
-    bottom: 0.5rem;
+    height: calc(100% - 1rem);
     width: 1px;
     background: var(--border-color);
 }
