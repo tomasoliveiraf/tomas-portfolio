@@ -697,7 +697,7 @@ img {
 
 .modal-content {
     position: relative;
-    width: 90%;
+    width: 100%;
     max-width: 1200px;
     max-height: 90vh;
     background: var(--bg-color);
@@ -750,18 +750,21 @@ img {
 }
 
 .modal-images {
-    padding: 2rem;
+    padding: 1rem;
+    /* REDUZIDO de 2rem para 1rem */
     background: var(--hover-color);
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
+    box-shadow: 0 2px 8px rgba(0.04, 0.04, 0.04, 0.08);
 }
 
 .modal-images img {
     width: 100%;
     height: auto;
-    border-radius: 2px;
+    border-radius: 8px;
     display: block;
+    box-shadow: 0 2px 8px rgba(0.04, 0.04, 0.04, 0.08);
 }
 
 .modal-info {

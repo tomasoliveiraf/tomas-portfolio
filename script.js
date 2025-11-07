@@ -85,6 +85,18 @@ const projectData = {
             areas: 'Music Production, Mixing, Mastering',
             images: ['assets/audio/serendipity/serendipity1.jpg', ],
             video: 'https://youtu.be/HPxAG745vqE?list=RDHPxAG745vqE'
+        },
+
+        {
+            id: 'singles',
+            title: 'Various Singles',
+            year: '2021-Present Day',
+            tags: ['Music'],
+            description: 'Descrição do projeto musical.',
+            role: 'Producer, Mixing Engineer',
+            areas: 'Music Production, Mixing, Mastering',
+            images: ['assets/audio/singles/singles1.jpg', ],
+            video: 'https://youtu.be/HPxAG745vqE?list=RDHPxAG745vqE'
         }
 
     ],
