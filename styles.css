@@ -417,6 +417,7 @@ img {
     overflow: hidden;
     border-radius: 2px;
     position: relative;
+    border-radius: 6px;
 }
 
 .project-image.has-image {

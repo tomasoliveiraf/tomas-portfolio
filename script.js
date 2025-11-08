@@ -57,11 +57,13 @@ const projectData = {
             title: 'LISTENING TO THE INVISIBLE',
             year: '2025',
             tags: ['Music Production', 'Computacional Design'],
-            description: 'Descrição do projeto.',
+            description: "<b>Master's Thesis Project</b> in Design and Multimedia, at the Faculty of Science and Technology of the University of Coimbra, developed between May 2024 and July 2025, under the supervision of Professor <b>Mariana Seiça</b> and co-supervision of Professor <b>Amílcar Cardoso</b>.<br><br>The purpose of this dissertation is to <b>explore the potential of sound</b> - both in terms of data representation and artistic expression and interpretation - by developing a <b>sonification system</b> that uses data provided by Spotify's API to create personalized musical compositions, whose versatility is a reflection of the listening habits of a community of listeners based on their personal playlists. The system uses tools such as <b>MAX for Live and Ableton Live</b> to transcribe quantitative consumption data into musical elements, and takes the format of a <b>sound installation with a performative component</b>. This project also seeks to reflect on the role of sonification as an artistic practice based on the interpretation of data, in order to contribute to the exploration of the technique in the context of multimedia design.",
             role: 'Designer, Producer, Sound Engineer',
             areas: 'Music Production, Sound Design',
-            images: ['assets/audio/escutar/escutar2.jpg', ],
-            video: 'https://youtu.be/B-UFFtwzrSo'
+            images: ['assets/audio/escutar/escutar1.jpeg', 'assets/audio/escutar/escutar2.jpg', 'assets/audio/escutar/escutar3.jpeg', 'assets/audio/escutar/escutar4.jpeg', ],
+            video: 'https://youtu.be/B-UFFtwzrSo',
+            linkText: 'SABER MAIS',
+            linkUrl: 'https://estudogeral.uc.pt/handle/10316/120545'
         },
 
         {
@@ -72,7 +74,7 @@ const projectData = {
             description: "<b>Pop/rock</b> debut <b>studio album</b> released under my own music project, <b>Tomás Oliveira</b>. The project includes 10 tracks that I <b>composed, produced, and mixed</b>, where I also played all the instruments. It was showcased live with a band at a small launch party and several concerts. <br><br> For this album, I also developed all the <b>graphic and editorial elements (cover, CD, artwork, banners, visualizers)</b> and collaborated with my colleague <b>Micael Nisa</b> on the creation of the music video for the single 'Despassarado.'",
             role: 'Composer, Musician, Producer, Mixing Engineer, Designer, Editor',
             areas: 'Music Production, Music',
-            images: ['assets/audio/lamire/lamire1.png', 'assets/audio/lamire/lamire2.png', 'assets/audio/lamire/lamire3.png', ],
+            images: ['assets/audio/lamire/lamire1.png', 'assets/audio/lamire/lamire2.png', 'assets/audio/lamire/lamire3.png', 'assets/audio/lamire/lamire4.jpg', 'assets/audio/lamire/lamire5.jpg', 'assets/audio/lamire/lamire6.jpg', 'assets/audio/lamire/lamire7.jpg', 'assets/audio/lamire/lamire8.jpg', 'assets/audio/lamire/lamire9.jpg', 'assets/audio/lamire/lamire10.jpeg', ],
             video: 'https://youtu.be/5MT288F68ak',
             linkText: 'OUVIR ÁLBUM',
             linkUrl: 'https://onerpm.link/220884326842'
@@ -81,13 +83,15 @@ const projectData = {
         {
             id: 'esplanada',
             title: 'HÁ UMA HORA NA ESPLANADA DO NAVIO DE ESPELHOS',
-            year: '2025',
-            tags: ['Music', 'Poetry', 'Sound'],
-            description: 'Descrição do projeto.',
+            year: '2023',
+            tags: ['Music', 'Poetry', 'Sound', 'Soundscape'],
+            description: "<b><i>Há Uma Hora na Esplanada do Navio de Espelhos</i></b> is a sound experience that seeks to musically reinterpret the work and life of Mário Cesariny, and the legacy he left behind. I built this piece based not only on the author's work, but also on musical projects that were created in homage to him - through techniques such as sampling and reinterpretation, adding instrumentation created by me and even recordings of my own voice. My main goal was to combine the traditional format with a more experimental nature, as a finished product in a mixed and mastered music format, ready to be listened to on all kinds of devices. <br><br>In April 2024, the piece was included in the performance recital <b><i>Há Um Sol Esplendente nas Coisas</i></b>, produced by the Bonifrates Cooperative in partnership with <b>FCTUC's Department of Computer Engineering</b> and the <b>Penedo da Saudade Cultural Center</b>. It was also featured in the exhibition attached to the recital, where it is accompanied by the graphic artwork in the video below, created by Professor <b>Mariana Seiça</b>.",
             role: 'Designer, Producer, Sound Engineer',
             areas: 'Music Production, Sound Design',
             images: ['assets/audio/esplanada/esplanada1.jpg', 'assets/audio/esplanada/esplanada2.jpg', ],
-            video: 'https://youtu.be/eBgwArEFQGE'
+            video: 'https://youtu.be/eBgwArEFQGE',
+            linkText: 'LEARN MORE',
+            linkUrl: 'https://www.behance.net/gallery/198510387/Ha-Uma-Hora-na-Esplanada-Soundscape'
         },
 
         {
