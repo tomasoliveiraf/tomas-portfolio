@@ -123,48 +123,53 @@ const projectData = {
         }
 
     ],
-    audiovisual: [{
-            id: 'cuidar',
-            title: 'CUIDAR - UM OLHAR ATENTO',
-            year: '2019',
-            tags: ['Photo editing'],
-            description: 'Descrição do projeto.',
-            role: 'Photographer, Editor',
-            areas: 'Photography',
-            images: ['assets/other/cuidar/cuidar1.jpg', 'assets/other/cuidar/cuidar2.jpg', 'assets/other/cuidar/cuidar3.jpg', 'assets/other/cuidar/cuidar4.jpg', 'assets/other/cuidar/cuidar5.jpg', 'assets/other/cuidar/cuidar6.jpg', 'assets/other/cuidar/cuidar7.jpg', 'assets/other/cuidar/cuidar8.jpg', 'assets/other/cuidar/cuidar9.jpg', 'assets/other/cuidar/cuidar10.jpg', 'assets/other/cuidar/cuidar11.jpg', ],
-            video: ''
-        },
-        {
-            id: 'alto-martir',
-            title: 'MARTYR: ONE STEP AWAY FROM THE DEAD',
-            year: '2021',
-            tags: ['Film', 'Sound Design'],
-            description: 'Descrição do projeto.',
-            role: 'Designer, Post-Production Supervisor',
-            areas: 'Graphic design, Video Post-Production, Audio Post-Production',
-            images: ['assets/other/alto/alto1.jpg', 'assets/other/alto/alto3.jpg', 'assets/other/alto/alto4.jpg', 'assets/other/alto/alto5.jpg', ],
-            video: 'https://youtu.be/85L27l6hYl8'
-        },
-        {
-            id: 'berco',
-            title: 'RAINBOW',
-            year: '2025',
-            tags: ['Short Film', 'Post-Production'],
-            description: 'Descrição do projeto.',
-            role: 'Designer, Editor, Mixing Engineer',
-            areas: 'Graphic Design, Video Post-Production, Audio Post-Production',
-            images: ['assets/other/berco/berco1.png'],
-            video: 'https://youtu.be/6ludLvMZLXc'
-        },
+    audiovisual: [
+
         {
             id: 'ouvir-hoje',
             title: 'WHAT ARE WE LISTENING TODAY?',
-            year: '2024',
+            year: 'Short Film, 2024',
             tags: ['Documentary', 'Sound'],
             description: 'Descrição do projeto.',
             role: 'Sound Director, Editor',
             areas: 'Captação de Som, Mixing',
-            images: ['assets/other/gente/gente1.jpg', ],
+            images: ['assets/other/gente/gente9.jpg', 'assets/other/gente/gente2.jpg', 'assets/other/gente/gente3.jpg', 'assets/other/gente/gente4.jpg', 'assets/other/gente/gente5.jpg', 'assets/other/gente/gente6.jpg', 'assets/other/gente/gente7.jpg', 'assets/other/gente/gente8.jpg', 'assets/other/gente/gente10.jpg', ],
+            video: ''
+        },
+
+        {
+            id: 'berco',
+            title: 'RAINBOW BABY',
+            year: 'Short Film, 2023',
+            tags: ['Short Film', 'Post-Production'],
+            description: 'Descrição do projeto.',
+            role: 'Designer, Editor, Mixing Engineer',
+            areas: 'Graphic Design, Video Post-Production, Audio Post-Production',
+            images: ['assets/other/berco/berco1.jpg', 'assets/other/berco/berco3.jpg', 'assets/other/berco/berco5.jpg', 'assets/other/berco/berco6.jpg', ],
+            video: 'https://youtu.be/6ludLvMZLXc'
+        },
+
+        {
+            id: 'alto-martir',
+            title: 'MARTYR: ONE STEP AWAY FROM THE DEAD',
+            year: 'Short Film, 2021',
+            tags: ['Film', 'Sound Design'],
+            description: 'Descrição do projeto.',
+            role: 'Designer, Post-Production Supervisor',
+            areas: 'Graphic design, Video Post-Production, Audio Post-Production',
+            images: ['assets/other/alto/alto1.jpg', 'assets/other/alto/alto3.jpg', 'assets/other/alto/alto2.jpg', 'assets/other/alto/alto4.jpg', 'assets/other/alto/alto5.jpg', 'assets/other/alto/alto6.jpg', 'assets/other/alto/alto7.jpg', 'assets/other/alto/alto8.jpg', 'assets/other/alto/alto9.jpg', ],
+            video: 'https://youtu.be/85L27l6hYl8'
+        },
+
+        {
+            id: 'cuidar',
+            title: 'CUIDAR - UM OLHAR ATENTO',
+            year: 'Photographic Exhibition, 2019',
+            tags: ['Photo editing'],
+            description: 'During my time as a Visual Arts student at <I>Liceu Alves Martins</I> in Viseu (more specifically, in the 12th grade), a partnership between the school and the local health center <b><I>Casa de Saúde São Mateus</i></b> came about through the Multimedia Workshop subject, which gave three students the opportunity to hold a photographic exhibition to celebrate the first anniversary of the <I>Casa de Saúde São Mateus</I> Convalescence Unit. Thus, in January 2020, the exhibition <b><I>Cuidar - Um Olhar Atento</I></b> by André Gonçalves, Gonçalo Figueiredo and Tomás Oliveira was born.<br><br>Later, in order to enrich our project, we were asked to return to the <I>Casa de Saúde</I> in order to photograph the entire hospital, since the first wave of photographs was only aimed at the most recent Unit. This gave rise to a new range of photographic material, completing the exhibition.<br>The photographs were exhibited in <b>physical format</b> in the Convalescence Unit, and a conference was organized to inaugurate the exhibition.',
+            role: 'Photographer, Editor',
+            areas: 'Photography',
+            images: ['assets/other/cuidar/cuidar1.jpg', 'assets/other/cuidar/cuidar2.jpg', 'assets/other/cuidar/cuidar3.jpg', 'assets/other/cuidar/cuidar4.jpg', 'assets/other/cuidar/cuidar5.jpg', 'assets/other/cuidar/cuidar6.jpg', 'assets/other/cuidar/cuidar7.jpg', 'assets/other/cuidar/cuidar8.jpg', 'assets/other/cuidar/cuidar9.jpg', 'assets/other/cuidar/cuidar10.jpg', 'assets/other/cuidar/cuidar11.jpg', 'assets/other/cuidar/cuidar12.jpg'],
             video: ''
         }
     ],
