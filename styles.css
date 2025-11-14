@@ -176,6 +176,16 @@ img {
 .social-links a {
     font-size: 0.875rem;
     color: var(--nav-text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.social-links a svg {
+    width: 24px;
+    height: 24px;
+    transition: var(--transition);
 }
 
 .social-links a:hover {
