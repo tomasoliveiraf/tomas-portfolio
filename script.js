@@ -116,8 +116,8 @@ const projectData = {
             description: 'Recording, production, instrumentation, mixing, and mastering of various individual tracks, released as singles by different artists.',
             role: 'Producer, Mixing Engineer',
             areas: 'Music Production, Mixing, Mastering',
-            images: [],
-            video: 'https://youtu.be/HPxAG745vqE?list=RDHPxAG745vqE',
+            images: ['assets/audio/singles/singles2.png', ],
+            video: 'https://youtu.be/JdPMcDybYcU?list=RDJdPMcDybYcU',
             linkText: 'PLAYLIST WITH ALL OF THE SONGS',
             linkUrl: 'https://open.spotify.com/playlist/5wMIlKW2ASYNKVVem0YuVL?si=03e3a695b4174f57'
         }
