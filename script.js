@@ -11,7 +11,7 @@ const projectData = {
             description: 'Freelance development of an <b>updated visual identity</b> for the wine distribution brand, <b><i>Winitróia</i></b>. The project includes the <b>modernization of the logo, iconography, utilities, among others.</b>',
             role: 'Graphic Designer',
             areas: 'Graphic Design, Branding',
-            images: ['assets/design/winitroia/winitroia1.jpg', 'assets/design/winitroia/winitroia2.jpg', 'assets/design/winitroia/winitroia3.jpg', 'assets/design/winitroia/winitroia4.jpg'],
+            images: ['assets/design/winitroia/winitroia1.jpg', 'assets/design/winitroia/winitroia2.jpg', 'assets/design/winitroia/winitroia3.jpg', 'assets/design/winitroia/winitroia4.jpg', 'assets/design/winitroia/winitroia5.jpg', 'assets/design/winitroia/winitroia6.jpg', 'assets/design/winitroia/winitroia7.jpg', 'assets/design/winitroia/winitroia8.jpg', 'assets/design/winitroia/winitroia9.jpg', 'assets/design/winitroia/winitroia10.jpg', 'assets/design/winitroia/winitroia11.jpg', 'assets/design/winitroia/winitroia12.jpg', 'assets/design/winitroia/winitroia13.jpg', ],
             video: ''
         },
         {
@@ -32,10 +32,10 @@ const projectData = {
             title: 'MUSIC ARTWORK',
             year: '2024-CURRENT',
             tags: ['Music', 'Artwork', 'Singles'],
-            description: "Design for music. Development of diverse visual universes for different music projects — including cover artworks, banners, social media content, etc.<br><br>Among many, I highlight:<br>• <b><i>Renaissance</i></b>, single by <b>Joana Sobral<b>; <br>",
+            description: "Design for music. Development of diverse visual universes for different music projects — including cover artworks, banners, social media content, etc.<br><br>Along some of my own music, my work in this field features:<br>• <b><i>Renaissance</i></b>, single by <b>Joana Sobral</b>; <br> • <b><i>Tempo Fugaz</i></b>, single by <b>Joana Sobral</b>; <br>• <b><i>Recomeça</i></b>, single by <b>Clã João Garcia</b>; <br>• <b><i>Oceans (Onde os Meus Pés Podem Falhar)</i></b>, single by <b>Clã João Garcia</b>; <br>",
             role: 'Graphic Designer',
             areas: 'Graphic Design, Design for Music',
-            images: [],
+            images: ['assets/design/artworks/artworks1.jpg', 'assets/design/artworks/artworks2.jpg', 'assets/design/artworks/artworks3.jpg', 'assets/design/artworks/artworks4.jpg', 'assets/design/artworks/artworks5.jpg', ],
             video: ''
         },
         {
@@ -55,35 +55,35 @@ const projectData = {
         {
             id: 'escutar',
             title: 'LISTENING TO THE INVISIBLE',
-            year: '2025',
+            year: "Master's Thesis, 2025",
             tags: ['Music Production', 'Computacional Design'],
             description: "<b>Master's Thesis Project</b> in Design and Multimedia, at the Faculty of Science and Technology of the University of Coimbra, developed between May 2024 and July 2025, under the supervision of Professor <b>Mariana Seiça</b> and co-supervision of Professor <b>Amílcar Cardoso</b>.<br><br>The purpose of this dissertation is to <b>explore the potential of sound</b> - both in terms of data representation and artistic expression and interpretation - by developing a <b>sonification system</b> that uses data provided by Spotify's API to create personalized musical compositions, whose versatility is a reflection of the listening habits of a community of listeners based on their personal playlists. The system uses tools such as <b>MAX for Live and Ableton Live</b> to transcribe quantitative consumption data into musical elements, and takes the format of a <b>sound installation with a performative component</b>. This project also seeks to reflect on the role of sonification as an artistic practice based on the interpretation of data, in order to contribute to the exploration of the technique in the context of multimedia design.",
             role: 'Designer, Producer, Sound Engineer',
             areas: 'Music Production, Sound Design',
             images: ['assets/audio/escutar/escutar1.jpeg', 'assets/audio/escutar/escutar2.jpg', 'assets/audio/escutar/escutar3.jpeg', 'assets/audio/escutar/escutar4.jpeg', ],
             video: 'https://youtu.be/B-UFFtwzrSo',
-            linkText: 'SABER MAIS',
+            linkText: 'LEARN MORE',
             linkUrl: 'https://estudogeral.uc.pt/handle/10316/120545'
         },
 
         {
             id: 'lamire',
             title: 'LAMIRÉ',
-            year: '2023',
+            year: 'Album, 2023',
             tags: ['Music', 'Pop/Rock'],
             description: "<b>Pop/rock</b> debut <b>studio album</b> released under my own music project, <b>Tomás Oliveira</b>. The project includes 10 tracks that I <b>composed, produced, and mixed</b>, where I also played all the instruments. It was showcased live with a band at a small launch party and several concerts. <br><br> For this album, I also developed all the <b>graphic and editorial elements (cover, CD, artwork, banners, visualizers)</b> and collaborated with my colleague <b>Micael Nisa</b> on the creation of the music video for the single 'Despassarado.'",
             role: 'Composer, Musician, Producer, Mixing Engineer, Designer, Editor',
             areas: 'Music Production, Music',
             images: ['assets/audio/lamire/lamire1.png', 'assets/audio/lamire/lamire2.png', 'assets/audio/lamire/lamire3.png', 'assets/audio/lamire/lamire4.jpg', 'assets/audio/lamire/lamire5.jpg', 'assets/audio/lamire/lamire6.jpg', 'assets/audio/lamire/lamire7.jpg', 'assets/audio/lamire/lamire8.jpg', 'assets/audio/lamire/lamire9.jpg', 'assets/audio/lamire/lamire10.jpeg', ],
             video: 'https://youtu.be/5MT288F68ak',
-            linkText: 'OUVIR ÁLBUM',
+            linkText: 'LISTEN TO THE ALBUM',
             linkUrl: 'https://onerpm.link/220884326842'
         },
 
         {
             id: 'esplanada',
             title: 'HÁ UMA HORA NA ESPLANADA DO NAVIO DE ESPELHOS',
-            year: '2023',
+            year: 'Soundscape, 2023',
             tags: ['Music', 'Poetry', 'Sound', 'Soundscape'],
             description: "<b><i>Há Uma Hora na Esplanada do Navio de Espelhos</i></b> is a sound experience that seeks to musically reinterpret the work and life of Mário Cesariny, and the legacy he left behind. I built this piece based not only on the author's work, but also on musical projects that were created in homage to him - through techniques such as sampling and reinterpretation, adding instrumentation created by me and even recordings of my own voice. My main goal was to combine the traditional format with a more experimental nature, as a finished product in a mixed and mastered music format, ready to be listened to on all kinds of devices. <br><br>In April 2024, the piece was included in the performance recital <b><i>Há Um Sol Esplendente nas Coisas</i></b>, produced by the Bonifrates Cooperative in partnership with <b>FCTUC's Department of Computer Engineering</b> and the <b>Penedo da Saudade Cultural Center</b>. It was also featured in the exhibition attached to the recital, where it is accompanied by the graphic artwork in the video below, created by Professor <b>Mariana Seiça</b>.",
             role: 'Designer, Producer, Sound Engineer',
@@ -97,14 +97,14 @@ const projectData = {
         {
             id: 'serendipity',
             title: 'SERENDIPITY',
-            year: '2021',
+            year: 'Album, 2021',
             tags: ['Music', 'Pop'],
             description: 'Debut album by pop artist <b>Miguel Correia</b>, on which I was the executive producer. I <b>produced and mixed</b> 10 of the 11 tracks written by Miguel, on which I also played all the instruments. <br><br> It was my first time working with music in English!',
             role: 'Musician, Producer, Mixing Engineer',
             areas: 'Music Production',
             images: ['assets/audio/serendipity/serendipity1.jpg', ],
             video: 'https://youtu.be/HPxAG745vqE?list=RDHPxAG745vqE',
-            linkText: 'OUVIR ÁLBUM',
+            linkText: 'LISTEN TO THE ALBUM',
             linkUrl: 'https://youtube.com/playlist?list=OLAK5uy_lKosbOljM3oK3ca_vEiYVicgf_FSefivw&si=0r4M1yfTYAJhgiwQ'
         },
 
@@ -118,7 +118,7 @@ const projectData = {
             areas: 'Music Production, Mixing, Mastering',
             images: [],
             video: 'https://youtu.be/HPxAG745vqE?list=RDHPxAG745vqE',
-            linkText: 'PLAYLIST COM TODAS AS MÚSICAS',
+            linkText: 'PLAYLIST WITH ALL OF THE SONGS',
             linkUrl: 'https://open.spotify.com/playlist/5wMIlKW2ASYNKVVem0YuVL?si=03e3a695b4174f57'
         }
 
