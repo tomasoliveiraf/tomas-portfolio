@@ -22,7 +22,7 @@ const projectData = {
             description: "My time in the communications department of the <b>Social Services of the University of Coimbra</b> consisted of expanding the newly created visual identity by developing various updated materials for the University's physical and digital media. The work carried out included various <b>posters, notices, signage, publications for social media, menus, among many others</b> - for the benefit of different departments (food, scholarships, residences, etc)",
             role: 'Communication Designer',
             areas: 'Communication Design',
-            images: ['assets/design/sasuc/sasuc1.jpg', 'assets/design/sasuc/sasuc2.jpg'],
+            images: ['assets/design/sasuc/sasuc3.jpg', 'assets/design/sasuc/sasuc4.jpg', 'assets/design/sasuc/sasuc2.jpg', 'assets/design/sasuc/sasuc1.jpg'],
             video: '',
             linkText: 'WEBSITE',
             linkUrl: 'https://www.uc.pt/sasuc/'
