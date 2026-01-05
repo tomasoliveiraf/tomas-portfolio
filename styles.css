@@ -1366,13 +1366,13 @@ button:focus-visible {
 
 @media (max-width: 768px) {
     .home-svg-container {
-        position: relative;
-        right: auto;
-        top: auto;
+        position: absolute;
+        top: -15%;
+        bottom: -20%;
+        left: -35%;
         transform: none;
-        width: 80%;
-        max-width: 400px;
-        margin: 3rem auto 0;
+        width: 170%;
+        max-width: none;
         opacity: 0;
         animation: fadeInSVG 0.8s ease forwards;
         animation-delay: 2.4s;
@@ -1382,13 +1382,22 @@ button:focus-visible {
     }
     #home .section-inner {
         flex-direction: column;
+        position: relative;
+        overflow: hidden;
+        min-height: 100vh;
+        max-height: 100vh;
+    }
+    #home.section {
+        height: 100vh;
+        overflow: hidden;
     }
 }
 
 @media (max-width: 480px) {
     .home-svg-container {
-        width: 90%;
-        margin: 2rem auto 0;
+        right: -85%;
+        bottom: -25%;
+        width: 200%;
     }
 }
 
