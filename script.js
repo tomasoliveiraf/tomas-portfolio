@@ -22,7 +22,7 @@ const projectData = {
             description: "My time in the communications department of the <b>Social Services of the University of Coimbra</b> consisted of expanding the newly created visual identity by developing various updated materials for the University's physical and digital media. The work carried out included various <b>posters, notices, signage, social media content, food menus, among many others</b> - for the benefit of different departments (food, scholarships, residences, etc). I was also heavily involved in creating strategies to promote many initiatives, often through video production for social media and for the website.",
             role: 'Communication Designer',
             areas: 'Communication Design, Video Production',
-            images: ['assets/design/sasuc/sasuc3.jpg', 'assets/design/sasuc/sasuc4.jpg', 'assets/design/sasuc/sasuc2.jpg', 'assets/design/sasuc/sasuc1.jpg'],
+            images: ['assets/design/sasuc/sasuc1.jpg', 'assets/design/sasuc/sasuc4.jpg', 'assets/design/sasuc/sasuc3.jpg', 'assets/design/sasuc/sasuc2.jpg'],
             video: '',
             linkText: 'SEE MORE',
             linkUrl: 'https://www.instagram.com/sas_uc/'
