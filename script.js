@@ -130,11 +130,13 @@ const projectData = {
             title: 'WHAT ARE WE LISTENING TODAY?',
             year: 'Short Film, 2024',
             tags: ['Documentary', 'Sound'],
-            description: 'Descrição do projeto.',
+            description: "<b>Short documentary film</b> directed by Carolina Costa, in which I worked as <b>sound director and head of post-production</b>. In addition, I also worked as a <b>designer</b>, responsible for creating the film's graphic aesthetics (posters, graphics, etc.). <br>The film was featured in the 2024 edition of the <b><i>Encontros de Cinema de Viana</i></b> film festival <br><br> <i>Radio São Miguel 93.4 FM enters the homes and vehicles of its listeners, it is their daily companion. On the other side of the microphone, Manuela Freire is the voice fighting loneliness. She guides us through the corners of this radio station and its history.</i>",
             role: 'Sound Director, Editor',
-            areas: 'Captação de Som, Mixing',
+            areas: 'Sound design, Video Post-Production, Audio Post-Production, Graphic Design',
             images: ['assets/other/gente/gente9.jpg', 'assets/other/gente/gente2.jpg', 'assets/other/gente/gente3.jpg', 'assets/other/gente/gente4.jpg', 'assets/other/gente/gente5.jpg', 'assets/other/gente/gente6.jpg', 'assets/other/gente/gente7.jpg', 'assets/other/gente/gente8.jpg', 'assets/other/gente/gente10.jpg', ],
-            video: ''
+            video: '',
+            linkText: 'LEARN MORE',
+            linkUrl: 'https://letterboxd.com/film/o-que-e-que-a-gente-vai-ouvir-hoje/'
         },
 
         {

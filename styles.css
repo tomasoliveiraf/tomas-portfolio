@@ -1367,7 +1367,7 @@ button:focus-visible {
 @media (max-width: 768px) {
     .home-svg-container {
         position: absolute;
-        top: -15%;
+        top: -10%;
         bottom: -20%;
         left: -35%;
         transform: none;
