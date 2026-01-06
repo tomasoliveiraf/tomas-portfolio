@@ -19,13 +19,13 @@ const projectData = {
             title: 'SASUC',
             year: '2024-CURRENT',
             tags: ['Branding', 'Visual Identity'],
-            description: "My time in the communications department of the <b>Social Services of the University of Coimbra</b> consisted of expanding the newly created visual identity by developing various updated materials for the University's physical and digital media. The work carried out included various <b>posters, notices, signage, publications for social media, menus, among many others</b> - for the benefit of different departments (food, scholarships, residences, etc). I was also heavily involved in creating strategies to promote various initiatives, often through video production for social media and the website.",
+            description: "My time in the communications department of the <b>Social Services of the University of Coimbra</b> consisted of expanding the newly created visual identity by developing various updated materials for the University's physical and digital media. The work carried out included various <b>posters, notices, signage, social media content, food menus, among many others</b> - for the benefit of different departments (food, scholarships, residences, etc). I was also heavily involved in creating strategies to promote many initiatives, often through video production for social media and for the website.",
             role: 'Communication Designer',
-            areas: 'Communication Design',
+            areas: 'Communication Design, Video Production',
             images: ['assets/design/sasuc/sasuc3.jpg', 'assets/design/sasuc/sasuc4.jpg', 'assets/design/sasuc/sasuc2.jpg', 'assets/design/sasuc/sasuc1.jpg'],
             video: '',
-            linkText: 'WEBSITE',
-            linkUrl: 'https://www.uc.pt/sasuc/'
+            linkText: 'SEE MORE',
+            linkUrl: 'https://www.instagram.com/sas_uc/'
         },
         {
             id: 'artworks',
@@ -129,7 +129,7 @@ const projectData = {
             id: 'ouvir-hoje',
             title: 'WHAT ARE WE LISTENING TODAY?',
             year: 'Short Film, 2024',
-            tags: ['Documentary', 'Sound'],
+            tags: ['Short Film', 'Sound'],
             description: "<b>Short documentary film</b> directed by Carolina Costa, in which I worked as <b>sound director and head of post-production</b>, also handling the sound mixing. In addition, I also worked as <b>designer</b>, responsible for creating the film's graphic aesthetics (posters, graphics, etc.). <br>The film was featured in the 2024 edition of the <b><i>Encontros de Cinema de Viana</i></b> film festival. <br><br> <i>Radio São Miguel 93.4 FM enters the homes and vehicles of its listeners, it is their daily companion. On the other side of the microphone, Manuela Freire is the voice fighting loneliness. She guides us through the corners of this radio station and its history.</i>",
             role: 'Sound Director, Editor',
             areas: 'Sound design, Video Post-Production, Audio Post-Production, Graphic Design',
@@ -137,6 +137,20 @@ const projectData = {
             video: '',
             linkText: 'LEARN MORE',
             linkUrl: 'https://letterboxd.com/film/o-que-e-que-a-gente-vai-ouvir-hoje/'
+        },
+
+        {
+            id: 'la-larai',
+            title: 'LA LARAI',
+            year: 'Short Film, 2023',
+            tags: ['Short Film', 'Post-Production'],
+            description: "<b>Short documentary film</b> directed by Carolina Costa, made in 2022, as part of the <b><i>Plano Frontal Film Residency</i></b> by the <b>AO NORTE</b> Audiovisual Production and Animation Association, during the <b><i>MDOC - Melgaço International Documentary Festival</i></b>. I worked as sound director and main editor, also taking on the role of designer — creating the aesthetics of the posters and related materials.<br> The film was presented in 2023, at the following year's edition of the festival.<br><br>From an early age, José Celeiro has found inspiration for life in music. Today, he shares this passion by opening the doors of his “Casa das Concertinas” to anyone who wants to come in. ",
+            role: 'Sound Director, Editor',
+            areas: 'Sound design, Video Post-Production, Audio Post-Production, Graphic Design',
+            images: ['assets/other/larai/larai1.jpg', 'assets/other/larai/larai2.png', 'assets/other/larai/larai11.jpg', 'assets/other/larai/larai8.png', 'assets/other/larai/larai12.jpg', 'assets/other/larai/larai13.jpg', 'assets/other/larai/larai14.jpg', ],
+            video: '',
+            linkText: 'WATCH',
+            linkUrl: 'https://lugardoreal.com/video/la-larai'
         },
 
         {
@@ -155,7 +169,7 @@ const projectData = {
             id: 'alto-martir',
             title: 'MARTYR: ONE STEP AWAY FROM THE DEAD',
             year: 'Short Film, 2021',
-            tags: ['Film', 'Sound Design'],
+            tags: ['Short Film', 'Sound Design'],
             description: "<b>Short documentary film</b> directed by Carolina Costa, on which I worked as <b>editor</b>. In addition, I also handled the <b>design</b>, creating the film's graphic aesthetic (posters, graphics, social media content, etc.).<br>The film was featured in the 2021 editions of the <b><i>DocLisboa</i></b> and <b><i>Caminhos do Cinema Português</i></b> film festivals.<br><br><i>In a small village in the countryside of Portugal, living one step away from the dead holds unimaginable secrets.</i>",
             role: 'Designer, Editor',
             areas: 'Graphic design, Video Post-Production, Audio Post-Production',
@@ -175,16 +189,15 @@ const projectData = {
             video: ''
         }
     ],
-    // NOVO BLOCO ACADEMIC
+
     academic: [{
         id: 'academic-main',
         title: 'ACADEMIC PROJECTS',
         year: 'VARIOUS',
-        tags: ['Research', 'Conceptual', 'Experimental'],
-        description: 'eheh',
-        role: 'Student / Researcher',
-        areas: 'Multidisciplinary',
-        // ATENÇÃO: Confirma que estes caminhos estão corretos na tua estrutura de pastas
+        tags: ['Multidisciplinary', 'Cross-Media'],
+        description: "During my studies in the two <b>Design & Multimedia</b> cycles offered by the Faculty of Science and Technology at the University of Coimbra (Bachelor's and Master's degrees), I developed several projects that I particularly enjoyed. Due to the variety of areas taught in the course, the projects (each individually described in the accompanying image) cover a range of fields, from editorial to computational design.",
+        role: 'Student, Designer',
+        areas: 'Graphic Design, Editorial Design, Computational Design, Sound Design, Audiovisual Production, Interaction Design',
         images: [
             'assets/design/academic/academic1.jpg',
             'assets/design/academic/academic2.jpg',
