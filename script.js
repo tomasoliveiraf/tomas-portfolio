@@ -195,7 +195,7 @@ const projectData = {
         title: 'ACADEMIC PROJECTS',
         year: 'VARIOUS',
         tags: ['Multidisciplinary', 'Cross-Media'],
-        description: "During my studies in the two <b>Design & Multimedia</b> cycles offered by the Faculty of Science and Technology at the University of Coimbra (Bachelor's and Master's degrees), I developed several projects that I particularly enjoyed. Due to the variety of areas taught in the course, the projects (each individually described in the accompanying image) cover a range of fields, from editorial to computational design.",
+        description: "During the two <b>Design & Multimedia</b> cycles offered by the Faculty of Science and Technology at the University of Coimbra (Bachelor's and Master's degrees), I developed several projects that I particularly enjoyed. Due to the variety of areas taught in the course, the projects (each individually described in the accompanying image) cover a range of fields, from editorial to computational design.",
         role: 'Student, Designer',
         areas: 'Graphic Design, Editorial Design, Computational Design, Sound Design, Audiovisual Production, Interaction Design',
         images: [
