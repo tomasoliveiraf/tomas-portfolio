@@ -1378,7 +1378,12 @@ button:focus-visible {
         animation-delay: 2.4s;
     }
     .home-content {
+        margin-top: 12%;
+        margin-left: 2%;
         max-width: 100%;
+    }
+    .title-large {
+        font-size: 140%;
     }
     #home .section-inner {
         flex-direction: column;
