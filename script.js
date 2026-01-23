@@ -29,10 +29,10 @@ const projectData = {
         },
         {
             id: 'artworks',
-            title: 'MUSIC ARTWORK',
+            title: 'DESIGN FOR MUSIC',
             year: '2024-CURRENT',
             tags: ['Music', 'Artwork', 'Singles'],
-            description: "Design for music. Development of diverse visual universes for different music projects — including cover artworks, banners, social media content, etc.<br><br>Along some of my own music, my work in this field features:<br>• <b><i>Renaissance</i></b>, single by <b>Joana Sobral</b>; <br> • <b><i>Tempo Fugaz</i></b>, single by <b>Joana Sobral</b>; <br>• <b><i>Recomeça</i></b>, single by <b>Clã João Garcia</b>; <br>• <b><i>Oceans (Onde os Meus Pés Podem Falhar)</i></b>, single by <b>Clã João Garcia</b>; <br>",
+            description: "With a particular interest in the translation of music into visual language, I have been working on the development of graphic identities for several individual music projects, focusing on the faithful visual interpretation of music through media such as cover artworks, banners, and social media content.<br><br>Along some of my own music, my work in this field features examples like:<br>• <b><i>Renaissance</i></b>, single by <b>Joana Sobral</b>; <br> • <b><i>Tempo Fugaz</i></b>, single by <b>Joana Sobral</b>; <br>• <b><i>Recomeça</i></b>, single by <b>Clã João Garcia</b>; <br>• <b><i>Oceans (Onde os Meus Pés Podem Falhar)</i></b>, single by <b>Clã João Garcia</b>; <br>",
             role: 'Graphic Designer',
             areas: 'Graphic Design, Design for Music',
             images: ['assets/design/artworks/artworks1.jpg', 'assets/design/artworks/artworks2.jpg', 'assets/design/artworks/artworks3.jpg', 'assets/design/artworks/artworks4.jpg', 'assets/design/artworks/artworks5.jpg', ],
