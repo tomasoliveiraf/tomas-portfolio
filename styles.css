@@ -126,6 +126,13 @@ img {
     margin-bottom: 3.5rem;
 }
 
+.logo-svg {
+    width: 100%;
+    max-width: 240px;
+    height: auto;
+    margin-bottom: 4rem;
+}
+
 .nav-links {
     list-style: none;
     flex-grow: 1;
@@ -569,14 +576,39 @@ img {
     width: 250px;
     height: 250px;
     border-radius: 0;
-    overflow: hidden;
-    border: 3px solid #000000;
+    overflow: visible;
+    position: relative;
+}
+
+.photo-border-svg {
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    width: calc(100% + 8px);
+    height: calc(100% + 8px);
+    pointer-events: none;
+    z-index: 2;
+}
+
+.photo-border-rect {
+    stroke-dasharray: 1016;
+    stroke-dashoffset: 1016;
+    animation: drawPhotoBorder 1.5s ease-out forwards;
+}
+
+@keyframes drawPhotoBorder {
+    to {
+        stroke-dashoffset: 0;
+    }
 }
 
 .about-photo img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 2px;
+    position: relative;
+    z-index: 1;
 }
 
 .photo-placeholder {
