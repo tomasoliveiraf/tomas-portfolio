@@ -623,14 +623,22 @@ img {
 }
 
 .about-text .lead {
-    font-size: 1.25rem;
+    font-size: 1.20rem;
     line-height: 1.8;
     margin-bottom: 1.5rem;
 }
 
 .about-text p {
     color: #666;
-    line-height: 1.8;
+    line-height: 1.6;
+}
+
+.highlight-text {
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 1.15em;
+    color: #666;
+    font-weight: normal;
+    padding: 0 0.15em;
 }
 
 .timeline-section {
@@ -681,7 +689,7 @@ img {
 
 .timeline-item {
     position: relative;
-    padding-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
     padding-left: 2rem;
 }
 
