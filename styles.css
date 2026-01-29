@@ -425,7 +425,8 @@ img {
 .work-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    gap: 3rem;
+    gap: 2.5rem;
+    row-gap: 2.5rem;
 }
 
 .project-item {
@@ -441,7 +442,7 @@ img {
     width: 100%;
     aspect-ratio: 4/3;
     background: var(--hover-color);
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
     overflow: hidden;
     border-radius: 2px;
     position: relative;
@@ -475,15 +476,23 @@ img {
     font-size: 0.875rem;
 }
 
+.project-info {
+    /* Base styles para garantir consistência */
+}
+
 .project-info h3 {
     font-size: 1.25rem;
     font-weight: 500;
+    margin-top: 0;
     margin-bottom: 0.25rem;
+    line-height: 1.3;
 }
 
 .project-meta {
     font-size: 0.875rem;
     color: #666;
+    line-height: 1.4;
+    margin-top: 0;
 }
 
 
@@ -561,7 +570,7 @@ img {
    ========================================== */
 
 .about-content {
-    max-width: 900px;
+    max-width: 1200px;
 }
 
 .about-intro {
@@ -652,26 +661,26 @@ img {
 }
 
 .timeline-section h3 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: 500;
-    margin-bottom: 2.5rem;
+    margin-bottom: 3rem;
 }
 
 .education-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 3rem;
+    gap: 4rem;
 }
 
 .experience-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 3rem;
+    gap: 4rem;
 }
 
 .education-column h4,
 .experience-column h4 {
-    font-size: 1.125rem;
+    font-size: 1.3rem;
     font-weight: 500;
     margin-bottom: 2rem;
     padding-bottom: 0.5rem;
@@ -717,7 +726,7 @@ img {
 }
 
 .timeline-year {
-    font-size: 0.875rem;
+    font-size: 1rem;
     font-weight: 600;
     color: #999;
     margin-bottom: 0.5rem;
@@ -726,7 +735,7 @@ img {
 
 .timeline-content p {
     color: #666;
-    font-size: 0.938rem;
+    font-size: 1.05rem;
     line-height: 1.6;
 }
 
@@ -1597,4 +1606,268 @@ button:focus-visible {
 
 .lightbox:not(.has-multiple-images) .lightbox-nav {
     display: none;
+}
+
+
+/* ==========================================
+   RESPONSIVE DESIGN - LARGE SCREENS (2560x1440 e superiores)
+   ========================================== */
+
+@media (min-width: 2000px) {
+    /* Aumentar a largura da navegação lateral */
+    .sidenav {
+        width: 380px;
+        padding: 4rem 3rem;
+    }
+    .logo-svg {
+        max-width: 320px;
+        margin-bottom: 5rem;
+    }
+    .nav-links li {
+        margin-bottom: 1.8rem;
+    }
+    .nav-link {
+        font-size: 1.4rem;
+    }
+    .location,
+    .email {
+        font-size: 1.1rem;
+    }
+    .social-links a svg {
+        width: 32px;
+        height: 32px;
+    }
+    /* Ajustar o conteúdo principal */
+    .main-content {
+        margin-left: 380px;
+    }
+    .section-inner {
+        max-width: 1600px;
+        padding: 8rem 6rem;
+    }
+    /* Home section */
+    .title-large {
+        font-size: 4.5rem;
+        line-height: 1.3;
+    }
+    .intro-text {
+        font-size: 2rem;
+    }
+    .home-svg-container {
+        max-width: 1200px;
+        right: -35%;
+    }
+    /* Section titles */
+    .section-title {
+        font-size: 3.5rem;
+        margin-bottom: 4rem;
+    }
+    /* Work grid - manter 3 colunas mas com itens maiores */
+    .work-grid {
+        gap: 2.5rem;
+        row-gap: 2.5rem;
+    }
+    .project-card {
+        height: 420px;
+    }
+    .project-info {
+        padding: 2rem;
+    }
+    .project-info h3 {
+        font-size: 1.6rem;
+        margin-bottom: 0.4rem;
+        line-height: 1.3;
+    }
+    .project-info p {
+        font-size: 1.1rem;
+        margin-bottom: 0.6rem;
+        line-height: 1.4;
+    }
+    /* About section */
+    .about-content {
+        max-width: 1600px;
+    }
+    .about-intro {
+        grid-template-columns: 380px 1fr;
+        gap: 4rem;
+    }
+    .about-photo {
+        width: 380px;
+        height: 400px;
+    }
+    .about-text .lead {
+        font-size: 1.8rem;
+        margin-bottom: 2.5rem;
+        line-height: 1.7;
+    }
+    .about-text p {
+        font-size: 1.25rem;
+        line-height: 1.8;
+        margin-bottom: 1.8rem;
+    }
+    /* Timeline section */
+    .timeline-section h3 {
+        font-size: 2.5rem;
+        margin-bottom: 3.5rem;
+    }
+    .experience-grid {
+        gap: 5rem;
+    }
+    .education-grid {
+        gap: 5rem;
+    }
+    .education-column h4,
+    .experience-column h4 {
+        font-size: 1.5rem;
+        margin-bottom: 2.5rem;
+    }
+    .timeline-year {
+        font-size: 1.2rem;
+        min-width: 160px;
+    }
+    .timeline-content {
+        font-size: 1.3rem;
+        line-height: 1.7;
+    }
+    .timeline-content p {
+        margin-bottom: 0.8rem;
+        font-size: 1.3rem;
+    }
+    /* Modal */
+    .modal-content {
+        width: 90%;
+        max-width: 1800px;
+        max-height: 92vh;
+    }
+    .modal-images {
+        flex: 1.2;
+        padding: 3rem;
+    }
+    .modal-info {
+        flex: 1;
+        padding: 3rem;
+    }
+    .modal-title {
+        font-size: 2.8rem;
+        margin-bottom: 1.2rem;
+    }
+    .modal-year {
+        font-size: 1.3rem;
+        margin-bottom: 1.5rem;
+    }
+    .tag {
+        font-size: 1.1rem;
+        padding: 0.6rem 1.2rem;
+    }
+    .modal-description {
+        font-size: 1.3rem;
+        line-height: 1.8;
+        margin-bottom: 2.5rem;
+        padding-bottom: 2.5rem;
+    }
+    .modal-details {
+        gap: 2rem;
+    }
+    .detail-item strong {
+        font-size: 1.2rem;
+        margin-bottom: 0.8rem;
+    }
+    .detail-item p {
+        font-size: 1.2rem;
+        line-height: 1.7;
+    }
+    .modal-close {
+        width: 60px;
+        height: 60px;
+        font-size: 2.8rem;
+        top: 2.5rem;
+        right: 2.5rem;
+    }
+    /* Carousel buttons */
+    .carousel-btn {
+        width: 70px;
+        height: 70px;
+        font-size: 2.5rem;
+    }
+    .carousel-prev {
+        left: 2rem;
+    }
+    .carousel-next {
+        right: 2rem;
+    }
+    /* Lightbox */
+    .lightbox-close {
+        width: 60px;
+        height: 60px;
+        font-size: 2.8rem;
+        top: 3rem;
+        right: 3rem;
+    }
+    .lightbox-nav {
+        width: 80px;
+        height: 80px;
+        font-size: 3.5rem;
+    }
+    .lightbox-prev {
+        left: 3rem;
+    }
+    .lightbox-next {
+        right: 3rem;
+    }
+}
+
+
+/* Para ecrãs ainda maiores (4K e superiores) */
+
+@media (min-width: 3000px) {
+    .sidenav {
+        width: 480px;
+        padding: 5rem 4rem;
+    }
+    .main-content {
+        margin-left: 480px;
+    }
+    .section-inner {
+        max-width: 2200px;
+        padding: 10rem 8rem;
+    }
+    .title-large {
+        font-size: 6rem;
+    }
+    .section-title {
+        font-size: 4.5rem;
+    }
+    .project-card {
+        height: 550px;
+    }
+    .about-content {
+        max-width: 2000px;
+    }
+    .about-photo {
+        width: 480px;
+        height: 500px;
+    }
+    .about-intro {
+        grid-template-columns: 480px 1fr;
+        gap: 6rem;
+    }
+    .about-text .lead {
+        font-size: 2.2rem;
+    }
+    .about-text p {
+        font-size: 1.5rem;
+    }
+    .timeline-section h3 {
+        font-size: 3rem;
+    }
+    .education-column h4,
+    .experience-column h4 {
+        font-size: 1.8rem;
+    }
+    .timeline-year {
+        font-size: 1.4rem;
+    }
+    .timeline-content p {
+        font-size: 1.5rem;
+    }
 }
