@@ -110,7 +110,7 @@ const projectData = {
 
         {
             id: 'singles',
-            title: 'VARIOUS SINGLES',
+            title: 'SINGLES',
             year: '2021-Present Day',
             tags: ['Music'],
             description: 'Recording, production, instrumentation, mixing, and mastering of various individual tracks, released as singles by different artists.',
