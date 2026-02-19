@@ -31,12 +31,12 @@ const projectData = {
         {
             id: 'lamire-design',
             title: 'LAMIRÉ',
-            year: 'Album, 2023',
+            year: '2023',
             tags: ['Music', 'Artwork', 'CD', 'Vinyl'],
             description: "Development of the graphic identity and product design for the <b>pop/rock</b> debut <b>studio album</b> released under my own independent music project, <b>Tomás Oliveira</b>. The visual component of this project includes <b>cover artwork, banners, visualizers, content for social media</b>, as well as conceptualization and independent production of the <b>physical CD format</b>. I also collaborated with my videographer friend <b>Micael Nisa</b> on the creation of the music video for the single 'Despassarado.'",
             role: 'Graphic Designer, Editor',
             areas: 'Graphic Design, Product Design, Design For Music',
-            images: ['assets/audio/lamire/lamire1.png', 'assets/audio/lamire/lamire3.png', 'assets/audio/lamire/lamire1.png', ],
+            images: ['assets/audio/lamire/lamire2.png', 'assets/audio/lamire/lamire3.png', 'assets/audio/lamire/lamire1.png', ],
             video: 'https://youtu.be/5MT288F68ak',
             linkText: 'LISTEN TO THE ALBUM',
             linkUrl: 'https://onerpm.link/220884326842'
@@ -89,7 +89,7 @@ const projectData = {
             description: "<b>Pop/rock</b> debut <b>studio album</b> released under my own music project, <b>Tomás Oliveira</b>. The project includes 10 tracks that I <b>composed, produced, and mixed</b>, where I also played all the instruments. It was showcased live with a band at a small launch party and several concerts. <br><br> For this album, I also developed all the <b>graphic and editorial elements (cover, CD, artwork, banners, visualizers)</b> and collaborated with my colleague <b>Micael Nisa</b> on the creation of the music video for the single 'Despassarado.'",
             role: 'Composer, Musician, Producer, Mixing Engineer, Designer, Editor',
             areas: 'Music Production, Music',
-            images: ['assets/audio/lamire/lamire1.png', 'assets/audio/lamire/lamire4.jpg', 'assets/audio/lamire/lamire5.jpg', 'assets/audio/lamire/lamire6.jpg', 'assets/audio/lamire/lamire7.jpg', 'assets/audio/lamire/lamire8.jpg', 'assets/audio/lamire/lamire9.jpg', 'assets/audio/lamire/lamire10.jpeg', ],
+            images: ['assets/audio/lamire/lamire1.png', 'assets/audio/lamire/lamire4.jpg', 'assets/audio/lamire/lamire5.jpg', 'assets/audio/lamire/lamire6.JPG', 'assets/audio/lamire/lamire7.JPG', 'assets/audio/lamire/lamire8.JPG', 'assets/audio/lamire/lamire9.jpg', 'assets/audio/lamire/lamire10.jpeg', ],
             video: 'https://youtu.be/5MT288F68ak',
             linkText: 'LISTEN TO THE ALBUM',
             linkUrl: 'https://onerpm.link/220884326842'
