@@ -33,10 +33,10 @@ const projectData = {
             title: 'LAMIRÉ',
             year: 'Album, 2023',
             tags: ['Music', 'Artwork', 'CD', 'Vinyl'],
-            description: "Development of the graphic identity and product design for the <b>Pop/rock</b> debut <b>studio album</b> released under my own independent music project, <b>Tomás Oliveira</b>. The visual component of this project includes <b>cover artwork, banners, visualizers, content for social media</b>, as well as conceptualization and independent production of the <b>physical CD format</b>. I also collaborated with my videographer friend <b>Micael Nisa</b> on the creation of the music video for the single 'Despassarado.'",
+            description: "Development of the graphic identity and product design for the <b>pop/rock</b> debut <b>studio album</b> released under my own independent music project, <b>Tomás Oliveira</b>. The visual component of this project includes <b>cover artwork, banners, visualizers, content for social media</b>, as well as conceptualization and independent production of the <b>physical CD format</b>. I also collaborated with my videographer friend <b>Micael Nisa</b> on the creation of the music video for the single 'Despassarado.'",
             role: 'Graphic Designer, Editor',
             areas: 'Graphic Design, Product Design, Design For Music',
-            images: ['assets/audio/lamire/lamir21.png', 'assets/audio/lamire/lamire3.png', 'assets/audio/lamire/lamire1.png', ],
+            images: ['assets/audio/lamire/lamire1.png', 'assets/audio/lamire/lamire3.png', 'assets/audio/lamire/lamire1.png', ],
             video: 'https://youtu.be/5MT288F68ak',
             linkText: 'LISTEN TO THE ALBUM',
             linkUrl: 'https://onerpm.link/220884326842'
