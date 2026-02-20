@@ -33,18 +33,18 @@ const projectData = {
             title: 'LAMIRÉ',
             year: '2023',
             tags: ['Music', 'Artwork', 'CD', 'Vinyl'],
-            description: "Development of the graphic identity and product design for the <b>pop/rock</b> debut <b>studio album</b> released under my own independent music project, <b>Tomás Oliveira</b>. The visual component of this project includes <b>cover artwork, banners, visualizers, content for social media</b>, as well as conceptualization and independent production of the <b>physical CD format</b>. I also collaborated with my videographer friend <b>Micael Nisa</b> on the creation of the music video for the single 'Despassarado.'",
+            description: "Development of the graphic identity and product design for the <b>pop/rock</b> debut <b>studio album</b> released under my own independent music project, <b>Tomás Oliveira</b>. The visual component of this project includes <b>cover artwork, banners, visualizers, content for social media</b>, as well as conceptualization and independent production of the <b>physical CD format</b>. I also collaborated with my videographer friend <b>Micael Nisa</b> on the creation of the music video for the single 'Despassarado'.",
             role: 'Graphic Designer, Editor',
             areas: 'Graphic Design, Product Design, Design For Music',
             images: ['assets/audio/lamire/lamire2.png', 'assets/audio/lamire/lamire3.png', 'assets/audio/lamire/lamire1.png', ],
-            video: 'https://youtu.be/5MT288F68ak',
+            video: 'https://www.youtube.com/watch?v=PTyu_jjLE4w',
             linkText: 'LISTEN TO THE ALBUM',
             linkUrl: 'https://onerpm.link/220884326842'
         },
 
         {
             id: 'artworks',
-            title: 'DESIGN FOR MUSIC',
+            title: '+ DESIGN FOR MUSIC',
             year: '2024-CURRENT',
             tags: ['Music', 'Artwork', 'Singles'],
             description: "With a particular interest in the translation of music into visual language, I have been working on the development of graphic identities for several individual music projects, focusing on the faithful visual interpretation of music through media such as cover artworks, banners, and social media content.<br><br>Along some of my own music, my work in this field features examples like:<br>• <b><i>Renaissance</i></b>, single by <b>Joana Sobral</b>; <br> • <b><i>Tempo Fugaz</i></b>, single by <b>Joana Sobral</b>; <br>• <b><i>Recomeça</i></b>, single by <b>Clã João Garcia</b>; <br>• <b><i>Oceans (Onde os Meus Pés Podem Falhar)</i></b>, single by <b>Clã João Garcia</b>; <br>",
@@ -90,7 +90,7 @@ const projectData = {
             role: 'Composer, Musician, Producer, Mixing Engineer, Designer, Editor',
             areas: 'Music Production, Music',
             images: ['assets/audio/lamire/lamire1.png', 'assets/audio/lamire/lamire4.jpg', 'assets/audio/lamire/lamire5.jpg', 'assets/audio/lamire/lamire6.JPG', 'assets/audio/lamire/lamire7.JPG', 'assets/audio/lamire/lamire8.JPG', 'assets/audio/lamire/lamire9.jpg', 'assets/audio/lamire/lamire10.jpeg', ],
-            video: 'https://youtu.be/5MT288F68ak',
+            video: 'https://youtu.be/a8SZSNYCGrU?si=6TTePxhdFDsDaCSx',
             linkText: 'LISTEN TO THE ALBUM',
             linkUrl: 'https://onerpm.link/220884326842'
         },
