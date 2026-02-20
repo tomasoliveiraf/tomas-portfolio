@@ -342,7 +342,7 @@ function createProjectElement(project) {
         `<img src="${project.images[0]}" alt="${project.title}">` :
         `<div class="placeholder">${project.title}</div>`;
 
-    // Gera badges de categorias para projetos multi-área
+    // Gera badges de categorias para projetos multi-área ${categoryBadges}
     const categoryLabels = { design: 'Design', audio: 'Audio', audiovisual: 'Film & Photo' };
     const categoryBadges = `<div class="project-categories">${project.categories.map(c => `<span class="category-badge category-badge--${c}">${categoryLabels[c]}</span>`).join('')}</div>`;
 
@@ -353,7 +353,7 @@ function createProjectElement(project) {
         <div class="project-info">
             <h3>${project.title}</h3>
             <span class="project-year-badge">${project.yearSort}</span>
-            ${categoryBadges}
+            
         </div>
     `;
 
