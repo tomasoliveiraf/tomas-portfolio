@@ -1,255 +1,261 @@
 // ==========================================
 // PROJECT DATA - Define tudo aqui!
+// Cada projeto tem uma propriedade 'categories' com um array
+// das categorias a que pertence. As categorias disponíveis são:
+// 'design', 'audio', 'audiovisual'
+// Um projeto pode pertencer a múltiplas categorias simultaneamente.
 // ==========================================
 
-const projectData = {
-    design: [{
-            id: 'winitroia',
-            title: 'WINITRÓIA',
-            year: '2025',
-            tags: ['Wine', 'Brand', 'Visual'],
-            description: 'Freelance development of an <b>updated visual identity</b> for the wine distribution brand, <b><i>Winitróia</i></b>. The project includes the <b>modernization of the logo, iconography, utilities, among others.</b>',
-            role: 'Graphic Designer',
-            areas: 'Graphic Design, Branding',
-            images: ['assets/design/winitroia/winitroia1.jpg', 'assets/design/winitroia/winitroia2.jpg', 'assets/design/winitroia/winitroia3.jpg', 'assets/design/winitroia/winitroia4.jpg', 'assets/design/winitroia/winitroia5.jpg', 'assets/design/winitroia/winitroia6.jpg', 'assets/design/winitroia/winitroia7.jpg', 'assets/design/winitroia/winitroia8.jpg', 'assets/design/winitroia/winitroia9.jpg', 'assets/design/winitroia/winitroia10.jpg', 'assets/design/winitroia/winitroia11.jpg', 'assets/design/winitroia/winitroia12.jpg', 'assets/design/winitroia/winitroia13.jpg', ],
-            video: ''
-        },
-        {
-            id: 'sasuc',
-            title: 'SASUC',
-            year: '2024-CURRENT',
-            tags: ['Branding', 'Visual Identity'],
-            description: "My time in the communications department of the <b>Social Services of the University of Coimbra</b> consisted of expanding the newly created visual identity by developing various updated materials for the University's physical and digital media. The work carried out included various <b>posters, notices, signage, social media content, food menus, among many others</b> - for the benefit of different departments (food, scholarships, residences, etc). I was also heavily involved in creating strategies to promote many initiatives, often through video production for social media and for the website.",
-            role: 'Communication Designer',
-            areas: 'Communication Design, Video Production',
-            images: ['assets/design/sasuc/sasuc8.jpg', 'assets/design/sasuc/sasuc1.jpg', 'assets/design/sasuc/sasuc5.png', 'assets/design/sasuc/sasuc6.png', 'assets/design/sasuc/sasuc7.png', 'assets/design/sasuc/sasuc2.jpg', 'assets/design/sasuc/sasuc9.jpg', 'assets/design/sasuc/sasuc10.jpg', 'assets/design/sasuc/sasuc11.jpg', 'assets/design/sasuc/sasuc12.jpg'],
-            video: '',
-            linkText: 'SEE MORE',
-            linkUrl: 'https://www.instagram.com/sas_uc/'
-        },
-
-        {
-            id: 'lamire-design',
-            title: 'LAMIRÉ',
-            year: '2023',
-            tags: ['Music', 'Artwork', 'CD', 'Vinyl'],
-            description: "Development of the graphic identity and product design for the <b>pop/rock</b> debut <b>studio album</b> released under my own independent music project, <b>Tomás Oliveira</b>. The visual component of this project includes <b>cover artwork, banners, visualizers, content for social media</b>, as well as conceptualization and independent production of the <b>physical CD format</b>. I also collaborated with my videographer friend <b>Micael Nisa</b> on the creation of the music video for the single 'Despassarado'.",
-            role: 'Graphic Designer, Editor',
-            areas: 'Graphic Design, Product Design, Design For Music',
-            images: ['assets/audio/lamire/lamire2.png', 'assets/audio/lamire/lamire3.png', 'assets/audio/lamire/lamire1.png', ],
-            video: 'https://www.youtube.com/watch?v=PTyu_jjLE4w',
-            linkText: 'LISTEN TO THE ALBUM',
-            linkUrl: 'https://onerpm.link/220884326842'
-        },
-
-        {
-            id: 'artworks',
-            title: '+ DESIGN FOR MUSIC',
-            year: '2024-CURRENT',
-            tags: ['Music', 'Artwork', 'Singles'],
-            description: "With a particular interest in the translation of music into visual language, I have been working on the development of graphic identities for several individual music projects, focusing on the faithful visual interpretation of music through media such as cover artworks, banners, and social media content.<br><br>Along some of my own music, my work in this field features examples like:<br>• <b><i>Renaissance</i></b>, single by <b>Joana Sobral</b>; <br> • <b><i>Tempo Fugaz</i></b>, single by <b>Joana Sobral</b>; <br>• <b><i>Recomeça</i></b>, single by <b>Clã João Garcia</b>; <br>• <b><i>Oceans (Onde os Meus Pés Podem Falhar)</i></b>, single by <b>Clã João Garcia</b>; <br>",
-            role: 'Graphic Designer',
-            areas: 'Graphic Design, Design for Music',
-            images: ['assets/design/artworks/artworks1.jpg', 'assets/design/artworks/artworks2.jpg', 'assets/design/artworks/artworks3.jpg', 'assets/design/artworks/artworks4.jpg', 'assets/design/artworks/artworks5.jpg', ],
-            video: ''
-        },
-        {
-            id: 'atrevome',
-            title: 'A(TREVO)-ME',
-            year: '2023',
-            tags: ['Brand', 'Visual', 'Social Media'],
-            description: "Brand identity (including <b>logo variations, typography & post mockups and a podcast cover</b>) developed for the social media brand “a(trevo)-me”.",
-            role: 'Graphic Designer',
-            areas: 'Graphic Design, Branding',
-            images: ['assets/design/atrevome/atrevome2.jpg', 'assets/design/atrevome/atrevome3.jpg', 'assets/design/atrevome/atrevome1.jpg'],
-            video: 'https://youtu.be/VuI3AnUKyg4'
-        }
-    ],
-    audio: [
-
-        {
-            id: 'escutar',
-            title: 'LISTENING TO THE INVISIBLE',
-            year: "Master's Thesis, 2025",
-            tags: ['Music Production', 'Computacional Design'],
-            description: "<b>Master's Thesis Project</b> in Design and Multimedia, at the Faculty of Science and Technology of the University of Coimbra, developed between May 2024 and July 2025, under the supervision of Professor <b>Mariana Seiça</b> and co-supervision of Professor <b>Amílcar Cardoso</b>.<br><br>The purpose of this dissertation is to <b>explore the potential of sound</b> - both in terms of data representation and artistic expression and interpretation - by developing a <b>sonification system</b> that uses data provided by Spotify's API to create personalized musical compositions, whose versatility is a reflection of the listening habits of a community of listeners based on their personal playlists. The system uses tools such as <b>MAX for Live and Ableton Live</b> to transcribe quantitative consumption data into musical elements, and takes the format of a <b>sound installation with a performative component</b>. This project also seeks to reflect on the role of sonification as an artistic practice based on the interpretation of data, in order to contribute to the exploration of the technique in the context of multimedia design.",
-            role: 'Designer, Producer, Sound Engineer',
-            areas: 'Music Production, Sound Design',
-            images: ['assets/audio/escutar/escutar1.jpeg', 'assets/audio/escutar/escutar2.jpg', 'assets/audio/escutar/escutar3.jpeg', 'assets/audio/escutar/escutar4.jpeg', ],
-            video: 'https://youtu.be/B-UFFtwzrSo',
-            linkText: 'LEARN MORE',
-            linkUrl: 'https://estudogeral.uc.pt/handle/10316/120545'
-        },
-
-        {
-            id: 'lamire',
-            title: 'LAMIRÉ',
-            year: 'Album, 2023',
-            tags: ['Music', 'Pop/Rock'],
-            description: "<b>Pop/rock</b> debut <b>studio album</b> released under my own music project, <b>Tomás Oliveira</b>. The project includes 10 tracks that I <b>composed, produced, and mixed</b>, where I also played all the instruments. It was showcased live with a band at a small launch party and several concerts. <br><br> For this album, I also developed all the <b>graphic and editorial elements (cover, CD, artwork, banners, visualizers)</b> and collaborated with my colleague <b>Micael Nisa</b> on the creation of the music video for the single 'Despassarado.'",
-            role: 'Composer, Musician, Producer, Mixing Engineer, Designer, Editor',
-            areas: 'Music Production, Music',
-            images: ['assets/audio/lamire/lamire1.png', 'assets/audio/lamire/lamire4.jpg', 'assets/audio/lamire/lamire5.jpg', 'assets/audio/lamire/lamire6.JPG', 'assets/audio/lamire/lamire7.JPG', 'assets/audio/lamire/lamire8.JPG', 'assets/audio/lamire/lamire9.jpg', 'assets/audio/lamire/lamire10.jpeg', ],
-            video: 'https://youtu.be/a8SZSNYCGrU?si=6TTePxhdFDsDaCSx',
-            linkText: 'LISTEN TO THE ALBUM',
-            linkUrl: 'https://onerpm.link/220884326842'
-        },
-
-        {
-            id: 'esplanada',
-            title: 'HÁ UMA HORA NA ESPLANADA DO NAVIO DE ESPELHOS',
-            year: 'Soundscape, 2023',
-            tags: ['Music', 'Poetry', 'Sound', 'Soundscape'],
-            description: "<b><i>Há Uma Hora na Esplanada do Navio de Espelhos</i></b> is a sound experience that seeks to musically reinterpret the work and life of Mário Cesariny, and the legacy he left behind. I built this piece based not only on the author's work, but also on musical projects that were created in homage to him - through techniques such as sampling and reinterpretation, adding instrumentation created by me and even recordings of my own voice. My main goal was to combine the traditional format with a more experimental nature, as a finished product in a mixed and mastered music format, ready to be listened to on all kinds of devices. <br><br>In April 2024, the piece was included in the performance recital <b><i>Há Um Sol Esplendente nas Coisas</i></b>, produced by the Bonifrates Cooperative in partnership with <b>FCTUC's Department of Computer Engineering</b> and the <b>Penedo da Saudade Cultural Center</b>. It was also featured in the exhibition attached to the recital, where it is accompanied by the graphic artwork in the video below, created by Professor <b>Mariana Seiça</b>.",
-            role: 'Designer, Producer, Sound Engineer',
-            areas: 'Music Production, Sound Design',
-            images: ['assets/audio/esplanada/esplanada1.jpg', 'assets/audio/esplanada/esplanada2.jpg', ],
-            video: 'https://youtu.be/eBgwArEFQGE',
-            linkText: 'LEARN MORE',
-            linkUrl: 'https://www.behance.net/gallery/198510387/Ha-Uma-Hora-na-Esplanada-Soundscape'
-        },
-
-        {
-            id: 'serendipity',
-            title: 'SERENDIPITY',
-            year: 'Album, 2021',
-            tags: ['Music', 'Pop'],
-            description: 'Debut album by pop artist <b>Miguel Correia</b>, on which I was the executive producer. I <b>produced and mixed</b> 10 of the 11 tracks written by Miguel, on which I also played all the instruments. <br><br> It was my first time working with music in English!',
-            role: 'Musician, Producer, Mixing Engineer',
-            areas: 'Music Production',
-            images: ['assets/audio/serendipity/serendipity1.jpg', ],
-            video: 'https://youtu.be/HPxAG745vqE?list=RDHPxAG745vqE',
-            linkText: 'LISTEN TO THE ALBUM',
-            linkUrl: 'https://youtube.com/playlist?list=OLAK5uy_lKosbOljM3oK3ca_vEiYVicgf_FSefivw&si=0r4M1yfTYAJhgiwQ'
-        },
-
-        {
-            id: 'singles',
-            title: 'SINGLES',
-            year: '2021-Present Day',
-            tags: ['Music'],
-            description: 'Recording, production, instrumentation, mixing, and mastering of various individual tracks, released as singles by different artists.',
-            role: 'Producer, Mixing Engineer',
-            areas: 'Music Production, Mixing, Mastering',
-            images: ['assets/audio/singles/singles2.png', ],
-            video: 'https://youtu.be/JdPMcDybYcU?list=RDJdPMcDybYcU',
-            linkText: 'PLAYLIST WITH ALL OF THE SONGS',
-            linkUrl: 'https://open.spotify.com/playlist/5wMIlKW2ASYNKVVem0YuVL?si=03e3a695b4174f57'
-        }
-
-    ],
-    audiovisual: [
-
-        {
-            id: 'ouvir-hoje',
-            title: 'WHAT ARE WE LISTENING TODAY?',
-            year: 'Short Film, 2024',
-            tags: ['Short Film', 'Sound'],
-            description: "<b>Short documentary film</b> directed by Carolina Costa, in which I worked as <b>sound director and head of post-production</b>, also handling the sound mixing. In addition, I also worked as <b>designer</b>, responsible for creating the film's graphic aesthetics (posters, graphics, etc.). <br>The film was featured in the 2024 edition of the <b><i>Encontros de Cinema de Viana</i></b> film festival. <br><br> <i>Radio São Miguel 93.4 FM enters the homes and vehicles of its listeners, it is their daily companion. On the other side of the microphone, Manuela Freire is the voice fighting loneliness. She guides us through the corners of this radio station and its history.</i>",
-            role: 'Sound Director, Editor',
-            areas: 'Sound design, Video Post-Production, Audio Post-Production, Graphic Design',
-            images: ['assets/other/gente/gente9.jpg', 'assets/other/gente/gente2.jpg', 'assets/other/gente/gente3.jpg', 'assets/other/gente/gente4.jpg', 'assets/other/gente/gente5.jpg', 'assets/other/gente/gente6.jpg', 'assets/other/gente/gente7.jpg', 'assets/other/gente/gente8.jpg', 'assets/other/gente/gente10.jpg', ],
-            video: '',
-            linkText: 'LEARN MORE',
-            linkUrl: 'https://letterboxd.com/film/o-que-e-que-a-gente-vai-ouvir-hoje/'
-        },
-
-        {
-            id: 'la-larai',
-            title: 'LA LARAI',
-            year: 'Short Film, 2023',
-            tags: ['Short Film', 'Post-Production'],
-            description: "<b>Short documentary film</b> directed by Carolina Costa, made in 2022, as part of the <b><i>Plano Frontal Film Residency</i></b> by the <b>AO NORTE</b> Audiovisual Production and Animation Association, during the <b><i>MDOC - Melgaço International Documentary Festival</i></b>. I worked as sound director and main editor, also taking on the role of designer — creating the aesthetics of the posters and related materials.<br> The film was presented in 2023, at the following year's edition of the festival.<br><br><i>From an early age, José Celeiro has found inspiration for life in music. Today, he shares this passion by opening the doors of his “Casa das Concertinas” to anyone who wants to come in.</i> ",
-            role: 'Sound Director, Editor',
-            areas: 'Sound design, Video Post-Production, Audio Post-Production, Graphic Design',
-            images: ['assets/other/larai/larai1.jpg', 'assets/other/larai/larai2.png', 'assets/other/larai/larai11.jpg', 'assets/other/larai/larai8.png', 'assets/other/larai/larai12.jpg', 'assets/other/larai/larai13.jpg', 'assets/other/larai/larai14.jpg', ],
-            video: '',
-            linkText: 'WATCH',
-            linkUrl: 'https://lugardoreal.com/video/la-larai'
-        },
-
-        {
-            id: 'berco',
-            title: 'RAINBOW BABY',
-            year: 'Short Film, 2023',
-            tags: ['Short Film', 'Post-Production'],
-            description: "<b>Short documentary film</b> directed by Carolina Costa, on which I worked as <b>post-producer</b> (mainly in color grading and sound mixing). In addition, I also handled the <b>design</b>, creating the film's graphic visual identity (posters, graphics, social media content, etc.).<br>The film was featured in the 2023 editions of the <b><i>Caminhos do Cinema Português</i></b> and <b><i>Encontros de Cinema de Viana</i></b> film festivals, as well as in the 2024 edition of the <b><i>Tokyo Short Film Festival</i></b>.<br><br><i>Mom, in your room there are four beds... and three cribs.</i>",
-            role: 'Designer, Editor, Mixing Engineer',
-            areas: 'Graphic Design, Video Post-Production, Audio Post-Production',
-            images: ['assets/other/berco/berco1.jpg', 'assets/other/berco/berco3.jpg', 'assets/other/berco/berco5.jpg', 'assets/other/berco/berco6.jpg', ],
-            video: 'https://youtu.be/6ludLvMZLXc'
-        },
-
-        {
-            id: 'alto-martir',
-            title: 'MARTYR: ONE STEP AWAY FROM THE DEAD',
-            year: 'Short Film, 2021',
-            tags: ['Short Film', 'Sound Design'],
-            description: "<b>Short documentary film</b> directed by Carolina Costa, on which I worked as <b>editor</b>. In addition, I also handled the <b>design</b>, creating the film's graphic aesthetic (posters, graphics, social media content, etc.).<br>The film was featured in the 2021 editions of the <b><i>DocLisboa</i></b> and <b><i>Caminhos do Cinema Português</i></b> film festivals.<br><br><i>In a small village in the countryside of Portugal, living one step away from the dead holds unimaginable secrets.</i>",
-            role: 'Designer, Editor',
-            areas: 'Graphic design, Video Post-Production, Audio Post-Production',
-            images: ['assets/other/alto/alto1.jpg', 'assets/other/alto/alto3.jpg', 'assets/other/alto/alto2.jpg', 'assets/other/alto/alto4.jpg', 'assets/other/alto/alto5.jpg', 'assets/other/alto/alto6.jpg', 'assets/other/alto/alto7.jpg', 'assets/other/alto/alto8.jpg', 'assets/other/alto/alto9.jpg', ],
-            video: 'https://youtu.be/85L27l6hYl8'
-        },
-
-        {
-            id: 'cuidar',
-            title: 'CUIDAR - UM OLHAR ATENTO',
-            year: 'Photographic Exhibition, 2019',
-            tags: ['Photo editing'],
-            description: 'During my time as a Visual Arts student at <I>Liceu Alves Martins</I> in Viseu (more specifically, in the 12th grade), a partnership between the school and the local health center <b><I>Casa de Saúde São Mateus</i></b> came about through the Multimedia Workshop subject, which gave three students the opportunity to hold a photographic exhibition to celebrate the first anniversary of the <I>Casa de Saúde São Mateus</I> Convalescence Unit. Thus, in January 2020, the exhibition <b><I>Cuidar - Um Olhar Atento</I></b> by André Gonçalves, Gonçalo Figueiredo and Tomás Oliveira was born.<br><br>Later, in order to enrich our project, we were asked to return to the <I>Casa de Saúde</I> in order to photograph the entire hospital, since the first wave of photographs was only aimed at the most recent Unit. This gave rise to a new range of photographic material, completing the exhibition.<br>The photographs were exhibited in <b>physical format</b> in the Convalescence Unit, and a conference was organized to inaugurate the exhibition.',
-            role: 'Photographer, Editor',
-            areas: 'Photography',
-            images: ['assets/other/cuidar/cuidar1.jpg', 'assets/other/cuidar/cuidar2.jpg', 'assets/other/cuidar/cuidar3.jpg', 'assets/other/cuidar/cuidar4.jpg', 'assets/other/cuidar/cuidar5.jpg', 'assets/other/cuidar/cuidar6.jpg', 'assets/other/cuidar/cuidar7.jpg', 'assets/other/cuidar/cuidar8.jpg', 'assets/other/cuidar/cuidar9.jpg', 'assets/other/cuidar/cuidar10.jpg', 'assets/other/cuidar/cuidar11.jpg', 'assets/other/cuidar/cuidar12.jpg'],
-            video: ''
-        }
-    ],
-
-    academic: [{
-        id: 'academic-main',
-        title: 'ACADEMIC PROJECTS',
-        year: 'VARIOUS',
-        tags: ['Multidisciplinary', 'Cross-Media'],
-        description: "During the two <b>Design & Multimedia</b> cycles offered by the Faculty of Science and Technology at the University of Coimbra (Bachelor's and Master's degrees), I developed several projects that I particularly enjoyed. Due to the variety of areas taught in the course, the projects (each individually described in the accompanying image) cover a range of fields, from editorial to computational design.",
-        role: 'Student, Designer',
-        areas: 'Graphic Design, Editorial Design, Computational Design, Sound Design, Audiovisual Production, Interaction Design',
-        images: [
-            'assets/design/academic/academic1.jpg',
-            'assets/design/academic/academic2.jpg',
-            'assets/design/academic/academic3.jpg',
-            'assets/design/academic/academic4.jpg',
-            'assets/design/academic/academic5.jpg',
-            'assets/design/academic/academic6.jpg',
-            'assets/design/academic/academic7.jpg',
-            'assets/design/academic/academic8.jpg',
-            'assets/design/academic/academic9.jpg',
-            'assets/design/academic/academic10.jpg',
-            'assets/design/academic/academic11.jpg',
-            'assets/design/academic/academic12.jpg',
-        ],
+const allProjects = [{
+        id: 'winitroia',
+        title: 'WINITRÓIA',
+        year: '2025',
+        yearSort: 2025,
+        categories: ['design'],
+        tags: ['Wine', 'Brand', 'Visual'],
+        description: 'Freelance development of an <b>updated visual identity</b> for the wine distribution brand, <b><i>Winitróia</i></b>. The project includes the <b>modernization of the logo, iconography, utilities, among others.</b>',
+        role: 'Graphic Designer',
+        areas: 'Graphic Design, Branding',
+        images: ['assets/design/winitroia/winitroia1.jpg', 'assets/design/winitroia/winitroia2.jpg', 'assets/design/winitroia/winitroia3.jpg', 'assets/design/winitroia/winitroia4.jpg', 'assets/design/winitroia/winitroia5.jpg', 'assets/design/winitroia/winitroia6.jpg', 'assets/design/winitroia/winitroia7.jpg', 'assets/design/winitroia/winitroia8.jpg', 'assets/design/winitroia/winitroia9.jpg', 'assets/design/winitroia/winitroia10.jpg', 'assets/design/winitroia/winitroia11.jpg', 'assets/design/winitroia/winitroia12.jpg', 'assets/design/winitroia/winitroia13.jpg'],
         video: ''
-    }]
+    },
+    {
+        id: 'escutar',
+        title: 'LISTENING TO THE INVISIBLE',
+        year: "Master's Thesis, 2025",
+        yearSort: 2025,
+        categories: ['audio'],
+        tags: ['Music Production', 'Computacional Design'],
+        description: "<b>Master's Thesis Project</b> in Design and Multimedia, at the Faculty of Science and Technology of the University of Coimbra, developed between May 2024 and July 2025, under the supervision of Professor <b>Mariana Seiça</b> and co-supervision of Professor <b>Amílcar Cardoso</b>.<br><br>The purpose of this dissertation is to <b>explore the potential of sound</b> - both in terms of data representation and artistic expression and interpretation - by developing a <b>sonification system</b> that uses data provided by Spotify's API to create personalized musical compositions, whose versatility is a reflection of the listening habits of a community of listeners based on their personal playlists. The system uses tools such as <b>MAX for Live and Ableton Live</b> to transcribe quantitative consumption data into musical elements, and takes the format of a <b>sound installation with a performative component</b>. This project also seeks to reflect on the role of sonification as an artistic practice based on the interpretation of data, in order to contribute to the exploration of the technique in the context of multimedia design.",
+        role: 'Designer, Producer, Sound Engineer',
+        areas: 'Music Production, Sound Design',
+        images: ['assets/audio/escutar/escutar1.jpeg', 'assets/audio/escutar/escutar2.jpg', 'assets/audio/escutar/escutar3.jpeg', 'assets/audio/escutar/escutar4.jpeg'],
+        video: 'https://youtu.be/B-UFFtwzrSo',
+        linkText: 'LEARN MORE',
+        linkUrl: 'https://estudogeral.uc.pt/handle/10316/120545'
+    },
+    {
+        id: 'sasuc',
+        title: 'SASUC',
+        year: '2024-CURRENT',
+        yearSort: 2024,
+        categories: ['design'],
+        tags: ['Branding', 'Visual Identity'],
+        description: "My time in the communications department of the <b>Social Services of the University of Coimbra</b> consisted of expanding the newly created visual identity by developing various updated materials for the University's physical and digital media. The work carried out included various <b>posters, notices, signage, social media content, food menus, among many others</b> - for the benefit of different departments (food, scholarships, residences, etc). I was also heavily involved in creating strategies to promote many initiatives, often through video production for social media and for the website.",
+        role: 'Communication Designer',
+        areas: 'Communication Design, Video Production',
+        images: ['assets/design/sasuc/sasuc8.jpg', 'assets/design/sasuc/sasuc1.jpg', 'assets/design/sasuc/sasuc5.png', 'assets/design/sasuc/sasuc6.png', 'assets/design/sasuc/sasuc7.png', 'assets/design/sasuc/sasuc2.jpg', 'assets/design/sasuc/sasuc9.jpg', 'assets/design/sasuc/sasuc10.jpg', 'assets/design/sasuc/sasuc11.jpg', 'assets/design/sasuc/sasuc12.jpg'],
+        video: '',
+        linkText: 'SEE MORE',
+        linkUrl: 'https://www.instagram.com/sas_uc/'
+    },
+    {
+        id: 'artworks',
+        title: '+ DESIGN FOR MUSIC',
+        year: '2024-CURRENT',
+        yearSort: 2024,
+        categories: ['design'],
+        tags: ['Music', 'Artwork', 'Singles'],
+        description: "With a particular interest in the translation of music into visual language, I have been working on the development of graphic identities for several individual music projects, focusing on the faithful visual interpretation of music through media such as cover artworks, banners, and social media content.<br><br>Along some of my own music, my work in this field features examples like:<br>• <b><i>Renaissance</i></b>, single by <b>Joana Sobral</b>; <br> • <b><i>Tempo Fugaz</i></b>, single by <b>Joana Sobral</b>; <br>• <b><i>Recomeça</i></b>, single by <b>Clã João Garcia</b>; <br>• <b><i>Oceans (Onde os Meus Pés Podem Falhar)</i></b>, single by <b>Clã João Garcia</b>; <br>",
+        role: 'Graphic Designer',
+        areas: 'Graphic Design, Design for Music',
+        images: ['assets/design/artworks/artworks1.jpg', 'assets/design/artworks/artworks2.jpg', 'assets/design/artworks/artworks3.jpg', 'assets/design/artworks/artworks4.jpg', 'assets/design/artworks/artworks5.jpg'],
+        video: ''
+    },
+    {
+        id: 'ouvir-hoje',
+        title: 'WHAT ARE WE LISTENING TODAY?',
+        year: 'Short Film, 2024',
+        yearSort: 2024,
+        categories: ['audiovisual', 'design'],
+        tags: ['Short Film', 'Sound'],
+        description: "<b>Short documentary film</b> directed by Carolina Costa, in which I worked as <b>sound director and head of post-production</b>, also handling the sound mixing. In addition, I also worked as <b>designer</b>, responsible for creating the film's graphic aesthetics (posters, graphics, etc.). <br>The film was featured in the 2024 edition of the <b><i>Encontros de Cinema de Viana</i></b> film festival. <br><br> <i>Radio São Miguel 93.4 FM enters the homes and vehicles of its listeners, it is their daily companion. On the other side of the microphone, Manuela Freire is the voice fighting loneliness. She guides us through the corners of this radio station and its history.</i>",
+        role: 'Sound Director, Editor',
+        areas: 'Sound design, Video Post-Production, Audio Post-Production, Graphic Design',
+        images: ['assets/other/gente/gente9.jpg', 'assets/other/gente/gente2.jpg', 'assets/other/gente/gente3.jpg', 'assets/other/gente/gente4.jpg', 'assets/other/gente/gente5.jpg', 'assets/other/gente/gente6.jpg', 'assets/other/gente/gente7.jpg', 'assets/other/gente/gente8.jpg', 'assets/other/gente/gente10.jpg'],
+        video: '',
+        linkText: 'LEARN MORE',
+        linkUrl: 'https://letterboxd.com/film/o-que-e-que-a-gente-vai-ouvir-hoje/'
+    },
+    {
+        id: 'lamire',
+        title: 'LAMIRÉ',
+        year: 'Album, 2023',
+        yearSort: 2023,
+        categories: ['audio', 'design'],
+        tags: ['Music', 'Pop/Rock', 'Artwork', 'CD', ],
+        description: "<b>Pop/rock</b> debut <b>studio album</b> released under my own music project, <b>Tomás Oliveira</b>. The project includes 10 tracks that I <b>composed, produced, and mixed</b>, where I also played all the instruments. It was showcased live with a band at a small launch party and several concerts. <br><br> For this album, I also developed the <b>graphic indentity</b> in its entirety. The visual component of this project includes the <b>cover artwork, banners, visualizers, content for social media</b>, as well as the conceptualization and independent production of the <b>physical CD</b> format. I also ended up collaborating with my colleague <b>Micael Nisa</b> on the creation of the music video for the single 'Despassarado.'",
+        role: 'Composer, Musician, Producer, Mixing Engineer, Designer, Editor',
+        areas: 'Music Production, Music, Graphic Design, Product Design',
+        images: ['assets/audio/lamire/lamire1.png', 'assets/audio/lamire/lamire2.png', 'assets/audio/lamire/lamire3.png', 'assets/audio/lamire/lamire4.jpg', 'assets/audio/lamire/lamire5.jpg', 'assets/audio/lamire/lamire6.JPG', 'assets/audio/lamire/lamire7.JPG', 'assets/audio/lamire/lamire8.JPG', 'assets/audio/lamire/lamire9.jpg', 'assets/audio/lamire/lamire10.jpeg'],
+        video: ['https://youtu.be/a8SZSNYCGrU?si=6TTePxhdFDsDaCSx', 'https://youtu.be/5MT288F68ak'],
+        linkText: 'LISTEN TO THE ALBUM',
+        linkUrl: 'https://onerpm.link/220884326842'
+    },
+    {
+        id: 'la-larai',
+        title: 'LA LARAI',
+        year: 'Short Film, 2023',
+        yearSort: 2023,
+        categories: ['audiovisual', 'design'],
+        tags: ['Short Film', 'Post-Production'],
+        description: "<b>Short documentary film</b> directed by Carolina Costa, made in 2022, as part of the <b><i>Plano Frontal Film Residency</i></b> by the <b>AO NORTE</b> Audiovisual Production and Animation Association, during the <b><i>MDOC - Melgaço International Documentary Festival</i></b>. I worked as sound director and main editor, also taking on the role of designer — creating the aesthetics of the posters and related materials.<br> The film was presented in 2023, at the following year's edition of the festival.<br><br><i>From an early age, José Celeiro has found inspiration for life in music. Today, he shares this passion by opening the doors of his \"Casa das Concertinas\" to anyone who wants to come in.</i> ",
+        role: 'Sound Director, Editor',
+        areas: 'Sound design, Video Post-Production, Audio Post-Production, Graphic Design',
+        images: ['assets/other/larai/larai1.jpg', 'assets/other/larai/larai2.png', 'assets/other/larai/larai11.jpg', 'assets/other/larai/larai8.png', 'assets/other/larai/larai12.jpg', 'assets/other/larai/larai13.jpg', 'assets/other/larai/larai14.jpg'],
+        video: '',
+        linkText: 'WATCH',
+        linkUrl: 'https://lugardoreal.com/video/la-larai'
+    },
+    {
+        id: 'berco',
+        title: 'RAINBOW BABY',
+        year: 'Short Film, 2023',
+        yearSort: 2023,
+        categories: ['audiovisual', 'design'],
+        tags: ['Short Film', 'Post-Production'],
+        description: "<b>Short documentary film</b> directed by Carolina Costa, on which I worked as <b>post-producer</b> (mainly in color grading and sound mixing). In addition, I also handled the <b>design</b>, creating the film's graphic visual identity (posters, graphics, social media content, etc.).<br>The film was featured in the 2023 editions of the <b><i>Caminhos do Cinema Português</i></b> and <b><i>Encontros de Cinema de Viana</i></b> film festivals, as well as in the 2024 edition of the <b><i>Tokyo Short Film Festival</i></b>.<br><br><i>Mom, in your room there are four beds... and three cribs.</i>",
+        role: 'Designer, Editor, Mixing Engineer',
+        areas: 'Graphic Design, Video Post-Production, Audio Post-Production',
+        images: ['assets/other/berco/berco1.jpg', 'assets/other/berco/berco3.jpg', 'assets/other/berco/berco5.jpg', 'assets/other/berco/berco6.jpg'],
+        video: 'https://youtu.be/6ludLvMZLXc'
+    },
+    {
+        id: 'esplanada',
+        title: 'HÁ UMA HORA NA ESPLANADA DO NAVIO DE ESPELHOS',
+        year: 'Soundscape, 2023',
+        yearSort: 2023,
+        categories: ['audio'],
+        tags: ['Music', 'Poetry', 'Sound', 'Soundscape'],
+        description: "<b><i>Há Uma Hora na Esplanada do Navio de Espelhos</i></b> is a sound experience that seeks to musically reinterpret the work and life of Mário Cesariny, and the legacy he left behind. I built this piece based not only on the author's work, but also on musical projects that were created in homage to him - through techniques such as sampling and reinterpretation, adding instrumentation created by me and even recordings of my own voice. My main goal was to combine the traditional format with a more experimental nature, as a finished product in a mixed and mastered music format, ready to be listened to on all kinds of devices. <br><br>In April 2024, the piece was included in the performance recital <b><i>Há Um Sol Esplendente nas Coisas</i></b>, produced by the Bonifrates Cooperative in partnership with <b>FCTUC's Department of Computer Engineering</b> and the <b>Penedo da Saudade Cultural Center</b>. It was also featured in the exhibition attached to the recital, where it is accompanied by the graphic artwork in the video below, created by Professor <b>Mariana Seiça</b>.",
+        role: 'Designer, Producer, Sound Engineer',
+        areas: 'Music Production, Sound Design',
+        images: ['assets/audio/esplanada/esplanada1.jpg', 'assets/audio/esplanada/esplanada2.jpg'],
+        video: 'https://youtu.be/eBgwArEFQGE',
+        linkText: 'LEARN MORE',
+        linkUrl: 'https://www.behance.net/gallery/198510387/Ha-Uma-Hora-na-Esplanada-Soundscape'
+    },
+    {
+        id: 'atrevome',
+        title: 'A(TREVO)-ME',
+        year: '2023',
+        yearSort: 2023,
+        categories: ['design'],
+        tags: ['Brand', 'Visual', 'Social Media'],
+        description: "Brand identity (including <b>logo variations, typography & post mockups and a podcast cover</b>) developed for the social media brand \u201ca(trevo)-me\u201d.",
+        role: 'Graphic Designer',
+        areas: 'Graphic Design, Branding',
+        images: ['assets/design/atrevome/atrevome2.jpg', 'assets/design/atrevome/atrevome3.jpg', 'assets/design/atrevome/atrevome1.jpg'],
+        video: 'https://youtu.be/VuI3AnUKyg4'
+    },
+    {
+        id: 'alto-martir',
+        title: 'MARTYR: ONE STEP AWAY FROM THE DEAD',
+        year: 'Short Film, 2021',
+        yearSort: 2021,
+        categories: ['audiovisual', 'design'],
+        tags: ['Short Film', 'Sound Design'],
+        description: "<b>Short documentary film</b> directed by Carolina Costa, on which I worked as <b>editor</b>. In addition, I also handled the <b>design</b>, creating the film's graphic aesthetic (posters, graphics, social media content, etc.).<br>The film was featured in the 2021 editions of the <b><i>DocLisboa</i></b> and <b><i>Caminhos do Cinema Português</i></b> film festivals.<br><br><i>In a small village in the countryside of Portugal, living one step away from the dead holds unimaginable secrets.</i>",
+        role: 'Designer, Editor',
+        areas: 'Graphic design, Video Post-Production, Audio Post-Production',
+        images: ['assets/other/alto/alto1.jpg', 'assets/other/alto/alto3.jpg', 'assets/other/alto/alto2.jpg', 'assets/other/alto/alto4.jpg', 'assets/other/alto/alto5.jpg', 'assets/other/alto/alto6.jpg', 'assets/other/alto/alto7.jpg', 'assets/other/alto/alto8.jpg', 'assets/other/alto/alto9.jpg'],
+        video: 'https://youtu.be/85L27l6hYl8'
+    },
+    {
+        id: 'serendipity',
+        title: 'SERENDIPITY',
+        year: 'Album, 2021',
+        yearSort: 2021,
+        categories: ['audio'],
+        tags: ['Music', 'Pop'],
+        description: 'Debut album by pop artist <b>Miguel Correia</b>, on which I was the executive producer. I <b>produced and mixed</b> 10 of the 11 tracks written by Miguel, on which I also played all the instruments. <br><br> It was my first time working with music in English!',
+        role: 'Musician, Producer, Mixing Engineer',
+        areas: 'Music Production',
+        images: ['assets/audio/serendipity/serendipity1.jpg'],
+        video: 'https://youtu.be/HPxAG745vqE?list=RDHPxAG745vqE',
+        linkText: 'LISTEN TO THE ALBUM',
+        linkUrl: 'https://youtube.com/playlist?list=OLAK5uy_lKosbOljM3oK3ca_vEiYVicgf_FSefivw&si=0r4M1yfTYAJhgiwQ'
+    },
+    {
+        id: 'singles',
+        title: 'SINGLES',
+        year: '2021-Present Day',
+        yearSort: 2021,
+        categories: ['audio'],
+        tags: ['Music'],
+        description: 'Recording, production, instrumentation, mixing, and mastering of various individual tracks, released as singles by different artists.',
+        role: 'Producer, Mixing Engineer',
+        areas: 'Music Production, Mixing, Mastering',
+        images: ['assets/audio/singles/singles2.png'],
+        video: 'https://youtu.be/JdPMcDybYcU?list=RDJdPMcDybYcU',
+        linkText: 'PLAYLIST WITH ALL OF THE SONGS',
+        linkUrl: 'https://open.spotify.com/playlist/5wMIlKW2ASYNKVVem0YuVL?si=03e3a695b4174f57'
+    },
+    {
+        id: 'cuidar',
+        title: 'CUIDAR - UM OLHAR ATENTO',
+        year: 'Photographic Exhibition, 2019',
+        yearSort: 2019,
+        categories: ['audiovisual'],
+        tags: ['Photo editing'],
+        description: 'During my time as a Visual Arts student at <I>Liceu Alves Martins</I> in Viseu (more specifically, in the 12th grade), a partnership between the school and the local health center <b><I>Casa de Saúde São Mateus</i></b> came about through the Multimedia Workshop subject, which gave three students the opportunity to hold a photographic exhibition to celebrate the first anniversary of the <I>Casa de Saúde São Mateus</I> Convalescence Unit. Thus, in January 2020, the exhibition <b><I>Cuidar - Um Olhar Atento</I></b> by André Gonçalves, Gonçalo Figueiredo and Tomás Oliveira was born.<br><br>Later, in order to enrich our project, we were asked to return to the <I>Casa de Saúde</I> in order to photograph the entire hospital, since the first wave of photographs was only aimed at the most recent Unit. This gave rise to a new range of photographic material, completing the exhibition.<br>The photographs were exhibited in <b>physical format</b> in the Convalescence Unit, and a conference was organized to inaugurate the exhibition.',
+        role: 'Photographer, Editor',
+        areas: 'Photography',
+        images: ['assets/other/cuidar/cuidar1.jpg', 'assets/other/cuidar/cuidar2.jpg', 'assets/other/cuidar/cuidar3.jpg', 'assets/other/cuidar/cuidar4.jpg', 'assets/other/cuidar/cuidar5.jpg', 'assets/other/cuidar/cuidar6.jpg', 'assets/other/cuidar/cuidar7.jpg', 'assets/other/cuidar/cuidar8.jpg', 'assets/other/cuidar/cuidar9.jpg', 'assets/other/cuidar/cuidar10.jpg', 'assets/other/cuidar/cuidar11.jpg', 'assets/other/cuidar/cuidar12.jpg'],
+        video: ''
+    }
+];
+
+// O projeto académico mantém-se separado (acionado pelo botão)
+const academicProject = {
+    id: 'academic-main',
+    title: 'ACADEMIC PROJECTS',
+    year: 'VARIOUS',
+    categories: ['design'],
+    tags: ['Multidisciplinary', 'Cross-Media'],
+    description: "During the two <b>Design & Multimedia</b> cycles offered by the Faculty of Science and Technology at the University of Coimbra (Bachelor's and Master's degrees), I developed several projects that I particularly enjoyed. Due to the variety of areas taught in the course, the projects (each individually described in the accompanying image) cover a range of fields, from editorial to computational design.",
+    role: 'Student, Designer',
+    areas: 'Graphic Design, Editorial Design, Computational Design, Sound Design, Audiovisual Production, Interaction Design',
+    images: [
+        'assets/design/academic/academic1.jpg',
+        'assets/design/academic/academic2.jpg',
+        'assets/design/academic/academic3.jpg',
+        'assets/design/academic/academic4.jpg',
+        'assets/design/academic/academic5.jpg',
+        'assets/design/academic/academic6.jpg',
+        'assets/design/academic/academic7.jpg',
+        'assets/design/academic/academic8.jpg',
+        'assets/design/academic/academic9.jpg',
+        'assets/design/academic/academic10.jpg',
+        'assets/design/academic/academic11.jpg',
+        'assets/design/academic/academic12.jpg',
+    ],
+    video: ''
 };
 
 // ==========================================
-// DOM ELEMENTS
+// FILTER STATE
 // ==========================================
 
-const navLinks = document.querySelectorAll('.nav-link');
-const sections = document.querySelectorAll('.section');
-const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-const sidenav = document.querySelector('.sidenav');
-const modal = document.getElementById('projectModal');
-const modalOverlay = document.querySelector('.modal-overlay');
-const modalClose = document.querySelector('.modal-close');
+let activeFilter = 'all';
 
-// Elementos do Lightbox
-const lightbox = document.getElementById('imageLightbox');
-const lightboxImage = lightbox.querySelector('.lightbox-image');
-const lightboxClose = lightbox.querySelector('.lightbox-close');
-const lightboxOverlay = lightbox.querySelector('.lightbox-overlay');
-const lightboxPrev = lightbox.querySelector('.lightbox-prev');
-const lightboxNext = lightbox.querySelector('.lightbox-next');
+// ==========================================
+// DOM ELEMENTS (declarados como let, inicializados em initApp)
+// ==========================================
+
+let navLinks;
+let sections;
+let mobileMenuToggle;
+let sidenav;
+let modal;
+let modalOverlay;
+let modalClose;
+let lightbox;
+let lightboxImage;
+let lightboxClose;
+let lightboxOverlay;
+let lightboxPrev;
+let lightboxNext;
 
 // ==========================================
 // CAROUSEL STATE
@@ -287,40 +293,58 @@ function convertYouTubeUrl(url) {
 }
 
 // ==========================================
-// RENDER PROJECTS DYNAMICALLY
+// RENDER & FILTER PROJECTS
 // ==========================================
 
-function renderProjects() {
-    Object.keys(projectData).forEach(category => {
-        // Ignora a categoria 'academic' aqui, pois é tratada por um botão separado
-        if (category === 'academic') return;
+function getFilteredProjects(filter) {
+    if (filter === 'all') {
+        // Ordena por ano (mais recente primeiro)
+        return [...allProjects].sort((a, b) => b.yearSort - a.yearSort);
+    }
+    return allProjects
+        .filter(p => p.categories.includes(filter))
+        .sort((a, b) => b.yearSort - a.yearSort);
+}
 
-        const section = document.getElementById(category);
-        if (!section) return;
+function renderProjects(filter) {
+    const workGrid = document.querySelector('#work .work-grid');
+    if (!workGrid) return;
 
-        const workGrid = section.querySelector('.work-grid');
-        if (!workGrid) return;
+    const projects = getFilteredProjects(filter || activeFilter);
 
-        workGrid.innerHTML = '';
+    workGrid.innerHTML = '';
 
-        projectData[category].forEach(project => {
-            const projectItem = createProjectElement(category, project);
-            workGrid.appendChild(projectItem);
-        });
+    projects.forEach((project, index) => {
+        const projectItem = createProjectElement(project);
+        projectItem.style.animationDelay = `${index * 0.05}s`;
+        workGrid.appendChild(projectItem);
     });
+
+    // Mostrar/esconder botão de trabalho académico (só aparece no filtro 'design' ou 'all')
+    const academicContainer = document.querySelector('.academic-trigger-container');
+    if (academicContainer) {
+        if (activeFilter === 'design' || activeFilter === 'all') {
+            academicContainer.style.display = '';
+        } else {
+            academicContainer.style.display = 'none';
+        }
+    }
 
     initProjectModal();
 }
 
-function createProjectElement(category, project) {
+function createProjectElement(project) {
     const div = document.createElement('div');
     div.className = 'project-item';
-    div.setAttribute('data-category', category);
     div.setAttribute('data-project-id', project.id);
 
     const imageContent = project.images && project.images.length > 0 ?
         `<img src="${project.images[0]}" alt="${project.title}">` :
         `<div class="placeholder">${project.title}</div>`;
+
+    // Gera badges de categorias para projetos multi-área
+    const categoryLabels = { design: 'Design', audio: 'Audio', audiovisual: 'Film & Photo' };
+    const categoryBadges = `<div class="project-categories">${project.categories.map(c => `<span class="category-badge category-badge--${c}">${categoryLabels[c]}</span>`).join('')}</div>`;
 
     div.innerHTML = `
         <div class="project-image ${project.images && project.images.length > 0 ? 'has-image' : ''}">
@@ -328,7 +352,8 @@ function createProjectElement(category, project) {
         </div>
         <div class="project-info">
             <h3>${project.title}</h3>
-            <p class="project-meta">${project.year}</p>
+            <span class="project-year-badge">${project.yearSort}</span>
+            ${categoryBadges}
         </div>
     `;
 
@@ -336,14 +361,28 @@ function createProjectElement(category, project) {
 }
 
 // ==========================================
-// FIND PROJECT BY CATEGORY AND ID
+// FIND PROJECT BY ID
 // ==========================================
 
-function findProject(category, projectId) {
-    const categoryProjects = projectData[category];
-    if (!categoryProjects) return null;
+function findProject(projectId) {
+    if (projectId === 'academic-main') return academicProject;
+    return allProjects.find(p => p.id === projectId) || null;
+}
 
-    return categoryProjects.find(p => p.id === projectId);
+// ==========================================
+// FILTER BUTTONS
+// ==========================================
+
+function initFilters() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    filterButtons.forEach(btn => {
+        btn.addEventListener('click', function () {
+            filterButtons.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            activeFilter = this.getAttribute('data-filter');
+            renderProjects(activeFilter);
+        });
+    });
 }
 
 // ==========================================
@@ -351,26 +390,22 @@ function findProject(category, projectId) {
 // ==========================================
 
 function initCarousel(images) {
-    currentImages = images; // Armazena as imagens do carrossel atual
+    currentImages = images;
     currentImageIndex = 0;
     updateCarouselDisplay();
 }
 
 function updateCarouselDisplay() {
-    const imagesContainer = document.querySelector('.modal-images');
+    const carouselContainer = document.querySelector('.modal-carousel');
 
     if (!currentImages || currentImages.length === 0) {
-        imagesContainer.innerHTML = '<div class="placeholder">Project Images</div>';
+        carouselContainer.innerHTML = '<div class="placeholder">Project Images</div>';
         return;
     }
 
-    // Guarda o vídeo se existir
-    const existingVideo = imagesContainer.querySelector('.modal-video');
-    const videoHTML = existingVideo ? existingVideo.outerHTML : '';
-
     const showControls = currentImages.length > 1;
 
-    const carouselHTML = `
+    carouselContainer.innerHTML = `
         <div class="carousel-container">
             ${showControls ? '<button class="carousel-btn carousel-prev" aria-label="Previous image">‹</button>' : ''}
             <div class="carousel-image-wrapper">
@@ -389,28 +424,22 @@ function updateCarouselDisplay() {
         ` : ''}
     `;
 
-    // Reconstrói mantendo o vídeo no final
-    imagesContainer.innerHTML = carouselHTML + videoHTML;
-
-    // Tornar a imagem do carrossel clicável
-    const carouselImageEl = imagesContainer.querySelector('.carousel-image');
+    const carouselImageEl = carouselContainer.querySelector('.carousel-image');
     if (carouselImageEl) {
         carouselImageEl.addEventListener('click', () => {
-            // ALTERADO: Passa o array completo de imagens e o índice atual
             openLightbox(carouselImageEl.src, currentImages, currentImageIndex);
         });
-        // Adiciona um cursor para indicar que é clicável
         carouselImageEl.style.cursor = 'zoom-in';
     }
 
     if (showControls) {
-        const prevBtn = imagesContainer.querySelector('.carousel-prev');
-        const nextBtn = imagesContainer.querySelector('.carousel-next');
-        const indicators = imagesContainer.querySelectorAll('.carousel-indicator');
+        const prevBtn = carouselContainer.querySelector('.carousel-prev');
+        const nextBtn = carouselContainer.querySelector('.carousel-next');
+        const indicators = carouselContainer.querySelectorAll('.carousel-indicator');
 
         if (prevBtn) prevBtn.addEventListener('click', () => navigateCarousel('prev'));
         if (nextBtn) nextBtn.addEventListener('click', () => navigateCarousel('next'));
-        
+
         indicators.forEach(indicator => {
             indicator.addEventListener('click', (e) => {
                 currentImageIndex = parseInt(e.target.dataset.index);
@@ -433,50 +462,48 @@ function navigateCarousel(direction) {
 // VIDEO EMBED
 // ==========================================
 
-function renderVideoEmbed(videoUrl) {
-    const imagesContainer = document.querySelector('.modal-images');
-    
-    if (!videoUrl || videoUrl.trim() === '') {
-        return;
-    }
+function renderVideoEmbed(video) {
+    const videosContainer = document.querySelector('.modal-videos');
 
-    const embedUrl = convertYouTubeUrl(videoUrl);
-    
-    if (!embedUrl) {
-        console.error('URL de vídeo inválida:', videoUrl);
-        return;
-    }
+    if (!video || (typeof video === 'string' && video.trim() === '')) return;
 
-    const videoHTML = `
-        <div class="modal-video">
-            <div class="video-container">
-                <iframe 
-                    src="${embedUrl}" 
-                    title="Project video"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    allowfullscreen>
-                </iframe>
+    const urls = Array.isArray(video) ? video : [video];
+
+    urls.forEach(videoUrl => {
+        if (!videoUrl || videoUrl.trim() === '') return;
+
+        const embedUrl = convertYouTubeUrl(videoUrl);
+        if (!embedUrl) return;
+
+        const videoHTML = `
+            <div class="modal-video">
+                <div class="video-container">
+                    <iframe 
+                        src="${embedUrl}" 
+                        title="Project video"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
             </div>
-        </div>
-    `;
-
-    imagesContainer.insertAdjacentHTML('beforeend', videoHTML);
+        `;
+        videosContainer.insertAdjacentHTML('beforeend', videoHTML);
+    });
 }
 
 // ==========================================
-// IMAGE LIGHTBOX (Ecrã Inteiro)
+// IMAGE LIGHTBOX
 // ==========================================
 
 function openLightbox(imageUrl, imagesArray, clickedIndex) {
     if (!lightbox || !lightboxImage) return;
 
-    currentLightboxImages = imagesArray || []; // Guarda o array de imagens
-    currentImageIndex = clickedIndex || 0;     // Guarda o índice da imagem clicada
+    currentLightboxImages = imagesArray || [];
+    currentImageIndex = clickedIndex || 0;
 
     lightboxImage.src = imageUrl;
     lightbox.classList.add('active');
 
-    // ADICIONADO: Controla a visibilidade dos botões de navegação
     if (currentLightboxImages.length > 1) {
         lightbox.classList.add('has-multiple-images');
     } else {
@@ -487,12 +514,11 @@ function openLightbox(imageUrl, imagesArray, clickedIndex) {
 function closeLightbox() {
     if (!lightbox) return;
     lightbox.classList.remove('active');
-    lightbox.classList.remove('has-multiple-images'); // Limpa a classe
-    currentLightboxImages = []; // Limpa o array
-    currentImageIndex = 0;      // Reinicia o índice
+    lightbox.classList.remove('has-multiple-images');
+    currentLightboxImages = [];
+    currentImageIndex = 0;
 }
 
-// ADICIONADO: Navegação para o lightbox
 function navigateLightbox(direction) {
     if (currentLightboxImages.length === 0) return;
 
@@ -510,11 +536,11 @@ function initLightbox() {
     lightboxClose.addEventListener('click', closeLightbox);
     lightboxOverlay.addEventListener('click', closeLightbox);
     lightboxPrev.addEventListener('click', (e) => {
-        e.stopPropagation(); // Impede o overlay de fechar
+        e.stopPropagation();
         navigateLightbox('prev');
     }); 
     lightboxNext.addEventListener('click', (e) => {
-        e.stopPropagation(); // Impede o overlay de fechar
+        e.stopPropagation();
         navigateLightbox('next');
     });
 }
@@ -592,27 +618,28 @@ window.addEventListener('resize', function() {
 // ==========================================
 
 function openAcademicModal() {
-    // Abre o modal usando os dados que definimos em 'academic'
-    openModal('academic', 'academic-main'); 
+    openModal('academic-main'); 
 }
 
 function initProjectModal() {
     const projectItems = document.querySelectorAll('.project-item');
-    const academicButton = document.getElementById('academicWorkButton'); // NOVO: Seleciona o botão
+    const academicButton = document.getElementById('academicWorkButton');
 
     projectItems.forEach(item => {
         const newItem = item.cloneNode(true);
         item.parentNode.replaceChild(newItem, item);
         
         newItem.addEventListener('click', function() {
-            const category = this.getAttribute('data-category');
             const projectId = this.getAttribute('data-project-id');
-            openModal(category, projectId);
+            openModal(projectId);
         });
     });
 
-    if (academicButton) { // NOVO: Adiciona o listener para o botão académico
-        academicButton.addEventListener('click', openAcademicModal);
+    if (academicButton) {
+        // Remove listener antigo para evitar duplicados
+        const newBtn = academicButton.cloneNode(true);
+        academicButton.parentNode.replaceChild(newBtn, academicButton);
+        newBtn.addEventListener('click', openAcademicModal);
     }
 
     if (modalClose) {
@@ -626,22 +653,19 @@ function initProjectModal() {
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') {
             if (lightbox && lightbox.classList.contains('active')) {
-                closeLightbox(); // Fecha o lightbox primeiro
+                closeLightbox();
             } else if (modal.classList.contains('active')) {
-                closeModal(); // Se o lightbox não estiver ativo, fecha o modal
+                closeModal();
             }
         }
         
-        // ADICIONADO: Navegação no lightbox com setas
         if (lightbox && lightbox.classList.contains('active') && currentLightboxImages.length > 1) {
             if (e.key === 'ArrowLeft') {
                 navigateLightbox('prev');
             } else if (e.key === 'ArrowRight') {
                 navigateLightbox('next');
             }
-        } 
-        // Navegação no carrossel (só funciona se o lightbox não estiver ativo)
-        else if (modal.classList.contains('active') && currentImages.length > 1) {
+        } else if (modal.classList.contains('active') && currentImages.length > 1) {
             if (e.key === 'ArrowLeft') {
                 navigateCarousel('prev');
             } else if (e.key === 'ArrowRight') {
@@ -658,11 +682,11 @@ function initProjectModal() {
     }
 }
 
-function openModal(category, projectId) {
-    const project = findProject(category, projectId);
+function openModal(projectId) {
+    const project = findProject(projectId);
 
     if (!project) {
-        console.error('Project not found:', category, projectId);
+        console.error('Project not found:', projectId);
         return;
     }
 
@@ -677,7 +701,7 @@ function closeModal() {
     modal.classList.remove('active');
     document.body.classList.remove('modal-open');
     document.body.style.overflow = '';
-    currentImages = []; // Limpa as imagens do carrossel
+    currentImages = [];
     currentImageIndex = 0;
 }
 
@@ -685,16 +709,11 @@ function updateModalContent(project) {
     document.querySelector('.modal-title').textContent = project.title;
     document.querySelector('.modal-year').textContent = project.year;
 
-
     const tagsContainer = document.querySelector('.modal-tags');
     tagsContainer.innerHTML = project.tags.map(tag =>
         `<span class="tag">${tag}</span>`
     ).join('');
 
-    document.querySelector('.modal-description').innerHTML =
-        `<p>${project.description}</p>`;
-
-        // 1. Limpa qualquer botão de ação de um projeto anterior
     const existingButton = modal.querySelector('.project-action-button');
     if (existingButton) {
         existingButton.remove();
@@ -703,17 +722,14 @@ function updateModalContent(project) {
     document.querySelector('.modal-description').innerHTML =
         `<p>${project.description}</p>`;
 
-    // >>> COLOQUE O CÓDIGO NOVO DO BOTÃO AQUI <<<
-    // 2. Cria e insere o novo botão se os dados existirem no projeto
     if (project.linkText && project.linkUrl) {
         const linkButton = document.createElement('a');
         linkButton.href = project.linkUrl;
-        linkButton.target = '_blank'; // Abrir em nova aba
+        linkButton.target = '_blank';
         linkButton.rel = 'noopener noreferrer';
         linkButton.textContent = project.linkText;
-        linkButton.className = 'project-action-button'; // Classe para estilização no CSS
+        linkButton.className = 'project-action-button';
         
-        // Insere o botão logo a seguir ao elemento da descrição
         const modalDescription = document.querySelector('.modal-description');
         modalDescription.insertAdjacentElement('afterend', linkButton); 
     }
@@ -730,19 +746,18 @@ function updateModalContent(project) {
         </div>
     `;
 
-    // IMPORTANTE: Limpa o container de imagens completamente antes de adicionar novo conteúdo
-    const imagesContainer = document.querySelector('.modal-images');
-    imagesContainer.innerHTML = '';
+    const carouselContainer = document.querySelector('.modal-carousel');
+    const videosContainer = document.querySelector('.modal-videos');
+    carouselContainer.innerHTML = '';
+    videosContainer.innerHTML = '';
 
-    // Renderiza imagens (carrossel)
     if (project.images && project.images.length > 0) {
         initCarousel(project.images);
     } else {
-        imagesContainer.innerHTML = '<div class="placeholder">Project Images</div>';
+        carouselContainer.innerHTML = '<div class="placeholder">Project Images</div>';
     }
 
-    // Adiciona vídeo se existir (sempre depois das imagens)
-    if (project.video && project.video.trim() !== '') {
+    if (project.video && (Array.isArray(project.video) ? project.video.length > 0 : project.video.trim() !== '')) {
         renderVideoEmbed(project.video);
     }
 }
@@ -754,10 +769,27 @@ function updateModalContent(project) {
 function initApp() {
     console.log('Portfolio initialized');
 
-    renderProjects();
+    // Inicializa os elementos do DOM aqui, depois do DOM estar carregado
+    navLinks = document.querySelectorAll('.nav-link');
+    sections = document.querySelectorAll('.section');
+    mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    sidenav = document.querySelector('.sidenav');
+    modal = document.getElementById('projectModal');
+    modalOverlay = document.querySelector('.modal-overlay');
+    modalClose = document.querySelector('.modal-close');
+
+    lightbox = document.getElementById('imageLightbox');
+    lightboxImage = lightbox ? lightbox.querySelector('.lightbox-image') : null;
+    lightboxClose = lightbox ? lightbox.querySelector('.lightbox-close') : null;
+    lightboxOverlay = lightbox ? lightbox.querySelector('.lightbox-overlay') : null;
+    lightboxPrev = lightbox ? lightbox.querySelector('.lightbox-prev') : null;
+    lightboxNext = lightbox ? lightbox.querySelector('.lightbox-next') : null;
+
+    renderProjects('all');
+    initFilters();
     initNavigation();
     initMobileMenu();
-    initLightbox(); 
+    initLightbox();
 
     const homeSection = document.getElementById('home');
     if (homeSection) {
@@ -789,16 +821,6 @@ function debounce(func, wait) {
         clearTimeout(timeout);
         timeout = setTimeout(later, wait);
     };
-}
-
-function isInViewport(element) {
-    const rect = element.getBoundingClientRect();
-    return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
 }
 
 if (typeof module !== 'undefined' && module.exports) {

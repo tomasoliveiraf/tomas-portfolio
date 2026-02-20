@@ -28,9 +28,7 @@
         </div>
         <ul class="nav-links">
             <li><a href="#home" class="nav-link active">HOME</a></li>
-            <li><a href="#design" class="nav-link">GRAPHIC DESIGN</a></li>
-            <li><a href="#audio" class="nav-link">AUDIO & MUSIC</a></li>
-            <li><a href="#audiovisual" class="nav-link">FILM & PHOTO</a></li>
+            <li><a href="#work" class="nav-link">WORK</a></li>
             <li><a href="#about" class="nav-link">ABOUT</a></li>
         </ul>
         <div class="nav-footer">
@@ -52,7 +50,7 @@
                 </a>
             </div>
             <p class="location">Coimbra / Viseu, PT</p>
-            <a href="mailto:tomasoliveira.media@gmail.com" class="email"><span class="__cf_email__" data-cfemail="b7c3d8dad6c4d8dbdec1d2dec5d699dad2d3ded6f7d0dad6dedb99d4d8da"><span class="__cf_email__" data-cfemail="4e3a21232f3d212227382b273c2f60232b2a272f0e29232f2722602d2123"><span class="__cf_email__" data-cfemail="91e5fefcf0e2fefdf8e7f4f8e3f0bffcf4f5f8f0d1f6fcf0f8fdbff2fefc">tomasoliveira.media@gmail.com</span></span></span></a>
+            <a href="mailto:tomasoliveira.media@gmail.com" class="email"><span class="__cf_email__" data-cfemail="b7c3d8dad6c4d8dbdec1d2dec5d699dad2d3ded6f7d0dad6dedb99d4d8da"><span class="__cf_email__" data-cfemail="4e3a21232f3d212227382b273c2f60232b2a272f0e29232f2722602d2123"><span class="__cf_email__" data-cfemail="91e5fefcf0e2fefdf8e7f4f8e3f0bffcf4f5f8f0d1f6fcf0f8fdbff2fefc"><span class="__cf_email__" data-cfemail="91e5fefcf0e2fefdf8e7f4f8e3f0bffcf4f5f8f0d1f6fcf0f8fdbff2fefc">tomasoliveira.media@gmail.com</span></span></span></span></a>
         </div>
     </nav>
 
@@ -85,41 +83,23 @@
             </div>
         </section>
 
-        <!-- DESIGN Section -->
-        <section id="design" class="section">
+        <!-- WORK Section -->
+        <section id="work" class="section">
             <div class="section-inner">
-                <h2 class="section-title">GRAPHIC DESIGN</h2>
+                <div class="work-filters">
+                    <button class="filter-btn active" data-filter="all">ALL PROJECTS</button>
+                    <button class="filter-btn" data-filter="design">GRAPHIC DESIGN</button>
+                    <button class="filter-btn" data-filter="audio">AUDIO & MUSIC</button>
+                    <button class="filter-btn" data-filter="audiovisual">FILM & PHOTO</button>
+                </div>
                 <div class="work-grid">
                     <!-- Projetos gerados automaticamente pelo JS -->
                 </div>
                 <div class="academic-trigger-container">
                     <button id="academicWorkButton" class="academic-trigger">
-                <span class="academic-text">ACADEMIC WORK</span>
-                <svg class="academic-arrow" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                    
-                </svg>
-            </button>
-                </div>
-            </div>
-            </div>
-        </section>
-
-        <!-- AUDIO & MUSIC Section -->
-        <section id="audio" class="section">
-            <div class="section-inner">
-                <h2 class="section-title">AUDIO & MUSIC</h2>
-                <div class="work-grid">
-                    <!-- Projetos gerados automaticamente pelo JS -->
-                </div>
-            </div>
-        </section>
-
-        <!-- OTHER MEDIA Section -->
-        <section id="audiovisual" class="section">
-            <div class="section-inner">
-                <h2 class="section-title">FILM, PHOTO & VIDEO</h2>
-                <div class="work-grid">
-                    <!-- Projetos gerados automaticamente pelo JS -->
+                        <span class="academic-text">ACADEMIC WORK</span>
+                        <svg class="academic-arrow" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"></svg>
+                    </button>
                 </div>
             </div>
         </section>
@@ -268,7 +248,10 @@
             <button class="modal-close" aria-label="Close modal">&times;</button>
             <div class="modal-inner">
                 <div class="modal-images">
-                    <div class="placeholder">Project Images</div>
+                    <div class="modal-carousel">
+                        <div class="placeholder">Project Images</div>
+                    </div>
+                    <div class="modal-videos"></div>
                 </div>
                 <div class="modal-info">
                     <h2 class="modal-title">Project Title</h2>
@@ -312,8 +295,6 @@
             </filter>
         </defs>
     </svg>
-
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script src="script.js"></script>
 </body>
 
