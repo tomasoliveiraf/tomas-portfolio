@@ -6,7 +6,23 @@
 // Um projeto pode pertencer a múltiplas categorias simultaneamente.
 // ==========================================
 
-const allProjects = [{
+const allProjects = [
+
+    {
+        id: 'paris',
+        title: 'PARIS',
+        year: "Cover Artwork, 2026",
+        yearSort: 2026,
+        categories: ['design'],
+        tags: ['Music', 'Artwork', 'Singles'],
+        description: "Artwork design for Joana Sobral's single, <b><i>Paris</i></b>. Assets include <b>cover art, thumbnail, lettering and social media content.</b>",
+        role: 'Graphic Designer',
+        areas: 'Graphic Design, Design for Music',
+        images: ['assets/design/paris/paris1.jpg', 'assets/design/paris/paris2.jpg', 'assets/design/paris/paris3.jpg', 'assets/design/paris/paris1.jpg'],
+        video: ''
+    },
+
+    {
         id: 'winitroia',
         title: 'WINITRÓIA',
         year: '2025',
