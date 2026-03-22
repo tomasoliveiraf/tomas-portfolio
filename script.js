@@ -18,7 +18,7 @@ const allProjects = [
         description: "Artwork design for Joana Sobral's single, <b><i>Paris</i></b>. Assets include <b>cover art, thumbnail, lettering and social media content.</b>",
         role: 'Graphic Designer',
         areas: 'Graphic Design, Design for Music',
-        images: ['assets/design/paris/paris1.jpg', 'assets/design/paris/paris2.jpg', 'assets/design/paris/paris3.jpg', 'assets/design/paris/paris1.jpg'],
+        images: ['assets/design/paris/paris1.jpg', 'assets/design/paris/paris2.jpg', 'assets/design/paris/paris3.jpg', 'assets/design/paris/paris4.jpg'],
         video: ''
     },
 
