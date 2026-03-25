@@ -568,9 +568,16 @@ function initLightbox() {
 function initNavigation() {
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+
+            // deixa links normais funcionarem (ex: cubiculo/index.html)
+            if (!href || !href.startsWith('#')) {
+                return;
+            }
+
             e.preventDefault();
 
-            const targetId = this.getAttribute('href').replace('#', '');
+            const targetId = href.replace('#', '');
 
             navLinks.forEach(l => l.classList.remove('active'));
             sections.forEach(s => s.classList.remove('active'));
