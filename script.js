@@ -568,9 +568,14 @@ function initLightbox() {
 function initNavigation() {
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+
+            // Se não começa com '#', é um link externo — deixa o browser tratar
+            if (!href.startsWith('#')) return;
+
             e.preventDefault();
 
-            const targetId = this.getAttribute('href').replace('#', '');
+            const targetId = href.replace('#', '');
 
             navLinks.forEach(l => l.classList.remove('active'));
             sections.forEach(s => s.classList.remove('active'));
