@@ -259,6 +259,8 @@ h1 {
     letter-spacing: -0.05em;
     font-weight: 600;
     max-width: 9ch;
+    text-transform: uppercase;
+    transform: scaleY(1.16);
 }
 
 h2 {
@@ -268,6 +270,11 @@ h2 {
     letter-spacing: -0.045em;
     font-weight: 600;
     max-width: 20ch;
+    text-transform: uppercase;
+    /* CAPS LOCK */
+    transform: scaleY(1.16);
+    /* stretch vertical */
+    transform-origin: center;
 }
 
 h3 {
@@ -378,6 +385,10 @@ select:focus {
     padding: 3.3rem 0;
 }
 
+.section-projects-list {
+    padding-top: 0;
+}
+
 .section-compact {
     padding: 4rem 0;
 }
@@ -447,7 +458,7 @@ select:focus {
 
 .projects-intro h2 {
     margin: 0;
-    max-width: 20ch;
+    max-width: 26ch;
 }
 
 .projects-grid {
