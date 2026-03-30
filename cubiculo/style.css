@@ -33,6 +33,13 @@ body {
     overflow-x: hidden;
 }
 
+@font-face {
+    font-family: 'Generic Slim';
+    src: url('./fonts/Generic-Slim.woff2') format('woff2'), url('./fonts/Generic-Slim.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .site-texture {
     position: fixed;
     inset: 0;
@@ -223,6 +230,7 @@ textarea {
 .visual-copy {
     display: grid;
     gap: 1.1rem;
+    font-family: 'Generic Slim', var(--font-main);
 }
 
 .hero-copy {
