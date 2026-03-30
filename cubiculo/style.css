@@ -34,8 +34,8 @@ body {
 }
 
 @font-face {
-    font-family: 'Generic Slim';
-    src: url('./fonts/Generic-Slim.woff2') format('woff2'), url('./fonts/Generic-Slim.woff') format('woff');
+    font-family: "Generic Slim";
+    src: url("./fonts/generic-g40-cc-slender.otf") format("woff2"), url("./fonts/generic-g40-cc-slender.otf") format("woff");
     font-weight: normal;
     font-style: normal;
 }
@@ -65,7 +65,8 @@ a {
 
 button,
 input,
-textarea {
+textarea,
+select {
     font: inherit;
 }
 
@@ -194,10 +195,8 @@ textarea {
 
 .hero-nav {
     position: absolute;
-    top: 7.0rem;
-    /* ajusta até alinhar com "O CUBÍCULO" */
+    top: 7rem;
     right: 0.2rem;
-    /* encostado à direita */
     display: flex;
     gap: 0.6rem;
     z-index: 5;
@@ -212,8 +211,7 @@ textarea {
     background: rgba(255, 255, 255, 0.06);
     padding: 0.6rem 1.2rem;
     border-radius: 2px;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    border-color: rgba(243, 238, 227, 0.4);
+    border: 1px solid rgba(243, 238, 227, 0.4);
     backdrop-filter: blur(6px);
     transition: all 0.2s ease;
     filter: blur(0.2px);
@@ -230,7 +228,7 @@ textarea {
 .visual-copy {
     display: grid;
     gap: 1.1rem;
-    font-family: 'Generic Slim', var(--font-main);
+    font-family: "Generic Slim", var(--font-main);
 }
 
 .hero-copy {
@@ -279,9 +277,7 @@ h2 {
     font-weight: 600;
     max-width: 20ch;
     text-transform: uppercase;
-    /* CAPS LOCK */
     transform: scaleY(1.16);
-    /* stretch vertical */
     transform-origin: center;
 }
 
@@ -312,18 +308,12 @@ h3 {
 .project-type {
     font-size: 0.75rem;
     color: var(--muted);
-    opacity: 0.6;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-}
-
-.project-type {
-    font-size: 0.75rem;
-    color: var(--muted);
     opacity: 0.7;
     font-weight: 400;
     white-space: nowrap;
     padding-left: 3%;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
 }
 
 .hero-text {
@@ -365,8 +355,7 @@ select:focus {
     min-height: 46px;
     padding: 0.82rem 1.15rem;
     border-radius: 2px;
-    border: 1px solid var(--line);
-    border-color: rgba(243, 238, 227, 0.4);
+    border: 1px solid rgba(243, 238, 227, 0.4);
     transition: transform 180ms ease, background 180ms ease, border-color 180ms ease, opacity 180ms ease;
 }
 
@@ -381,7 +370,6 @@ select:focus {
     background: var(--accent);
     color: #111;
     border-color: rgba(243, 238, 227, 0.4);
-    ;
 }
 
 .button-secondary {
@@ -713,13 +701,6 @@ textarea:focus {
         max-width: none;
         order: 2;
     }
-    .hero-logo-wrap {
-        order: 1;
-        min-height: 280px;
-    }
-    .hero-logo-image {
-        width: min(100%, 420px);
-    }
     .visual-photo img {
         min-height: 360px;
         max-height: 520px;
@@ -742,30 +723,119 @@ textarea:focus {
     .page-shell {
         padding: 0 1rem;
     }
+    .cursor-glow,
+    .grain {
+        display: none;
+    }
+    .site-texture {
+        opacity: 0.12;
+    }
+    .bg-stains {
+        opacity: 0.16;
+        filter: blur(10px);
+    }
+    .top-actions {
+        padding-top: 1rem;
+    }
+    .back-home,
+    .back-link {
+        font-size: 0.9rem;
+    }
+    .hero {
+        padding: 1rem 0 0.5rem;
+    }
+    .hero-full-image {
+        display: grid;
+        gap: 0.9rem;
+    }
+    .hero-nav {
+        position: static;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.6rem;
+        order: 2;
+    }
+    .hero-full-image-file {
+        order: 1;
+        width: 100%;
+        height: auto;
+    }
+    .hero-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 0.8rem 0.9rem;
+        font-size: 0.8rem;
+        backdrop-filter: none;
+    }
     h1 {
         font-size: clamp(2.2rem, 13vw, 4rem);
+        transform: scaleY(1.1);
     }
     h2 {
-        font-size: clamp(1.6rem, 8vw, 2.4rem);
+        font-size: clamp(1.9rem, 9vw, 2.5rem);
+        line-height: 0.95;
+        max-width: none;
+        transform: scaleY(1.08);
+    }
+    .projects-intro h2,
+    .contact-copy h2 {
+        max-width: none;
     }
     .projects-grid-featured,
     .projects-grid-all {
         grid-template-columns: 1fr;
     }
-    .hero-actions {
-        flex-direction: column;
-        align-items: stretch;
+    .projects-grid {
+        gap: 1rem;
+    }
+    .project-meta {
+        padding: 0.8rem 0.85rem 0.9rem;
+    }
+    .project-artist {
+        font-size: 0.82rem;
+    }
+    .project-desc {
+        font-size: 0.88rem;
+        line-height: 1.45;
+    }
+    .service-line {
+        grid-template-columns: 1fr;
+        gap: 0.35rem;
+        padding: 0.95rem 0;
+    }
+    .service-line span:first-child {
+        font-size: 1rem;
+    }
+    .service-line span:last-child {
+        font-size: 0.95rem;
+        line-height: 1.45;
+    }
+    .visual-grid,
+    .contact-grid,
+    .videos-grid {
+        grid-template-columns: 1fr;
+    }
+    .visual-photo img {
+        min-height: 300px;
+        max-height: 460px;
+    }
+    .contact-section {
+        padding-bottom: 0.5rem;
+    }
+    .contact-form {
+        padding: 1rem;
+    }
+    .section {
+        padding: 3.2rem 0;
+    }
+    .section-compact {
+        padding: 2.8rem 0;
     }
     .button {
         width: 100%;
     }
-    .section {
-        padding: 4.2rem 0;
-    }
-    .section-compact {
-        padding: 3.2rem 0;
-    }
-    .contact-form {
-        padding: 1.2rem;
+    .page-top {
+        padding: 1.4rem 0 1.6rem;
+        gap: 1.1rem;
     }
 }
