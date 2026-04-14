@@ -154,7 +154,7 @@ const allProjects = [
     },
     {
         id: 'esplanada',
-        title: 'HÁ UMA HORA NA ESPLANADA DO NAVIO DE ESPELHOS',
+        title: 'HÁ UMA HORA NA ESPLANADA',
         year: 'Soundscape, 2023',
         yearSort: 2023,
         categories: ['audio'],
