@@ -18,7 +18,7 @@ const allProjects = [
         description: "<b>Visual identity</b> for <b><i>O CUBÍCULO</b></i> music production studio, creating a cohesive graphic system that reflects the brand’s personality through typography, color, and composition. The project was designed to work consistently across different media, including the development of the <b>website</b>.",
         role: 'Graphic Designer, Web Designer',
         areas: 'Graphic Design, Design for Music, Web Design',
-        images: ['assets/design/cubiculo/cub1.jpg', 'assets/design/cubiculo/cub2.jpg', 'assets/design/cubiculo/cub3.png', 'assets/design/cubiculo/cub4.png', 'assets/design/cubiculo/cub5.jpg', 'assets/design/cubiculo/cub6.jpg', 'assets/design/cubiculo/cub7.jpg'],
+        images: ['assets/design/cubiculo/cub1.jpg', 'assets/design/cubiculo/cub2.jpg', 'assets/design/cubiculo/cub3.png', 'assets/design/cubiculo/cub4.png', 'assets/design/cubiculo/cub5.jpg', 'assets/design/cubiculo/cub7.jpg'],
         video: '',
         linkText: 'WEBSITE',
         linkUrl: 'https://tomasdof.com/cubiculo/'
