@@ -371,7 +371,7 @@ function createProjectElement(project) {
     div.setAttribute('data-project-id', project.id);
 
     const imageContent = project.images && project.images.length > 0 ?
-        `<img src="${project.images[0]}" alt="${project.title}">` :
+        `<img src="${project.images[0]}" alt="${project.title}" loading="lazy">` :
         `<div class="placeholder">${project.title}</div>`;
 
     // Gera badges de categorias para projetos multi-área ${categoryBadges}
@@ -479,6 +479,21 @@ function updateCarouselDisplay() {
             });
         });
     }
+
+    // Preload das imagens adjacentes para navegação instantânea
+    preloadAdjacentImages();
+}
+
+function preloadAdjacentImages() {
+    if (!currentImages || currentImages.length <= 1) return;
+    const indexes = [
+        (currentImageIndex + 1) % currentImages.length,
+        (currentImageIndex - 1 + currentImages.length) % currentImages.length
+    ];
+    indexes.forEach(i => {
+        const img = new Image();
+        img.src = currentImages[i];
+    });
 }
 
 function navigateCarousel(direction) {
@@ -800,6 +815,21 @@ function updateModalContent(project) {
 }
 
 // ==========================================
+// PRELOAD DE IMAGENS
+// ==========================================
+
+function preloadThumbnails() {
+    // Preload da primeira imagem de cada projeto (thumbnails da grid)
+    const allProjectsList = [...allProjects, academicProject];
+    allProjectsList.forEach(project => {
+        if (project.images && project.images.length > 0) {
+            const img = new Image();
+            img.src = project.images[0];
+        }
+    });
+}
+
+// ==========================================
 // INITIALIZE APP
 // ==========================================
 
@@ -827,6 +857,7 @@ function initApp() {
     initNavigation();
     initMobileMenu();
     initLightbox();
+    preloadThumbnails();
 
     const homeSection = document.getElementById('home');
     if (homeSection) {
