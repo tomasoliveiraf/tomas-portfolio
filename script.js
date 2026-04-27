@@ -9,6 +9,22 @@
 const allProjects = [
 
     {
+        id: 'nuvem',
+        title: 'NUVEM DE CARTÃO',
+        year: "2026",
+        yearSort: 2026,
+        categories: ['design', 'audio'],
+        tags: ['Music', 'Artwork', 'Singles', 'Music Production'],
+        description: "<b>Visuals, artwork, motion graphics</b> & <b>animated lyric video</b> for <b><i>Nuvem de Cartão</b></i>, a <i>single</i> I wrote, produced and released under my solo music project.",
+        role: 'Graphic Designer, Motion Designer, Music Producer, Musician',
+        areas: 'Graphic Design, Design for Music, Web Design',
+        images: ['assets/design/nuvem/nuv1.jpg', 'assets/design/nuvem/nuv2.jpg', 'assets/design/nuvem/nuv3.jpg'],
+        video: 'https://youtu.be/cSh0RLoCN8U',
+        linkText: 'LISTEN',
+        linkUrl: 'https://onerpm.link/648139028232'
+    },
+
+    {
         id: 'cubiculo',
         title: 'O CUBÍCULO',
         year: "2026",
