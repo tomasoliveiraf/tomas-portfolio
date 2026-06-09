@@ -35,9 +35,10 @@ body {
 
 @font-face {
     font-family: "Generic Slim";
-    src: url("./fonts/generic-g40-cc-slender.otf") format("woff2"), url("./fonts/generic-g40-cc-slender.otf") format("woff");
+    src: url("./fonts/generic-g40-cc-slender.otf") format("opentype");
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 .site-texture {
@@ -51,6 +52,8 @@ body {
     background-repeat: no-repeat;
     opacity: 0.20;
     mix-blend-mode: screen;
+    will-change: transform;
+    contain: strict;
 }
 
 img {
@@ -89,7 +92,9 @@ select {
     z-index: 0;
     opacity: 0.34;
     background: radial-gradient(ellipse at 20% 18%, rgba(120, 105, 85, 0.07), transparent 34%), radial-gradient(ellipse at 76% 10%, rgba(135, 115, 92, 0.05), transparent 28%), radial-gradient(ellipse at 54% 64%, rgba(110, 95, 78, 0.055), transparent 30%), radial-gradient(ellipse at 90% 82%, rgba(92, 80, 64, 0.04), transparent 22%);
-    filter: blur(16px);
+    filter: blur(6px);
+    will-change: transform;
+    contain: strict;
 }
 
 .cursor-glow {
@@ -103,6 +108,7 @@ select {
     transform: translate(-50%, -50%);
     filter: blur(10px);
     opacity: 0.75;
+    will-change: left, top;
 }
 
 .page-shell,

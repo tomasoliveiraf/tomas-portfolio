@@ -15,8 +15,14 @@ const observer = new IntersectionObserver(
 
 reveals.forEach((el) => observer.observe(el));
 
-window.addEventListener('mousemove', (e) => {
-    if (!glow) return;
-    glow.style.left = `${e.clientX}px`;
-    glow.style.top = `${e.clientY}px`;
-});
+if (glow) {
+    let rafId = null;
+    window.addEventListener('mousemove', (e) => {
+        if (rafId) return;
+        rafId = requestAnimationFrame(() => {
+            glow.style.left = `${e.clientX}px`;
+            glow.style.top = `${e.clientY}px`;
+            rafId = null;
+        });
+    });
+}
