@@ -296,13 +296,19 @@ h3 {
 }
 
 .hero-text,
-.visual-bio,
 .contact-text,
 .service-line span:last-child,
 .project-desc {
     font-size: 1rem;
     line-height: 1.6;
     color: var(--muted);
+}
+
+.visual-bio {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--muted);
+    text-align: justify;
 }
 
 .project-artist {
@@ -413,7 +419,7 @@ select:focus {
 }
 
 .section-visual {
-    padding-top: 1.5rem;
+    padding-top: 3rem;
 }
 
 .visual-grid {
