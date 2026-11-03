@@ -9,6 +9,22 @@
 const allProjects = [
 
     {
+        id: 'estatua',
+        title: 'A ESTÁTUA',
+        year: "2026",
+        yearSort: 2026,
+        categories: ['audiovisual', 'audio', 'design'],
+        tags: ['Short Film', 'Sound', 'Music'],
+        description: "A <b>documentary short film</b> funded by DGArtes, with the support of Santa Comba Dão City Council. Directed by Carolina Costa and co-directed by Telmo Oliveira, the film explores the origins and fate of the statue of António de Oliveira Salazar, which was destroyed in February 1978. <br><br> In addition to being responsible for the sound direction and recording, I also developed the film's visual identity. I also composed the entire <b>original soundtrack</b>. Inspired by the iconic song 'Grândola, Vila Morena', I used shifts between major and minor keys, combined with a contrast between acoustic and electronic instruments, to translate the emotions conveyed throughout the film. <br><br> The film premiered on <b>October 25th 2026</b>, during an exclusive event in Santa Comba Dão. It is yet to be distributed to the public.",
+        role: 'Sound Director, Designer, Composer',
+        areas: 'Sound design, Audio Post-Production, Graphic Design, Music Production',
+        images: ['assets/other/estatua/estatua1.jpg'],
+        video: '',
+        linkText: 'LEARN MORE',
+        linkUrl: 'https://www.instagram.com/p/DfCTAHElqMi/'
+    },
+
+    {
         id: 'nuvem',
         title: 'NUVEM DE CARTÃO',
         year: "2026",
