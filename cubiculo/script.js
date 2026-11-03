@@ -13,7 +13,7 @@ const observer = new IntersectionObserver((entries, obs) => {
 
 reveals.forEach((el) => observer.observe(el));
 
-// Cursor glow: só em dispositivos com rato, movido com transform (sem recalcular layout)
+// Cursor glow: só em dispositivos com rato, movido com transform
 if (glow && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
     let x = 0;
     let y = 0;
@@ -31,13 +31,13 @@ if (glow && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
     }, { passive: true });
 }
 
-// YouTube: o iframe só é criado quando o utilizador clica
+// YouTube: o iframe só é criado quando o utilizador clica na fachada
 document.querySelectorAll('.yt-facade').forEach((el) => {
     const load = () => {
         el.classList.remove('yt-facade');
         el.removeAttribute('role');
         el.removeAttribute('tabindex');
-        el.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${el.dataset.id}?autoplay=1" title="Vídeo" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>`;
+        el.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${el.dataset.id}?autoplay=1" title="Vídeo de Processo — O Cubículo" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>`;
     };
     el.addEventListener('click', load, { once: true });
     el.addEventListener('keydown', (e) => {
