@@ -9,22 +9,6 @@
 const allProjects = [
 
     {
-        id: 'caradecaso',
-        title: 'CARA DE CASO',
-        year: 'Album, 2026',
-        yearSort: 2026,
-        categories: ['audio', 'design'],
-        tags: ['Music', 'Design', 'Artwork', 'CD', ],
-        description: "<b><i>Indie Pop</b></i> sophomore studio album released under my own music project, Tomás Oliveira. Includes 11 tracks that I <b>wrote, produced, and mixed</b>, and I also played most of the instruments. It was created based on the concept of duality, which runs through the lyrics as well as the album’s sound itself: The <b>first part</b> features a more danceable, disco-pop sound, while the <b>second part</b> veers toward a more aggressive sound with distorted guitars.<br><br>I also developed the album's <b>visual identity</b> in its entirety. The visual component of this project includes the cover artwork, banners, visualizers, content for social media, as well as the packaging for the physical CD format. I also collaborated with my friend <b>Micael Nisa</b> on the creation of the music videos for some of the songs.",
-        role: 'Composer, Musician, Producer, Mixing Engineer, Designer, Editor',
-        areas: 'Music Production, Music, Graphic Design, Product Design',
-        images: ['assets/audio/cdc/cdc1.jpg', 'assets/audio/cdc/cdc2.jpg', 'assets/audio/cdc/cdc3.jpg', 'assets/audio/cdc/cdc4.jpg'],
-        video: ['https://youtu.be/p7VbCR1GbOA', 'https://youtu.be/rsgH1gm2TJs'],
-        linkText: 'LISTEN TO THE ALBUM',
-        linkUrl: 'https://onerpm.link/118178157206'
-    },
-
-    {
         id: 'estatua',
         title: 'A ESTÁTUA',
         year: "2026",
@@ -38,6 +22,22 @@ const allProjects = [
         video: '',
         linkText: 'LEARN MORE',
         linkUrl: 'https://www.instagram.com/p/DfCTAHElqMi/'
+    },
+
+    {
+        id: 'caradecaso',
+        title: 'CARA DE CASO',
+        year: 'Album, 2026',
+        yearSort: 2026,
+        categories: ['audio', 'design'],
+        tags: ['Music', 'Design', 'Artwork', 'CD', ],
+        description: "<b><i>Indie Pop</b></i> sophomore studio album released under my own music project, Tomás Oliveira. Includes 11 tracks that I <b>wrote, produced, and mixed</b>, and I also played most of the instruments. It was created based on the concept of duality, which runs through the lyrics as well as the album’s sound itself: The <b>first part</b> features a more danceable, disco-pop sound, while the <b>second part</b> veers toward a more aggressive sound with a bunch of distorted guitars.<br><br>I also developed the album's <b>visual identity</b> in its entirety. The visual component of this project includes the cover artwork, banners, visualizers, content for social media, as well as the packaging for the physical CD format. I also collaborated with my friend <b>Micael Nisa</b> on the creation of the music videos for some of the songs.",
+        role: 'Composer, Musician, Producer, Mixing Engineer, Designer, Editor',
+        areas: 'Music Production, Music, Graphic Design, Product Design',
+        images: ['assets/audio/cdc/cdc1.jpg', 'assets/audio/cdc/cdc2.jpg', 'assets/audio/cdc/cdc3.jpg', 'assets/audio/cdc/cdc4.jpg'],
+        video: ['https://youtu.be/p7VbCR1GbOA', 'https://youtu.be/rsgH1gm2TJs'],
+        linkText: 'LISTEN TO THE ALBUM',
+        linkUrl: 'https://onerpm.link/118178157206'
     },
 
     {
