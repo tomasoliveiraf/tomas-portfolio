@@ -48,14 +48,18 @@ img {
     justify-content: space-between;
     align-items: center;
     padding: 2.2rem 0;
-    /* Linha removida para limpar abaixo do logo/header */
 }
 
-.logo-text {
-    font-size: 1.15rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
+.logo-link {
+    display: inline-block;
+    line-height: 0;
+}
+
+.site-logo {
+    height: 36px;
+    width: auto;
+    display: block;
+    object-fit: contain;
 }
 
 .site-nav {
@@ -81,22 +85,10 @@ img {
     opacity: 0.7;
 }
 
-.logo-link {
-    display: inline-block;
-    line-height: 0;
-}
-
-.site-logo {
-    height: 36px; /* Podes ajustar este valor para o logótipo ficar maior ou mais pequeno no topo */
-    width: auto;
-    display: block;
-    object-fit: contain;
-}
-
 /* ---------- Hero ---------- */
 
 .hero {
-    padding: 3rem 0 2rem;
+    padding: 2.5rem 0 3rem;
 }
 
 .hero-image-wrap {
@@ -111,9 +103,9 @@ img {
     border-top: 1px solid var(--line);
 }
 
-/* Remove a linha especificamente na primeira secção (projetos) logo após o hero */
 #projetos {
     border-top: none;
+    padding-top: 2rem;
 }
 
 .archive-section {
@@ -208,6 +200,59 @@ img {
     color: var(--muted);
     opacity: 0.65;
     margin: 0.1rem 0 0;
+}
+
+/* ---------- Vídeos de Processo ---------- */
+
+.videos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+}
+
+.video-card {
+    background: #141413;
+    overflow: hidden;
+}
+
+.video-embed {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    background: #141413;
+}
+
+.video-embed iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
+
+.yt-facade {
+    cursor: pointer;
+}
+
+.yt-facade img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.85;
+    transition: opacity 200ms ease;
+}
+
+.yt-facade:hover img {
+    opacity: 1;
+}
+
+.yt-facade::after {
+    content: "▶";
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    font-size: 2.2rem;
+    color: var(--text);
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
 }
 
 /* ---------- Contacto ---------- */
@@ -310,59 +355,6 @@ img {
     color: var(--text);
 }
 
-/* ---------- Vídeos de Processo ---------- */
-
-.videos-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.25rem;
-}
-
-.video-card {
-    background: #141413;
-    overflow: hidden;
-}
-
-.video-embed {
-    position: relative;
-    aspect-ratio: 16 / 9;
-    background: #141413;
-}
-
-.video-embed iframe {
-    width: 100%;
-    height: 100%;
-    border: 0;
-    display: block;
-}
-
-.yt-facade {
-    cursor: pointer;
-}
-
-.yt-facade img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.85;
-    transition: opacity 200ms ease;
-}
-
-.yt-facade:hover img {
-    opacity: 1;
-}
-
-.yt-facade::after {
-    content: "▶";
-    position: absolute;
-    inset: 0;
-    display: grid;
-    place-items: center;
-    font-size: 2.2rem;
-    color: var(--text);
-    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
-}
-
 /* ---------- Responsivo ---------- */
 
 @media (max-width: 1024px) {
@@ -379,28 +371,35 @@ img {
     .site-header {
         flex-direction: column;
         align-items: flex-start;
-        gap: 1rem;
-        padding: 1.5rem 0;
+        gap: 0.75rem;
+        padding: 1.25rem 0;
     }
 
     .site-nav {
-        gap: 1.5rem;
+        gap: 1.25rem;
+        flex-wrap: wrap;
+    }
+
+    .hero {
+        padding: 0.5rem 0 1.5rem;
+    }
+
+    #projetos {
+        padding-top: 1.25rem;
     }
 
     .contact-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
-}
 
-@media (max-width: 540px) {
-    .projects-grid {
+    .videos-grid {
         grid-template-columns: 1fr;
     }
 }
 
-@media (max-width: 768px) {
-    .videos-grid {
+@media (max-width: 540px) {
+    .projects-grid {
         grid-template-columns: 1fr;
     }
 }
