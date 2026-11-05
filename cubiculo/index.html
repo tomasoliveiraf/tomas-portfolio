@@ -5,196 +5,144 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>O CUBÍCULO</title>
-    <meta name="description" content="O Cubículo — Home studio de produção musical, mistura e masterização de Tomás Oliveira." />
+    <meta name="description" content="O Cubículo — Produção musical, mistura e masterização por Tomás Oliveira." />
     <link rel="stylesheet" href="./style.css" />
     <link rel="icon" type="image/x-icon" href="./img/icon.ico" />
-    <!-- Preload das imagens críticas (above the fold) -->
-    <link rel="preload" as="image" href="./img/cub-ext.png" />
-    <link rel="preload" as="image" href="./img/profissional.jpg" />
 </head>
 
 <body>
-    <div class="grain"></div>
-    <div class="bg-stains"></div>
-    <div class="site-texture"></div>
-    <div class="cursor-glow"></div>
-
     <main class="page-shell" id="top">
-        <div class="top-actions reveal">
-            <a href="../index.html" class="back-link">← Web Portfolio</a>
-        </div>
 
-        <section class="hero hero-full-image reveal">
-            <div class="hero-nav">
-                <a href="#projetos" class="hero-btn">Projetos</a>
-                <a href="#contacto" class="hero-btn">Contacto</a>
-            </div>
-            <img src="./img/cub-ext.png" alt="O Cubículo" class="hero-full-image-file" />
-        </section>
+        <!-- CABEÇALHO -->
+        <header class="site-header">
+            <a href="#top" class="logo-link">
+                <img src="./img/cub-text.png" alt="O Cubículo" class="site-logo" />
+            </a>
 
-        <section class="section section-visual">
-            <div class="visual-grid">
-                <div class="visual-photo reveal">
-                    <img src="./img/profissional.jpg" alt="Tomás Oliveira no estúdio O Cubículo" loading="lazy" />
-                </div>
+            <nav class="site-nav">
+                <a href="./projects.html">Projetos</a>
+                <a href="#contacto">Contacto</a>
+                <a href="../index.html" class="nav-muted">Portfolio ↗</a>
+            </nav>
+        </header>
 
-                <div class="visual-copy reveal">
-                    <h2>Sobre.</h2>
-                    <div class="visual-bio">
-                        <p>
-                            <strong>O Cubículo</strong> é o espaço (físico e psicológico) atribuído ao meu <em>home studio</em> de produção musical. É, na prática, o ponto de encontro entre o lado mais técnico e o lado mais intuitivo do meu processo criativo.
-                        </p>
-                        <p>
-                            Sou o Tomás Oliveira — produtor, músico e designer — e este pseudo-estúdio acaba por ser uma extensão natural do meu percurso, feito entre lançamentos próprios e colaborações com outros artistas. Pelo caminho, as músicas cujo processo criativo me passou pelas mãos já acumularam mais de 80 mil reproduções nas plataformas digitais.
-                        </p>
-                        <p>
-                            Este site existe para abrir <strong>O Cubículo</strong> a outros projetos. Trabalho sobretudo de forma remota, acompanhando as diferentes fases de construção de uma canção, da ideia inicial ao resultado final.
-                        </p>
-                    </div>
-                </div>
+        <!-- HERO -->
+        <section class="hero">
+            <div class="hero-image-wrap">
+                <img src="./img/cub-marca.png" alt="O Cubículo" />
             </div>
         </section>
 
+        <!-- PROJETOS EM DESTAQUE -->
         <section id="projetos" class="section">
-            <div class="section-intro section-intro-row reveal">
-                <h2>Criados no Cubículo.</h2>
-                <a href="./projects.html" class="button button-secondary section-button">
-                    Ver todos
-                </a>
+            <div class="section-bar">
+                <h2>Criado n'O Cubículo</h2>
+                <a href="./projects.html" class="link-sub">Ver arquivo completo →</a>
             </div>
 
-            <div class="projects-grid projects-grid-featured">
-                <article class="project-card reveal">
-                    <a href="https://onerpm.link/118178157206" target="_blank" rel="noreferrer" class="project-image-link">
-                        <div class="project-image-wrap square">
-                            <img src="./img/cdc.jpg" alt="Capa do álbum Cara de Caso" class="project-image" loading="lazy" />
+            <div class="projects-grid">
+                <article class="project-card">
+                    <a href="https://onerpm.link/118178157206" target="_blank" rel="noreferrer">
+                        <div class="card-cover">
+                            <img src="./img/cdc.jpg" alt="Cara de Caso" loading="lazy" />
+                        </div>
+                        <div class="card-meta">
+                            <div class="card-title-row">
+                                <h3>Cara de Caso</h3>
+                                <span class="badge">Álbum</span>
+                            </div>
+                            <p class="artist">Tomás Oliveira</p>
+                            <p class="role">Produção / Mistura / Master</p>
                         </div>
                     </a>
-                    <div class="project-meta">
-                        <h3>Cara de Caso<span class="project-type">Álbum</span></h3>
-                        <p class="project-artist">Tomás Oliveira</p>
-                        <p class="project-desc">Produção / Mistura / Masterização</p>
-                    </div>
                 </article>
 
-                <article class="project-card reveal">
-                    <a href="https://show.co/B19aasw" target="_blank" rel="noreferrer" class="project-image-link">
-                        <div class="project-image-wrap square">
-                            <img src="./img/agua.jpeg" alt="Capa do single Mensagens d'Água" class="project-image" loading="lazy" />
+                <article class="project-card">
+                    <a href="https://show.co/B19aasw" target="_blank" rel="noreferrer">
+                        <div class="card-cover">
+                            <img src="./img/agua.jpeg" alt="Mensagens d'Água" loading="lazy" />
+                        </div>
+                        <div class="card-meta">
+                            <div class="card-title-row">
+                                <h3>Mensagens d'Água</h3>
+                                <span class="badge">Single</span>
+                            </div>
+                            <p class="artist">Francisca Reis</p>
+                            <p class="role">Mistura / Master</p>
                         </div>
                     </a>
-                    <div class="project-meta">
-                        <h3>Mensagens d'Água<span class="project-type">Single</span></h3>
-                        <p class="project-artist">Francisca Reis</p>
-                        <p class="project-desc">Mistura / Masterização</p>
-                    </div>
                 </article>
 
-                <article class="project-card reveal">
-                    <a href="https://www.youtube.com/watch?v=JdPMcDybYcU" target="_blank" rel="noreferrer" class="project-image-link">
-                        <div class="project-image-wrap square">
-                            <img src="./img/oceans.jpg" alt="Capa do single Oceans" class="project-image" loading="lazy" />
+                <article class="project-card">
+                    <a href="https://www.youtube.com/watch?v=JdPMcDybYcU" target="_blank" rel="noreferrer">
+                        <div class="card-cover">
+                            <img src="./img/oceans.jpg" alt="Oceans" loading="lazy" />
+                        </div>
+                        <div class="card-meta">
+                            <div class="card-title-row">
+                                <h3>Oceans</h3>
+                                <span class="badge">Single</span>
+                            </div>
+                            <p class="artist">Clã João Garcia</p>
+                            <p class="role">Produção / Mistura / Master</p>
                         </div>
                     </a>
-                    <div class="project-meta">
-                        <h3>Oceans<span class="project-type">Single</span></h3>
-                        <p class="project-artist">Clã João Garcia</p>
-                        <p class="project-desc">Produção / Mistura / Masterização</p>
-                    </div>
                 </article>
 
-                <article class="project-card reveal">
-                    <a href="https://www.youtube.com/watch?v=RCt8XkPFYEo&list=OLAK5uy_lKosbOljM3oK3ca_vEiYVicgf_FSefivw" target="_blank" rel="noreferrer" class="project-image-link">
-                        <div class="project-image-wrap square">
-                            <img src="./img/serendipity.jpg" alt="Capa do álbum Serendipity" class="project-image" loading="lazy" />
+                <article class="project-card">
+                    <a href="https://www.youtube.com/watch?v=RCt8XkPFYEo&list=OLAK5uy_lKosbOljM3oK3ca_vEiYVicgf_FSefivw" target="_blank" rel="noreferrer">
+                        <div class="card-cover">
+                            <img src="./img/serendipity.jpg" alt="Serendipity" loading="lazy" />
+                        </div>
+                        <div class="card-meta">
+                            <div class="card-title-row">
+                                <h3>Serendipity</h3>
+                                <span class="badge">Álbum</span>
+                            </div>
+                            <p class="artist">Miguel Correia</p>
+                            <p class="role">Produção / Mistura / Master</p>
                         </div>
                     </a>
-                    <div class="project-meta">
-                        <h3>Serendipity<span class="project-type">Álbum</span></h3>
-                        <p class="project-artist">Miguel Correia</p>
-                        <p class="project-desc">Produção / Mistura / Masterização</p>
-                    </div>
                 </article>
             </div>
         </section>
 
-        <section id="contacto" class="section contact-section">
+        <!-- CONTACTO -->
+        <section id="contacto" class="section">
+            <div class="section-bar">
+                <h2>Contacto</h2>
+            </div>
+
             <div class="contact-grid">
-                <div class="contact-copy reveal">
-                    <div class="section-intro contact-intro">
-                        <h2>Contacto.</h2>
-                    </div>
-
-                    <p class="contact-text">
-                        Se tens uma canção, um EP, um álbum ou outro projeto em desenvolvimento, fala comigo!
-                    </p>
-
+                <div class="contact-info">
+                    <p class="contact-lead">Tens uma canção, EP ou álbum em desenvolvimento? Fala diretamente connosco.</p>
                     <div class="contact-links">
-                        <a href="mailto:tomasoliveira.media@gmail.com">E-MAIL</a>
-                        <a href="https://instagram.com/ocubiculo" target="_blank" rel="noreferrer">INSTAGRAM</a>
-                        <a href="../index.html">PORTFOLIO</a>
+                        <a href="mailto:tomasoliveira.media@gmail.com">tomasoliveira.media@gmail.com ↗</a>
+                        <a href="https://instagram.com/ocubiculo" target="_blank" rel="noreferrer">instagram.com/ocubiculo ↗</a>
                     </div>
                 </div>
 
-                <form class="contact-form reveal" action="https://formspree.io/f/mpqorqjp" method="POST">
+                <form class="clean-form" action="https://formspree.io/f/mpqorqjp" method="POST">
                     <div class="form-row">
-                        <label for="nome">Nome</label>
-                        <input type="text" id="nome" name="nome" required />
+                        <input type="text" name="nome" placeholder="Nome" required />
                     </div>
-
                     <div class="form-row">
-                        <label for="email">E-mail</label>
-                        <input type="email" id="email" name="email" required />
+                        <input type="email" name="email" placeholder="E-mail" required />
                     </div>
-
                     <div class="form-row">
-                        <label for="tipo">Projeto</label>
-                        <select id="tipo" name="tipo">
-                            <option value="">Selecionar</option>
-                            <option value="producao">Produção</option>
-                            <option value="mistura">Mistura</option>
-                            <option value="masterizacao">Masterização</option>
-                            <option value="mistura-masterizacao">Mistura & Masterização</option>
-                            <option value="outro">Outro</option>
-                        </select>
+                        <textarea name="mensagem" rows="3" placeholder="Mensagem / Projeto..." required></textarea>
                     </div>
-
-                    <div class="form-row">
-                        <label for="mensagem">Mensagem</label>
-                        <textarea id="mensagem" name="mensagem" rows="6" required></textarea>
-                    </div>
-
-                    <button type="submit" class="button button-primary">Enviar</button>
+                    <button type="submit" class="submit-button">Enviar mensagem →</button>
                 </form>
             </div>
         </section>
 
-        <section id="videos" class="section">
-            <div class="section-intro reveal">
-                <h2>Processo.</h2>
-            </div>
-
-            <div class="videos-grid">
-                <div class="video-card reveal">
-                    <div class="video-embed yt-facade" data-id="i1QkJxJHWWk" role="button" tabindex="0" aria-label="Reproduzir vídeo de processo 1">
-                        <img src="https://i.ytimg.com/vi/i1QkJxJHWWk/hqdefault.jpg" alt="Vídeo de Processo 1" loading="lazy" />
-                    </div>
-                </div>
-
-                <div class="video-card reveal">
-                    <div class="video-embed yt-facade" data-id="a8SZSNYCGrU" role="button" tabindex="0" aria-label="Reproduzir vídeo de processo 2">
-                        <img src="https://i.ytimg.com/vi/a8SZSNYCGrU/hqdefault.jpg" alt="Vídeo de Processo 2" loading="lazy" />
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <footer class="site-footer">
-            <p>O Cubículo</p>
+            <span>O Cubículo — Produção e Pós-Produção Áudio</span>
+            <a href="#top">Topo ↑</a>
         </footer>
-    </main>
 
-    <script src="./script.js"></script>
+    </main>
 </body>
 
 </html>
